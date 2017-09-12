@@ -1,0 +1,89 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  </head>
+  <body>
+    TODO write content
+    <div id="MytextID">My text </div>
+    <input type="text" id="inputId" name="name">
+    <a href="https://www.bidcrm.com/"  id="click">Test</a>
+    
+https://answers.squarespace.com/questions/13088/can-anyone-think-of-a-way-of-triggering-a-google-analytics-pseudo-page-view.html
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script>
+   
+var links = document.querySelectorAll("a");
+/*
+for (var i=0, len=links.length; i<len; i++){
+    links[i].onclick = function(e){
+    	setTimeout(function(){ location.reload(); }, 500);
+    	 var now = new Date().getTime();
+    	var wnd = window.open("http://localhost:8080/bidcrm/rest/portal/570CC0F8DD02ECD5E050960A6B3A3B47/click.gif","_self");
+    	while(new Date().getTime() < now + 500){};
+    	wnd.close();
+	    e.preventDefault();
+        //
+    }
+}
+*/
+function clickListener(e) 
+{   
+    var clickedElement=(window.event)
+                        ? window.event.srcElement
+                        : e.target,
+        tags=document.getElementsByTagName(clickedElement.tagName);
+
+    for(var i=0;i<tags.length;++i)
+    {
+      if(tags[i]==clickedElement)
+      {
+        arrayWithElements.push({tag:clickedElement.tagName,index:i}); 
+        
+        if(clickedElement.tagName.toLowerCase()=='a'){
+        	var xmlHttp = new XMLHttpRequest();
+            var theUrl="http://localhost:8080/bidcrm/rest/portal/570CC0F8DD02ECD5E050960A6B3A3B47/click.gif";
+            xmlHttp.open( "GET", theUrl, false ); 
+            xmlHttp.send( null );
+        }
+       
+      }    
+    }
+}
+
+document.onclick = clickListener;
+
+$(document).ready(function(){
+    var x = $('#MytextID');
+   
+    $('#inputId').keyup(function(){
+        //alert(x.text());
+    })
+    
+})
+
+var arrayWithElements = new Array();
+function replay(i)
+{
+  clearTimeout(replaytimer);        
+  if(!arrayWithElements.length)return;
+  if(i>0)
+  {
+    document.getElementsByTagName(arrayWithElements[i-1].tag)[arrayWithElements[i-1].index].style.border="none";
+  }
+  document.getElementsByTagName(arrayWithElements[i].tag)[arrayWithElements[i].index].style.border="2px dotted firebrick";
+  if(arrayWithElements.length>i+1)
+  {
+    replaytimer=setTimeout(function(){replay(i+1);},1000)
+  }
+  else(arrayWithElements.length>i+1)
+  {
+    replaytimer=setTimeout(function(){document.getElementsByTagName(arrayWithElements[i].tag)[arrayWithElements[i].index].style.border="none";},1000)
+  }
+}
+
+
+</script>
+  </body>
+</html>

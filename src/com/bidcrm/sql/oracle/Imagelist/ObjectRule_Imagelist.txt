@@ -1,0 +1,116 @@
+//*****************************************************************//
+//Adding Object Rule
+//Table Name:Imagelist
+//Attribute Name:Imagelist Rule
+//********************************************************************//
+
+	<ObjectRule>
+		Name=Imagelist Rule
+		TableName=Imagelist
+		EffectedTable=Images
+		Description=Calling Upadte and Insert Rule for object Imagelist
+		Reason=1
+		ActionState=1
+		Condition=objid$gt$0
+		RuleIndex=1
+		Status=1
+	</ObjectRule>
+
+//*****************************************************************//
+//Adding Action Query
+//Table Name:Imagelist
+//Name:Call Insert_Imagelist procedure
+//Step No:1
+//**************************************************************//
+
+	<ActionQuery>
+		Name=Call Insert_Imagelist procedure
+		TableName=Imagelist
+		Description=Call Insert_Imagelist procedure
+		StepNo=1
+		Input=@Objid
+		InputDataType=@Integer
+		Output=$activityId
+		QueryType=0
+		HasRecordSet=0
+		OracleQuery=exec Insert_Imagelist(@objid)
+		MssqlQuery=exec Insert_Imagelist @objid
+		Status=0
+	</ActionQuery>
+
+	<ActionQuery>
+		Name=Select -ve objid for child Images
+		TableName=Images
+		Description=Select -ve objid for child Images
+		StepNo=2
+		Input=@Objid
+		InputDataType=@Integer
+		Output=$objid $name $Imagesid
+		QueryType=0
+		HasRecordSet=0
+		OracleQuery=select objid, name ,objid Imagesid from table_Images where objid like \'-%\' and Images2Imagelist=@objid
+		MssqlQuery=select objid, name ,objid Imagesid from table_Images where objid like \'-%\' and Images2Imagelist=@objid
+		Status=0
+	</ActionQuery>
+
+	<ActionQuery>
+		Name=Update -ve objid for child Images
+		TableName=Images
+		Description=Update -ve objid for child Images
+		StepNo=3
+		Input=@objid @name @Imagesid
+		InputDataType=@Integer @Varchar @Integer
+		Output=$count
+		QueryType=0
+		HasRecordSet=0
+		OracleQuery=update table_Images set objid=@objid where objid=@Imagesid and name=@name
+		MssqlQuery=update table_Images set objid=@objid where objid=@Imagesid and name=@name
+		Status=0
+	</ActionQuery>
+
+
+	<ActionQuery>
+		Name=Select -ve objid for child MasterTemplate
+		TableName=MasterTemplate
+		Description=Select -ve objid for child MasterTemplate
+		StepNo=4
+		Input=@Objid
+		InputDataType=@Integer
+		Output=$objid $name $MasterTemplateid
+		QueryType=0
+		HasRecordSet=0
+		OracleQuery=select objid, name ,objid MasterTemplateid from table_MasterTemplate where objid like \'-%\' and MasterTemplate2Imagelist=@objid
+		MssqlQuery=select objid, name ,objid MasterTemplateid from table_MasterTemplate where objid like \'-%\' and MasterTemplate2Imagelist=@objid
+		Status=0
+	</ActionQuery>
+
+	<ActionQuery>
+		Name=Update -ve objid for child MasterTemplate
+		TableName=MasterTemplate
+		Description=Update -ve objid for child MasterTemplate
+		StepNo=5
+		Input=@objid @name @MasterTemplateid
+		InputDataType=@Integer @Varchar @Integer
+		Output=$count
+		QueryType=0
+		HasRecordSet=0
+		OracleQuery=update table_MasterTemplate set objid=@objid where objid=@MasterTemplateid and name=@name
+		MssqlQuery=update table_MasterTemplate set objid=@objid where objid=@MasterTemplateid and name=@name
+		Status=0
+	</ActionQuery>
+
+
+	<ActionQuery>
+		Name=Call Upadte_Imagelist procedure
+		TableName=Imagelist
+		Description=Call Update_Imagelist procedure
+		StepNo=6
+		Input=@Objid
+		InputDataType=@Integer
+		Output=$activityId
+		QueryType=0
+		HasRecordSet=0
+		OracleQuery=exec Update_Imagelist(@objid)
+		MssqlQuery=exec Update_Imagelist @objid
+		Status=0
+	</ActionQuery>

@@ -1,0 +1,36 @@
+
+
+ssh -i "/home/srimanta/Documents/Projects/testrepo/data/pem/CloudTestAutomation.pem" root@ec2-107-21-103-155.compute-1.amazonaws.com
+
+scp -i "/home/srimanta/Documents/Projects/testrepo/data/pem/CloudTestAutomation.pem"  /home/srimanta/Downloads/z8c18LeBxcsm67wBCkzZhqDULumcgsGeoqCkS3bRrkM root@ec2-107-21-103-155.compute-1.amazonaws.com:/var/www/html/.well-known/acme-challenge
+
+scp -i "/home/srimanta/Documents/Projects/testrepo/data/pem/CloudTestAutomation.pem"  /home/srimanta/Downloads/sslforfree.zip root@ec2-107-21-103-155.compute-1.amazonaws.com:/etc/nginx/ssl
+
+
+
+scp   -i "/home/srimanta/Documents/Projects/testrepo/data/pem/CloudTestAutomation.pem" ssl.zip  root@107.21.103.155:/u02/app/apache/tomcat9erp/webapps/ROOT/.well-known/acme-challenge
+
+
+
+
+1) Enter all Domian names like
+	artitelly.com www.artitelly.com bidcrm.com www.bidcrm.com biderp.com www.biderp.com paychecknext.com www.paychecknext.com
+2) Create file for manual verification with DNS
+3) Select the acme-chalenge key and value and update the value in amazon Route53 Hosted Zone
+4) Verify the challenge in SSLForFree website, if fails then regenerate the chalenge key and update in AWS
+5) Download the files.
+6) Transfer the file to the ssl folder and unzip
+scp -i "/home/srimanta/Documents/Projects/testrepo/data/pem/CloudTestAutomation.pem" "/home/srimanta/Downloads/sslforfree2.zip" root@ec2-107-21-103-155.compute-1.amazonaws.com:/etc/nginx/ssl
+
+
+HTTPs with SSLForFree and Nginx (Manually)
+Get your certificate files and private key on SSLForFree.
+Download verification files and put them on your server for verification of ownership of your server.
+Once pass the ownership verification, download the certificate files.
+Get bundle.crt by running “cat certificate.crt ca_bundle.crt >> bundle.crt”
+Get privkey.pem by running “openssl rsa -in private.key -text > privkey.pem”
+Upload them to your server
+Configure nginx config (/etc/nginx/sites-available/default)
+open bundle.crt and break END and BEGIN CERTIFICATE into 2 lines
+Put “ssl on;”, “ssl_certificate /yourpath/bundle.crt” and “ssl_certificate_key /yourpath/privkey.pem;” inside the server section
+That’s it.

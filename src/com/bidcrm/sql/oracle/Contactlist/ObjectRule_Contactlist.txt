@@ -1,0 +1,116 @@
+//*****************************************************************//
+//Adding Object Rule
+//Table Name:Contactlist
+//Attribute Name:Contactlist Rule
+//********************************************************************//
+
+	<ObjectRule>
+		Name=Contactlist Rule
+		TableName=Contactlist
+		EffectedTable=ContactListLog
+		Description=Calling Upadte and Insert Rule for object Contactlist
+		Reason=1
+		ActionState=1
+		Condition=objid$gt$0
+		RuleIndex=1
+		Status=1
+	</ObjectRule>
+
+//*****************************************************************//
+//Adding Action Query
+//Table Name:Contactlist
+//Name:Call Insert_Contactlist procedure
+//Step No:1
+//**************************************************************//
+
+	<ActionQuery>
+		Name=Call Insert_Contactlist procedure
+		TableName=Contactlist
+		Description=Call Insert_Contactlist procedure
+		StepNo=1
+		Input=@Objid
+		InputDataType=@Integer
+		Output=$activityId
+		QueryType=0
+		HasRecordSet=0
+		OracleQuery=exec Insert_Contactlist(@objid)
+		MssqlQuery=exec Insert_Contactlist @objid
+		Status=0
+	</ActionQuery>
+
+	<ActionQuery>
+		Name=Select -ve objid for child ContactListLog
+		TableName=ContactListLog
+		Description=Select -ve objid for child ContactListLog
+		StepNo=2
+		Input=@Objid
+		InputDataType=@Integer
+		Output=$objid $name $ContactListLogid
+		QueryType=0
+		HasRecordSet=0
+		OracleQuery=select objid, name ,objid ContactListLogid from table_ContactListLog where objid like \'-%\' and ContactListLog2Contactlist=@objid
+		MssqlQuery=select objid, name ,objid ContactListLogid from table_ContactListLog where objid like \'-%\' and ContactListLog2Contactlist=@objid
+		Status=0
+	</ActionQuery>
+
+	<ActionQuery>
+		Name=Update -ve objid for child ContactListLog
+		TableName=ContactListLog
+		Description=Update -ve objid for child ContactListLog
+		StepNo=3
+		Input=@objid @name @ContactListLogid
+		InputDataType=@Integer @Varchar @Integer
+		Output=$count
+		QueryType=0
+		HasRecordSet=0
+		OracleQuery=update table_ContactListLog set objid=@objid where objid=@ContactListLogid and name=@name
+		MssqlQuery=update table_ContactListLog set objid=@objid where objid=@ContactListLogid and name=@name
+		Status=0
+	</ActionQuery>
+
+
+	<ActionQuery>
+		Name=Select -ve objid for child EmailSetting
+		TableName=EmailSetting
+		Description=Select -ve objid for child EmailSetting
+		StepNo=4
+		Input=@Objid
+		InputDataType=@Integer
+		Output=$objid $name $EmailSettingid
+		QueryType=0
+		HasRecordSet=0
+		OracleQuery=select objid, name ,objid EmailSettingid from table_EmailSetting where objid like \'-%\' and EmailSetting2Contactlist=@objid
+		MssqlQuery=select objid, name ,objid EmailSettingid from table_EmailSetting where objid like \'-%\' and EmailSetting2Contactlist=@objid
+		Status=0
+	</ActionQuery>
+
+	<ActionQuery>
+		Name=Update -ve objid for child EmailSetting
+		TableName=EmailSetting
+		Description=Update -ve objid for child EmailSetting
+		StepNo=5
+		Input=@objid @name @EmailSettingid
+		InputDataType=@Integer @Varchar @Integer
+		Output=$count
+		QueryType=0
+		HasRecordSet=0
+		OracleQuery=update table_EmailSetting set objid=@objid where objid=@EmailSettingid and name=@name
+		MssqlQuery=update table_EmailSetting set objid=@objid where objid=@EmailSettingid and name=@name
+		Status=0
+	</ActionQuery>
+
+
+	<ActionQuery>
+		Name=Call Upadte_Contactlist procedure
+		TableName=Contactlist
+		Description=Call Update_Contactlist procedure
+		StepNo=6
+		Input=@Objid
+		InputDataType=@Integer
+		Output=$activityId
+		QueryType=0
+		HasRecordSet=0
+		OracleQuery=exec Update_Contactlist(@objid)
+		MssqlQuery=exec Update_Contactlist @objid
+		Status=0
+	</ActionQuery>

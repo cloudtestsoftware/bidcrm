@@ -1,0 +1,85 @@
+//*****************************************************************//
+//Adding Object Rule
+//Table Name:Rfqemail
+//Attribute Name:Rfqemail Rule
+//********************************************************************//
+
+	<ObjectRule>
+		Name=Rfqemail Rule
+		TableName=Rfqemail
+		EffectedTable=EmailDocs
+		Description=Calling Upadte and Insert Rule for object Rfqemail
+		Reason=1
+		ActionState=1
+		Condition=objid$gt$0
+		RuleIndex=1
+		Status=1
+	</ObjectRule>
+
+//*****************************************************************//
+//Adding Action Query
+//Table Name:Rfqemail
+//Name:Call Insert_Rfqemail procedure
+//Step No:1
+//**************************************************************//
+
+	<ActionQuery>
+		Name=Call Insert_Rfqemail procedure
+		TableName=Rfqemail
+		Description=Call Insert_Rfqemail procedure
+		StepNo=1
+		Input=@Objid
+		InputDataType=@Integer
+		Output=$activityId
+		QueryType=0
+		HasRecordSet=0
+		OracleQuery=exec Insert_Rfqemail(@objid)
+		MssqlQuery=exec Insert_Rfqemail @objid
+		Status=0
+	</ActionQuery>
+
+	<ActionQuery>
+		Name=Select -ve objid for child EmailDocs
+		TableName=EmailDocs
+		Description=Select -ve objid for child EmailDocs
+		StepNo=2
+		Input=@Objid
+		InputDataType=@Integer
+		Output=$objid $name $EmailDocsid
+		QueryType=0
+		HasRecordSet=0
+		OracleQuery=select objid, name ,objid EmailDocsid from table_EmailDocs where objid like \'-%\' and EmailDocs2Rfqemail=@objid
+		MssqlQuery=select objid, name ,objid EmailDocsid from table_EmailDocs where objid like \'-%\' and EmailDocs2Rfqemail=@objid
+		Status=0
+	</ActionQuery>
+
+	<ActionQuery>
+		Name=Update -ve objid for child EmailDocs
+		TableName=EmailDocs
+		Description=Update -ve objid for child EmailDocs
+		StepNo=3
+		Input=@objid @name @EmailDocsid
+		InputDataType=@Integer @Varchar @Integer
+		Output=$count
+		QueryType=0
+		HasRecordSet=0
+		OracleQuery=update table_EmailDocs set objid=@objid where objid=@EmailDocsid and name=@name
+		MssqlQuery=update table_EmailDocs set objid=@objid where objid=@EmailDocsid and name=@name
+		Status=0
+	</ActionQuery>
+
+
+	<ActionQuery>
+		Name=Call Upadte_Rfqemail procedure
+		TableName=Rfqemail
+		Description=Call Update_Rfqemail procedure
+		StepNo=4
+		Input=@Objid
+		InputDataType=@Integer
+		Output=$activityId
+		QueryType=0
+		HasRecordSet=0
+		OracleQuery=exec Update_Rfqemail(@objid)
+		MssqlQuery=exec Update_Rfqemail @objid
+		Status=0
+	</ActionQuery>

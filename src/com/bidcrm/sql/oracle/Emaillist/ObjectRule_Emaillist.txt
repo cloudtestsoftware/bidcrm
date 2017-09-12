@@ -1,0 +1,147 @@
+//*****************************************************************//
+//Adding Object Rule
+//Table Name:Emaillist
+//Attribute Name:Emaillist Rule
+//********************************************************************//
+
+	<ObjectRule>
+		Name=Emaillist Rule
+		TableName=Emaillist
+		EffectedTable=EmailContact
+		Description=Calling Upadte and Insert Rule for object Emaillist
+		Reason=1
+		ActionState=1
+		Condition=objid$gt$0
+		RuleIndex=1
+		Status=1
+	</ObjectRule>
+
+//*****************************************************************//
+//Adding Action Query
+//Table Name:Emaillist
+//Name:Call Insert_Emaillist procedure
+//Step No:1
+//**************************************************************//
+
+	<ActionQuery>
+		Name=Call Insert_Emaillist procedure
+		TableName=Emaillist
+		Description=Call Insert_Emaillist procedure
+		StepNo=1
+		Input=@Objid
+		InputDataType=@Integer
+		Output=$activityId
+		QueryType=0
+		HasRecordSet=0
+		OracleQuery=exec Insert_Emaillist(@objid)
+		MssqlQuery=exec Insert_Emaillist @objid
+		Status=0
+	</ActionQuery>
+
+	<ActionQuery>
+		Name=Select -ve objid for child EmailContact
+		TableName=EmailContact
+		Description=Select -ve objid for child EmailContact
+		StepNo=2
+		Input=@Objid
+		InputDataType=@Integer
+		Output=$objid $name $EmailContactid
+		QueryType=0
+		HasRecordSet=0
+		OracleQuery=select objid, name ,objid EmailContactid from table_EmailContact where objid like \'-%\' and EmailContact2Emaillist=@objid
+		MssqlQuery=select objid, name ,objid EmailContactid from table_EmailContact where objid like \'-%\' and EmailContact2Emaillist=@objid
+		Status=0
+	</ActionQuery>
+
+	<ActionQuery>
+		Name=Update -ve objid for child EmailContact
+		TableName=EmailContact
+		Description=Update -ve objid for child EmailContact
+		StepNo=3
+		Input=@objid @name @EmailContactid
+		InputDataType=@Integer @Varchar @Integer
+		Output=$count
+		QueryType=0
+		HasRecordSet=0
+		OracleQuery=update table_EmailContact set objid=@objid where objid=@EmailContactid and name=@name
+		MssqlQuery=update table_EmailContact set objid=@objid where objid=@EmailContactid and name=@name
+		Status=0
+	</ActionQuery>
+
+
+	<ActionQuery>
+		Name=Select -ve objid for child Accounts
+		TableName=Accounts
+		Description=Select -ve objid for child Accounts
+		StepNo=4
+		Input=@Objid
+		InputDataType=@Integer
+		Output=$objid $name $Accountsid
+		QueryType=0
+		HasRecordSet=0
+		OracleQuery=select objid, name ,objid Accountsid from table_Accounts where objid like \'-%\' and Accounts2Emaillist=@objid
+		MssqlQuery=select objid, name ,objid Accountsid from table_Accounts where objid like \'-%\' and Accounts2Emaillist=@objid
+		Status=0
+	</ActionQuery>
+
+	<ActionQuery>
+		Name=Update -ve objid for child Accounts
+		TableName=Accounts
+		Description=Update -ve objid for child Accounts
+		StepNo=5
+		Input=@objid @name @Accountsid
+		InputDataType=@Integer @Varchar @Integer
+		Output=$count
+		QueryType=0
+		HasRecordSet=0
+		OracleQuery=update table_Accounts set objid=@objid where objid=@Accountsid and name=@name
+		MssqlQuery=update table_Accounts set objid=@objid where objid=@Accountsid and name=@name
+		Status=0
+	</ActionQuery>
+
+
+	<ActionQuery>
+		Name=Select -ve objid for child ContactList
+		TableName=ContactList
+		Description=Select -ve objid for child ContactList
+		StepNo=6
+		Input=@Objid
+		InputDataType=@Integer
+		Output=$objid $name $ContactListid
+		QueryType=0
+		HasRecordSet=0
+		OracleQuery=select objid, name ,objid ContactListid from table_ContactList where objid like \'-%\' and ContactList2Emaillist=@objid
+		MssqlQuery=select objid, name ,objid ContactListid from table_ContactList where objid like \'-%\' and ContactList2Emaillist=@objid
+		Status=0
+	</ActionQuery>
+
+	<ActionQuery>
+		Name=Update -ve objid for child ContactList
+		TableName=ContactList
+		Description=Update -ve objid for child ContactList
+		StepNo=7
+		Input=@objid @name @ContactListid
+		InputDataType=@Integer @Varchar @Integer
+		Output=$count
+		QueryType=0
+		HasRecordSet=0
+		OracleQuery=update table_ContactList set objid=@objid where objid=@ContactListid and name=@name
+		MssqlQuery=update table_ContactList set objid=@objid where objid=@ContactListid and name=@name
+		Status=0
+	</ActionQuery>
+
+
+	<ActionQuery>
+		Name=Call Upadte_Emaillist procedure
+		TableName=Emaillist
+		Description=Call Update_Emaillist procedure
+		StepNo=8
+		Input=@Objid
+		InputDataType=@Integer
+		Output=$activityId
+		QueryType=0
+		HasRecordSet=0
+		OracleQuery=exec Update_Emaillist(@objid)
+		MssqlQuery=exec Update_Emaillist @objid
+		Status=0
+	</ActionQuery>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<emailresponse>
+<record id="0">
+<objid isRequired="true" type="RAW"> </objid>
+<emailresponse2campaign isRequired="true" type="RAW">@sampleorder2campaign</emailresponse2campaign>
+<name isRequired="true" type="VARCHAR">@name</name>
+<lastname isRequired="false" type="VARCHAR">@lastname</lastname>
+<email isRequired="true" type="VARCHAR">@email</email>
+<phone isRequired="false" type="VARCHAR">@officephone</phone>
+<phone2 isRequired="false" type="VARCHAR">@mobile</phone2>
+<status isRequired="false" type="VARCHAR">Sample Ordered</status>
+<stagecode isRequired="false" type="NUMBER"></stagecode>
+<responsedate isRequired="false" type="DATE">@today</responsedate>
+<isordered isRequired="false" type="VARCHAR">1</isordered>
+<originid isRequired="false" type="RAW">@originid</originid>
+<destinitionid isRequired="false" type="RAW">@destinitionid</destinitionid>
+</record>
+</emailresponse>

@@ -1,0 +1,116 @@
+//*****************************************************************//
+//Adding Object Rule
+//Table Name:Emailresponse
+//Attribute Name:Emailresponse Rule
+//********************************************************************//
+
+	<ObjectRule>
+		Name=Emailresponse Rule
+		TableName=Emailresponse
+		EffectedTable=AutomationLog
+		Description=Calling Upadte and Insert Rule for object Emailresponse
+		Reason=1
+		ActionState=1
+		Condition=objid$gt$0
+		RuleIndex=1
+		Status=1
+	</ObjectRule>
+
+//*****************************************************************//
+//Adding Action Query
+//Table Name:Emailresponse
+//Name:Call Insert_Emailresponse procedure
+//Step No:1
+//**************************************************************//
+
+	<ActionQuery>
+		Name=Call Insert_Emailresponse procedure
+		TableName=Emailresponse
+		Description=Call Insert_Emailresponse procedure
+		StepNo=1
+		Input=@Objid
+		InputDataType=@Integer
+		Output=$activityId
+		QueryType=0
+		HasRecordSet=0
+		OracleQuery=exec Insert_Emailresponse(@objid)
+		MssqlQuery=exec Insert_Emailresponse @objid
+		Status=0
+	</ActionQuery>
+
+	<ActionQuery>
+		Name=Select -ve objid for child AutomationLog
+		TableName=AutomationLog
+		Description=Select -ve objid for child AutomationLog
+		StepNo=2
+		Input=@Objid
+		InputDataType=@Integer
+		Output=$objid $name $AutomationLogid
+		QueryType=0
+		HasRecordSet=0
+		OracleQuery=select objid, name ,objid AutomationLogid from table_AutomationLog where objid like \'-%\' and AutomationLog2Emailresponse=@objid
+		MssqlQuery=select objid, name ,objid AutomationLogid from table_AutomationLog where objid like \'-%\' and AutomationLog2Emailresponse=@objid
+		Status=0
+	</ActionQuery>
+
+	<ActionQuery>
+		Name=Update -ve objid for child AutomationLog
+		TableName=AutomationLog
+		Description=Update -ve objid for child AutomationLog
+		StepNo=3
+		Input=@objid @name @AutomationLogid
+		InputDataType=@Integer @Varchar @Integer
+		Output=$count
+		QueryType=0
+		HasRecordSet=0
+		OracleQuery=update table_AutomationLog set objid=@objid where objid=@AutomationLogid and name=@name
+		MssqlQuery=update table_AutomationLog set objid=@objid where objid=@AutomationLogid and name=@name
+		Status=0
+	</ActionQuery>
+
+
+	<ActionQuery>
+		Name=Select -ve objid for child ActionNote
+		TableName=ActionNote
+		Description=Select -ve objid for child ActionNote
+		StepNo=4
+		Input=@Objid
+		InputDataType=@Integer
+		Output=$objid $name $ActionNoteid
+		QueryType=0
+		HasRecordSet=0
+		OracleQuery=select objid, name ,objid ActionNoteid from table_ActionNote where objid like \'-%\' and ActionNote2Emailresponse=@objid
+		MssqlQuery=select objid, name ,objid ActionNoteid from table_ActionNote where objid like \'-%\' and ActionNote2Emailresponse=@objid
+		Status=0
+	</ActionQuery>
+
+	<ActionQuery>
+		Name=Update -ve objid for child ActionNote
+		TableName=ActionNote
+		Description=Update -ve objid for child ActionNote
+		StepNo=5
+		Input=@objid @name @ActionNoteid
+		InputDataType=@Integer @Varchar @Integer
+		Output=$count
+		QueryType=0
+		HasRecordSet=0
+		OracleQuery=update table_ActionNote set objid=@objid where objid=@ActionNoteid and name=@name
+		MssqlQuery=update table_ActionNote set objid=@objid where objid=@ActionNoteid and name=@name
+		Status=0
+	</ActionQuery>
+
+
+	<ActionQuery>
+		Name=Call Upadte_Emailresponse procedure
+		TableName=Emailresponse
+		Description=Call Update_Emailresponse procedure
+		StepNo=6
+		Input=@Objid
+		InputDataType=@Integer
+		Output=$activityId
+		QueryType=0
+		HasRecordSet=0
+		OracleQuery=exec Update_Emailresponse(@objid)
+		MssqlQuery=exec Update_Emailresponse @objid
+		Status=0
+	</ActionQuery>

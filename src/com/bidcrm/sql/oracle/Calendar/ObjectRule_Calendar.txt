@@ -1,0 +1,85 @@
+//*****************************************************************//
+//Adding Object Rule
+//Table Name:Calendar
+//Attribute Name:Calendar Rule
+//********************************************************************//
+
+	<ObjectRule>
+		Name=Calendar Rule
+		TableName=Calendar
+		EffectedTable=Month
+		Description=Calling Upadte and Insert Rule for object Calendar
+		Reason=1
+		ActionState=1
+		Condition=objid$gt$0
+		RuleIndex=1
+		Status=1
+	</ObjectRule>
+
+//*****************************************************************//
+//Adding Action Query
+//Table Name:Calendar
+//Name:Call Insert_Calendar procedure
+//Step No:1
+//**************************************************************//
+
+	<ActionQuery>
+		Name=Call Insert_Calendar procedure
+		TableName=Calendar
+		Description=Call Insert_Calendar procedure
+		StepNo=1
+		Input=@Objid
+		InputDataType=@Integer
+		Output=$activityId
+		QueryType=0
+		HasRecordSet=0
+		OracleQuery=exec Insert_Calendar(@objid)
+		MssqlQuery=exec Insert_Calendar @objid
+		Status=0
+	</ActionQuery>
+
+	<ActionQuery>
+		Name=Select -ve objid for child Month
+		TableName=Month
+		Description=Select -ve objid for child Month
+		StepNo=2
+		Input=@Objid
+		InputDataType=@Integer
+		Output=$objid $name $Monthid
+		QueryType=0
+		HasRecordSet=0
+		OracleQuery=select objid, name ,objid Monthid from table_Month where objid like \'-%\' and Month2Calendar=@objid
+		MssqlQuery=select objid, name ,objid Monthid from table_Month where objid like \'-%\' and Month2Calendar=@objid
+		Status=0
+	</ActionQuery>
+
+	<ActionQuery>
+		Name=Update -ve objid for child Month
+		TableName=Month
+		Description=Update -ve objid for child Month
+		StepNo=3
+		Input=@objid @name @Monthid
+		InputDataType=@Integer @Varchar @Integer
+		Output=$count
+		QueryType=0
+		HasRecordSet=0
+		OracleQuery=update table_Month set objid=@objid where objid=@Monthid and name=@name
+		MssqlQuery=update table_Month set objid=@objid where objid=@Monthid and name=@name
+		Status=0
+	</ActionQuery>
+
+
+	<ActionQuery>
+		Name=Call Upadte_Calendar procedure
+		TableName=Calendar
+		Description=Call Update_Calendar procedure
+		StepNo=4
+		Input=@Objid
+		InputDataType=@Integer
+		Output=$activityId
+		QueryType=0
+		HasRecordSet=0
+		OracleQuery=exec Update_Calendar(@objid)
+		MssqlQuery=exec Update_Calendar @objid
+		Status=0
+	</ActionQuery>

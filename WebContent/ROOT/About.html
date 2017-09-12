@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="">
+<meta name="author" content="">
+
+<title>BidERP, Bidding & Construction ERP in Cloud</title>
+
+<!-- Bootstrap Core CSS -->
+<link href="css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Custom CSS -->
+<link href="css/modern-business.css" rel="stylesheet">
+
+<!-- Custom Fonts -->
+<!--<link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">-->
+<link href="http://fonts.googleapis.com/css?family=Inconsolata"
+	rel="stylesheet" type="text/css">
+<style>
+.navbar-inverse .navbar-brand {
+	color: #fff;
+	font-size: 22px;
+}
+
+.navbar-inverse {
+	border-color: #00BCD4;
+}
+
+.navbar-inverse {
+	background-color: #00BCD4;
+	box-shadow: 0 3px 3px rgba(0, 0, 0, .29);
+	/* border-color: #080808; */
+}
+
+.navbar-inverse .navbar-nav>li>a {
+	color: #fff;
+	text-transform: uppercase;
+}
+
+.panel {
+	box-shadow: 2px 2px 5px rgba(0, 0, 0, .1);
+	border-radius: 0;
+	cursor: pointer;
+	border: 1px solid #dedede;
+}
+
+.panel-default>.panel-heading {
+	color: #333;
+	background-color: #00BCD4;
+	border-color: none;
+	color: #fff;
+	text-align: center;
+	font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.panel-body {
+	font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	text-align: left;
+}
+
+.card-panel {
+	transition: box-shadow .25s;
+	padding: 24px;
+	margin: .5rem 0 1rem 0;
+	border-radius: 2px;
+	background-color: #fff;
+	box-shadow: 2px 2px 5px rgba(0, 0, 0, .1);
+	border-left: 10px solid #CDDC39;
+}
+
+img.responsive-img, video.responsive-video {
+	max-width: 100%;
+	height: auto;
+}
+
+.circle {
+	border-radius: 50%;
+}
+
+img.responsive-img, video.responsive-video {
+	max-width: 100%;
+	height: auto;
+	width: 60px;
+	background-color: #fafafa
+}
+
+.navbar-inverse .navbar-nav>li>a:hover {
+	background-color: rgba(63, 81, 181, 0.63);
+}
+
+panel-heading {
+	padding: 10px 15px;
+	border-bottom: 0px solid transparent;
+	border-top-left-radius: 0px;
+	border-top-right-radius: 0px;
+}
+
+.portfolio {
+	box-shadow: 2px 2px 5px rgba(0, 0, 0, .1);
+	background-color: #fff;
+}
+
+.img-portfolio {
+	margin: 0px;
+	padding: 10px;
+}
+
+.iconImage {
+	display: block;
+	text-align: center;
+	margin: 0 auto;
+}
+
+.panelFooter {
+	background-color: #607D8B;
+	padding: 10px;
+	box-shadow: 2px 2px 2px #888888;
+}
+
+.circle1 {
+	width: 9px;
+	height: 9px;
+	-webkit-border-radius: 25px;
+	-moz-border-radius: 25px;
+	border-radius: 20px;
+	background-color: #AED581;
+	display: inline-block;
+	margin-right: 10px;
+}
+
+.circle2 {
+	width: 9px;
+	height: 9px;
+	-webkit-border-radius: 25px;
+	-moz-border-radius: 25px;
+	border-radius: 20px;
+	background-color: #FFF176;
+	display: inline-block;
+	margin-right: 10px;
+}
+
+.circle3 {
+	width: 9px;
+	height: 9px;
+	-webkit-border-radius: 25px;
+	-moz-border-radius: 25px;
+	border-radius: 20px;
+	background-color: #f3b49f;
+	display: inline-block;
+	margin-right: 10px;
+}
+
+.circle4 {
+	width: 9px;
+	height: 9px;
+	-webkit-border-radius: 25px;
+	-moz-border-radius: 25px;
+	border-radius: 20px;
+	background-color: #80DEEA;
+	display: inline-block;
+	margin-right: 10px;
+}
+
+.circle5 {
+	width: 9px;
+	height: 9px;
+	-webkit-border-radius: 25px;
+	-moz-border-radius: 25px;
+	border-radius: 20px;
+	background-color: #8BC34A;
+	display: inline-block;
+	margin-right: 10px;
+}
+
+.mini-timeline:before {
+	content: '';
+	position: absolute;
+	top: 8px;
+	bottom: 0;
+	width: 2px;
+	background: #eeeeee;
+	left: 8px;
+}
+
+.mini-timeline {
+	padding-left: 0;
+	list-style: none;
+	position: relative;
+	margin-left: 7%;
+}
+
+.mini-timeline>li {
+	position: relative;
+}
+
+li {
+	display: list-item;
+	text-align: -webkit-match-parent;
+}
+
+.mini-timeline-lime .timeline-icon {
+	border: 2px solid #cddc39 !important;
+}
+
+.mini-timeline>li .timeline-body {
+	margin: 0 0px 20px 32px;
+	padding: 0;
+	position: relative;
+	background-color: #fff;
+}
+
+.mini-timeline>li .timeline-icon {
+	position: absolute;
+	border-radius: 50%;
+	left: 3px;
+	top: 3px;
+	margin: 0;
+	padding: 0;
+	width: 12px;
+	height: 12px;
+	background: #fff;
+}
+
+.mini-timeline-deeporange .timeline-icon {
+	border: 2px solid #ff5722 !important;
+}
+
+.mini-timeline-info .timeline-icon {
+	border: 2px solid #00bcd4 !important;
+}
+
+.mini-timeline-indigo .timeline-icon {
+	border: 2px solid #3f51b5 !important;
+}
+
+li {
+	list-style: none;
+}
+
+.modal-content {
+	border-radius: none;
+}
+
+#success_message {
+	display: none;
+}
+
+body {
+	background: rgba(238, 238, 238, 0.63);
+	font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+</style>
+
+
+
+
+
+</head>
+
+<body>
+
+	<!-- Navigation -->
+	<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+		<div class="container">
+			<!-- Brand and toggle get grouped for better mobile display -->
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse"
+					data-target="#bs-example-navbar-collapse-1">
+					<span class="sr-only">Toggle navigation</span> <span
+						class="icon-bar"></span> <span class="icon-bar"></span> <span
+						class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="index.html">BidERP</a>
+			</div>
+			<!-- Collect the nav links, forms, and other content for toggling -->
+			<div class="collapse navbar-collapse"
+				id="bs-example-navbar-collapse-1">
+				<ul class="nav navbar-nav navbar-right">
+					<li><a href="index.html">Home</a></li>
+					<li><a href="About.html">About</a></li>
+					<li><a href="Product.html">Products</a></li>
+					<li><a href="contact.html">Contact</a></li>
+					<li><a href="Blog.html">Blog</a></li>
+					<li><a href="./bidcrm/service">LogIn</a></li>
+
+				</ul>
+			</div>
+			<!-- /.navbar-collapse -->
+		</div>
+		<!-- /.container -->
+	</nav>
+
+
+
+	<!-- Page Content -->
+	<div class="container">
+
+		<h3>About</h3>
+
+		<div class="row" style="margin-top: 1%">
+
+			<div class="col-lg-4">
+				<div style="box-shadow: 2px 2px 5px rgba(0, 0, 0, .1);">
+					<div
+						style="height: 50%; background-color: rgba(244, 67, 54, 0.77); padding: 15px; box-shadow: 2px 2px 5px rgba(0, 0, 0, .1);">
+
+
+						<div
+							style="font-size: 40px; text-align: center; border-radius: 75%; margin-top: 3%">
+
+							<img id="idProfile" src="./img/mngtm2.png"
+								style="border-radius: 50%; width: 150px; height: 150px; border: 2px solid #fff">
+						</div>
+
+						<div
+							style="margin-top: 3%; text-align: center; font-family: Trebuchet MS’, Helvetica, sans-serif;">
+							<span id="idUserId" style="font-weight: 500; color: #eeeeee">Srimanta
+								Jana</span>
+							<p id="idDesignation" style="text-align: center; color: #eeeeee">President</p>
+						</div>
+
+					</div>
+
+					<div
+						style="height: 50%; background-color: #eee; padding: 6px; text-align: justify;">
+
+						<p>Srimanta is founder and president of BidERP. He has more
+							than 20+ years of experience in ERP, CRM, eCommerce and
+							Construction Management Software, published many articles and
+							scientific papers, worked in major construction projects in Asia,
+							managed and built team from ground, have rich management
+							experience, worked in multiple successful startups and fortune
+							500 companies like NPCIL, Sonata Software, Walmart.com, Trinet,
+							Spiget & Mindjet, Amdocs, Nortel Networks, CA, Clarify, Intuit
+							etc. Srimanta holds degree in Bachelor of Mechanical Engineering
+							from IIEST, Shibpur & MBA from reputed institutes in India.</p>
+
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-4">
+				<div style="box-shadow: 2px 2px 5px rgba(0, 0, 0, .1);">
+					<div
+						style="height: 50%; background-color: rgba(0, 150, 136, 0.63); padding: 16px">
+
+
+						<div
+							style="font-size: 40px; text-align: center; border-radius: 75%; margin-top: 3%">
+
+							<img id="idProfile" src="./img/mngtm3.png"
+								style="border-radius: 50%; width: 150px; height: 150px; border: 2px solid #fff">
+						</div>
+
+						<div
+							style="margin-top: 3%; text-align: center; font-family: Trebuchet MS’, Helvetica, sans-serif;">
+							<span id="idUserId" style="font-weight: 500; color: #eeeeee">Nimai
+								Majumder</span>
+							<p id="idDesignation" style="text-align: center; color: #eeeeee">VP.
+								Business Strategy & Development</p>
+						</div>
+
+					</div>
+
+					<div
+						style="height: 50%; background-color: #eee; padding: 6px; text-align: justify;">
+
+						<p>With more than two decades of management, technology, sales
+							and marketing experience in major international companies in
+							India, like HCL Technology, SAP India, HP India, IBM India, Nimai
+							is one of the distinguished professional who is helping us to
+							grow our business internationally and driving sales and marketing
+							efforts outside of USA. He has extensive experience in closing
+							multi millions dollars of sales and managing of 100 plus people
+							in his team. He holds degree in Bachelor of Mechanical
+							Engineering, IIEST, Shibpur, M Tech from IIT, Kharagpur and PGDM
+							from IIM, Bangalore.</p>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-4" style="margin-top: 2%">
+				<div style="box-shadow: 2px 2px 5px rgba(0, 0, 0, .1);">
+					<div
+						style="height: 50%; background-color: rgba(33, 150, 243, 0.73); padding: 16px">
+
+
+						<div
+							style="font-size: 40px; text-align: center; border-radius: 75%; margin-top: 3%">
+
+							<img id="idProfile" src="./img/mngtm7.png"
+								style="border-radius: 50%; width: 150px; height: 150px; border: 2px solid #fff">
+						</div>
+
+						<div
+							style="margin-top: 3%; text-align: center; font-family: Trebuchet MS’, Helvetica, sans-serif;">
+							<span id="idUserId" style="font-weight: 500; color: #eeeeee">Sam
+								Ramsey</span>
+							<p id="idDesignation" style="text-align: center; color: #eeeeee">
+								VP. Sales & Marketing</p>
+						</div>
+
+					</div>
+
+					<div
+						style="height: 50%; background-color: #eee; padding: 6px; text-align: justify;">
+
+						<p>A successful & experienced technology international sales
+							and marketing manager in both Software & Capital Equipment who
+							worked at both Japanese & American companies. Proven track record
+							of success within channel and direct B2B & B2G sales. Hired,
+							trained, coached and managed agents & distributors overseas to
+							maximize sales & customer service, speak several foreign
+							languages fluently. Sam is working as our key account executive
+							to drive business both in USA and Middle East.</p>
+					</div>
+				</div>
+			</div>
+
+		</div>
+
+
+		<div class="row">
+			<div class="col-lg-4" style="margin-top: 2%">
+				<div style="box-shadow: 2px 2px 5px rgba(0, 0, 0, .1);">
+					<div
+						style="height: 50%; background-color: rgba(233, 30, 99, 0.68); padding: 16px">
+
+
+						<div
+							style="font-size: 40px; text-align: center; border-radius: 75%; margin-top: 3%">
+
+							<img id="idProfile" src="./img/mngtm5.png"
+								style="border-radius: 50%; width: 150px; height: 150px; border: 2px solid #fff">
+						</div>
+
+						<div
+							style="margin-top: 3%; text-align: center; font-family: Trebuchet MS’, Helvetica, sans-serif;">
+							<span id="idUserId" style="font-weight: 500; color: #eeeeee">Stéphane
+								H. Maes</span>
+							<p id="idDesignation" style="text-align: center; color: #eeeeee">Advisory</p>
+						</div>
+
+					</div>
+
+					<div
+						style="height: 50%; background-color: #eee; padding: 6px; text-align: justify;">
+
+						<p>Dr Maes is Cloud and Automation Products CTO and Chief
+							Architect at HP Software and HP DT. He contributed to key new
+							technologies fields and standards including Cloud, IT/SOA SDP,
+							HPSW Cloud Products and Cloud Automation Products. He holds more
+							than 200 patents and patent applications in process and has
+							received many awards and industry recognition including MIT and
+							WTN. He holds Ph.D., MS and BS degrees in EE and Physics as well
+							as IBM MBA & ISU degree. He serves as Technical advisory to
+							BidERP Software team..</p>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-4" style="margin-top: 2%">
+				<div style="box-shadow: 2px 2px 5px rgba(0, 0, 0, .1);">
+					<div
+						style="height: 50%; background-color: rgba(63, 81, 181, 0.72); padding: 16px">
+
+
+						<div
+							style="font-size: 40px; text-align: center; border-radius: 75%; margin-top: 3%">
+
+							<img id="idProfile" src="./img/mngtm6.png"
+								style="border-radius: 50%; width: 150px; height: 150px; border: 2px solid #fff">
+						</div>
+
+						<div
+							style="margin-top: 3%; text-align: center; font-family: Trebuchet MS’, Helvetica, sans-serif;">
+							<span id="idUserId" style="font-weight: 500; color: #eeeeee">Chuck
+								Nolan</span>
+							<p id="idDesignation" style="text-align: center; color: #eeeeee">Director
+								Marketing</p>
+						</div>
+
+					</div>
+
+					<div
+						style="height: 50%; background-color: #eee; padding: 6px; text-align: justify;">
+
+						<p>Chuck is one of the most idea savvy executive, highly
+							respected business leader in becoming a fully equipped trainer in
+							management and personal coaching, quality process and standards
+							with many years of sales and marketing experience. Previously he
+							worked as Vice President of Sales & Marketing in Ovation Systems
+							Technologies, President & Chief Engineer in Com-De, President,
+							and Derivative Technologies etc. He is an expert in ISO-9001 and
+							had experience in adoption and application of standards, assisted
+							in setting up document control, performed design review, and
+							developed a database for categorizing ISO-9001 complaints for
+							statistical analysis. He has distinguished sales and marketing
+							records holding different management positions in fortune 500
+							companies and earlier worked as management consultants to HP &
+							IBM.</p>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-4">
+				<div style="box-shadow: 2px 2px 5px rgba(0, 0, 0, .1);">
+					<div
+						style="height: 50%; background-color: rgba(103, 58, 183, 0.63); padding: 16px">
+
+
+						<div
+							style="font-size: 40px; text-align: center; border-radius: 75%; margin-top: 3%">
+
+							<img id="idProfile" src="./img/mngtm4.png"
+								style="border-radius: 50%; width: 150px; height: 150px; border: 2px solid #fff">
+						</div>
+
+						<div
+							style="margin-top: 3%; text-align: center; font-family: Trebuchet MS’, Helvetica, sans-serif;">
+							<span id="idUserId" style="font-weight: 500; color: #eeeeee">Harry
+								Gordon</span>
+							<p id="idDesignation" style="text-align: center; color: #eeeeee">Director
+								Business Development</p>
+						</div>
+
+					</div>
+
+					<div
+						style="height: 50%; background-color: #eee; padding: 6px; text-align: justify;">
+
+						<p>Harry has extensive experience in international sales,
+							sales management, and business and channel development in the IT
+							industry for companies of all sizes, focusing on hardware,
+							software, and network systems. Successfully developed and
+							implemented marketing and global sales plans for distribution,
+							systems integration, value-added reseller channel, and OEM
+							channels in over 40 countries, managing up to 25 employees. He
+							worked and managed many sales organizations with different
+							capacity as Director of Sales, Specialix International, VP and GM
+							for North America IBM etc.</p>
+					</div>
+				</div>
+			</div>
+
+		</div>
+
+
+	</div>
+
+
+	<footer>
+		<div class="container-fluid"
+			style="padding: 20px; background-color: #607D8B; color: #fff">
+			<div class="col-lg-12">
+				<p>© 2015 by Artitelly Solutions , Inc</p>
+				<p>info@CloudTestSoftware.com | Tel: 1-650-823-2300</p>
+			</div>
+		</div>
+	</footer>
+	<!-- Footer -->
+
+
+	<!-- jQuery -->
+	<script src="js/jquery.js"></script>
+
+	<!-- Bootstrap Core JavaScript -->
+	<script src="js/bootstrap.min.js"></script>
+
+	<!-- Script to Activate the Carousel -->
+	<script>
+
+    </script>
+
+</body>
+
+</html>

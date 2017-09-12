@@ -1,0 +1,85 @@
+//*****************************************************************//
+//Adding Object Rule
+//Table Name:Dataimport
+//Attribute Name:Dataimport Rule
+//********************************************************************//
+
+	<ObjectRule>
+		Name=Dataimport Rule
+		TableName=Dataimport
+		EffectedTable=ImportLog
+		Description=Calling Upadte and Insert Rule for object Dataimport
+		Reason=1
+		ActionState=1
+		Condition=objid$gt$0
+		RuleIndex=1
+		Status=1
+	</ObjectRule>
+
+//*****************************************************************//
+//Adding Action Query
+//Table Name:Dataimport
+//Name:Call Insert_Dataimport procedure
+//Step No:1
+//**************************************************************//
+
+	<ActionQuery>
+		Name=Call Insert_Dataimport procedure
+		TableName=Dataimport
+		Description=Call Insert_Dataimport procedure
+		StepNo=1
+		Input=@Objid
+		InputDataType=@Integer
+		Output=$activityId
+		QueryType=0
+		HasRecordSet=0
+		OracleQuery=exec Insert_Dataimport(@objid)
+		MssqlQuery=exec Insert_Dataimport @objid
+		Status=0
+	</ActionQuery>
+
+	<ActionQuery>
+		Name=Select -ve objid for child ImportLog
+		TableName=ImportLog
+		Description=Select -ve objid for child ImportLog
+		StepNo=2
+		Input=@Objid
+		InputDataType=@Integer
+		Output=$objid $name $ImportLogid
+		QueryType=0
+		HasRecordSet=0
+		OracleQuery=select objid, name ,objid ImportLogid from table_ImportLog where objid like \'-%\' and ImportLog2Dataimport=@objid
+		MssqlQuery=select objid, name ,objid ImportLogid from table_ImportLog where objid like \'-%\' and ImportLog2Dataimport=@objid
+		Status=0
+	</ActionQuery>
+
+	<ActionQuery>
+		Name=Update -ve objid for child ImportLog
+		TableName=ImportLog
+		Description=Update -ve objid for child ImportLog
+		StepNo=3
+		Input=@objid @name @ImportLogid
+		InputDataType=@Integer @Varchar @Integer
+		Output=$count
+		QueryType=0
+		HasRecordSet=0
+		OracleQuery=update table_ImportLog set objid=@objid where objid=@ImportLogid and name=@name
+		MssqlQuery=update table_ImportLog set objid=@objid where objid=@ImportLogid and name=@name
+		Status=0
+	</ActionQuery>
+
+
+	<ActionQuery>
+		Name=Call Upadte_Dataimport procedure
+		TableName=Dataimport
+		Description=Call Update_Dataimport procedure
+		StepNo=4
+		Input=@Objid
+		InputDataType=@Integer
+		Output=$activityId
+		QueryType=0
+		HasRecordSet=0
+		OracleQuery=exec Update_Dataimport(@objid)
+		MssqlQuery=exec Update_Dataimport @objid
+		Status=0
+	</ActionQuery>

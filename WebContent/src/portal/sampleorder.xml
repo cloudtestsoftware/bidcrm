@@ -1,0 +1,30 @@
+<items>
+<item type="settings" inputWidth="200" position="label-left" labelWidth="100"/>
+<item type="hidden" label="" name="sampleorder:objid:false:RAW:16" inputWidth="200" labelWidth="100" id="sampleorder:objid:false:RAW:16" value=""/>
+<item type="select" label="Campaign" name="sampleorder:sampleorder2campaign:true:RAW:16" inputWidth="200" labelWidth="100" id="sampleorder:sampleorder2campaign:true:RAW:16" value="">
+<option value="562018714A146C18E050960A6B3A3B51" label="Summer Camp 2017"/>
+</item>
+<item type="input" label="Name" name="sampleorder:name:false:VARCHAR2:100" inputWidth="200" labelWidth="100" id="sampleorder:name:false:VARCHAR2:100" value=""/>
+<item type="input" label="Last Name" name="sampleorder:lastname:false:VARCHAR2:100" inputWidth="200" labelWidth="100" id="sampleorder:lastname:false:VARCHAR2:100" value=""/>
+<!--item type="input" label="Billing Address" name="sampleorder:billingaddress:false:VARCHAR2:300" inputWidth="200" labelWidth="100" id="sampleorder:billingaddress:false:VARCHAR2:300" value=""/>
+<item type="input" label="Billing Country" name="sampleorder:billingcountry:true:VARCHAR2:30" inputWidth="200" labelWidth="100" id="sampleorder:billingcountry:true:VARCHAR2:30" value=""/>
+<item type="input" label="Billing State" name="sampleorder:billingstate:true:VARCHAR2:30" inputWidth="200" labelWidth="100" id="sampleorder:billingstate:true:VARCHAR2:30" value=""/>
+<item type="input" label="Billing City" name="sampleorder:billingcity:true:VARCHAR2:50" inputWidth="200" labelWidth="100" id="sampleorder:billingcity:true:VARCHAR2:50" value=""/>
+<item type="input" label="Billing Zip" name="sampleorder:billingzipcode:true:VARCHAR2:10" inputWidth="200" labelWidth="100" id="sampleorder:billingzipcode:true:VARCHAR2:10" value=""/>
+-->
+<item type="input" label="Office Number" name="sampleorder:officephone:true:VARCHAR2:20" inputWidth="200" labelWidth="100" id="sampleorder:officephone:true:VARCHAR2:20" value=""/>
+<item type="input" label="Mobile No" name="sampleorder:mobile:false:VARCHAR2:20" inputWidth="200" labelWidth="100" id="sampleorder:mobile:false:VARCHAR2:20" value=""/>
+<item type="input" label="Email" name="sampleorder:email:true:VARCHAR2:100" inputWidth="200" labelWidth="100" id="sampleorder:email:true:VARCHAR2:100" value=""/>
+<item type="input" label="Shipping Address" name="sampleorder:shippingaddress:false:VARCHAR2:300" inputWidth="200" labelWidth="100" id="sampleorder:shippingaddress:false:VARCHAR2:300" value=""/>
+<item type="input" label="Shipping Country" name="sampleorder:shippingcountry:true:VARCHAR2:40" inputWidth="200" labelWidth="100" id="sampleorder:shippingcountry:true:VARCHAR2:40" value=""/>
+<item type="input" label="Shipping State" name="sampleorder:shippingstate:true:VARCHAR2:30" inputWidth="200" labelWidth="100" id="sampleorder:shippingstate:true:VARCHAR2:30" value=""/>
+<item type="input" label="Shipping City" name="sampleorder:shippingcity:true:VARCHAR2:50" inputWidth="200" labelWidth="100" id="sampleorder:shippingcity:true:VARCHAR2:50" value=""/>
+<item type="input" label="Shipping Zip" name="sampleorder:shippingzipcode:true:VARCHAR2:10" inputWidth="200" labelWidth="100" id="sampleorder:shippingzipcode:true:VARCHAR2:10" value=""/>
+<!--item type="editor" label="Quick Note" name="sampleorder:quicknote:true:VARCHAR2:2000" inputWidth="200" labelWidth="100" id="sampleorder:quicknote:true:VARCHAR2:2000" value="" inputHeight="250" toolbar="true" iconsPath="./src/codebase/imgs/"/>
+<item type="input" label="Agent Id" name="sampleorder:agentid:true:VARCHAR2:50" inputWidth="200" labelWidth="100" id="sampleorder:agentid:true:VARCHAR2:50" value=""/>
+<item type="select" label="Status" name="sampleorder:status:true:VARCHAR2:50" inputWidth="200" labelWidth="100" id="sampleorder:status:true:VARCHAR2:50" value="">
+<option value="Open" label="Open"/>
+<option value="Dispatched" label="Dispatched"/>
+<option value="Pending" label="Pending"/>
+</item-->
+</items>

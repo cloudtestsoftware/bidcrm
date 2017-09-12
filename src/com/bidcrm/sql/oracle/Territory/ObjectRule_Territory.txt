@@ -1,0 +1,116 @@
+//*****************************************************************//
+//Adding Object Rule
+//Table Name:Territory
+//Attribute Name:Territory Rule
+//********************************************************************//
+
+	<ObjectRule>
+		Name=Territory Rule
+		TableName=Territory
+		EffectedTable=Account
+		Description=Calling Upadte and Insert Rule for object Territory
+		Reason=1
+		ActionState=1
+		Condition=objid$gt$0
+		RuleIndex=1
+		Status=1
+	</ObjectRule>
+
+//*****************************************************************//
+//Adding Action Query
+//Table Name:Territory
+//Name:Call Insert_Territory procedure
+//Step No:1
+//**************************************************************//
+
+	<ActionQuery>
+		Name=Call Insert_Territory procedure
+		TableName=Territory
+		Description=Call Insert_Territory procedure
+		StepNo=1
+		Input=@Objid
+		InputDataType=@Integer
+		Output=$activityId
+		QueryType=0
+		HasRecordSet=0
+		OracleQuery=exec Insert_Territory(@objid)
+		MssqlQuery=exec Insert_Territory @objid
+		Status=0
+	</ActionQuery>
+
+	<ActionQuery>
+		Name=Select -ve objid for child Account
+		TableName=Account
+		Description=Select -ve objid for child Account
+		StepNo=2
+		Input=@Objid
+		InputDataType=@Integer
+		Output=$objid $name $Accountid
+		QueryType=0
+		HasRecordSet=0
+		OracleQuery=select objid, name ,objid Accountid from table_Account where objid like \'-%\' and Account2Territory=@objid
+		MssqlQuery=select objid, name ,objid Accountid from table_Account where objid like \'-%\' and Account2Territory=@objid
+		Status=0
+	</ActionQuery>
+
+	<ActionQuery>
+		Name=Update -ve objid for child Account
+		TableName=Account
+		Description=Update -ve objid for child Account
+		StepNo=3
+		Input=@objid @name @Accountid
+		InputDataType=@Integer @Varchar @Integer
+		Output=$count
+		QueryType=0
+		HasRecordSet=0
+		OracleQuery=update table_Account set objid=@objid where objid=@Accountid and name=@name
+		MssqlQuery=update table_Account set objid=@objid where objid=@Accountid and name=@name
+		Status=0
+	</ActionQuery>
+
+
+	<ActionQuery>
+		Name=Select -ve objid for child Site
+		TableName=Site
+		Description=Select -ve objid for child Site
+		StepNo=4
+		Input=@Objid
+		InputDataType=@Integer
+		Output=$objid $name $Siteid
+		QueryType=0
+		HasRecordSet=0
+		OracleQuery=select objid, name ,objid Siteid from table_Site where objid like \'-%\' and Site2Territory=@objid
+		MssqlQuery=select objid, name ,objid Siteid from table_Site where objid like \'-%\' and Site2Territory=@objid
+		Status=0
+	</ActionQuery>
+
+	<ActionQuery>
+		Name=Update -ve objid for child Site
+		TableName=Site
+		Description=Update -ve objid for child Site
+		StepNo=5
+		Input=@objid @name @Siteid
+		InputDataType=@Integer @Varchar @Integer
+		Output=$count
+		QueryType=0
+		HasRecordSet=0
+		OracleQuery=update table_Site set objid=@objid where objid=@Siteid and name=@name
+		MssqlQuery=update table_Site set objid=@objid where objid=@Siteid and name=@name
+		Status=0
+	</ActionQuery>
+
+
+	<ActionQuery>
+		Name=Call Upadte_Territory procedure
+		TableName=Territory
+		Description=Call Update_Territory procedure
+		StepNo=6
+		Input=@Objid
+		InputDataType=@Integer
+		Output=$activityId
+		QueryType=0
+		HasRecordSet=0
+		OracleQuery=exec Update_Territory(@objid)
+		MssqlQuery=exec Update_Territory @objid
+		Status=0
+	</ActionQuery>

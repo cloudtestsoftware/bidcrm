@@ -1,0 +1,16 @@
+	
+<Context>
+
+
+  <Resource name="jdbc/SoftleanDs" auth="Container"
+              type="javax.sql.DataSource"
+              driverClassName="oracle.jdbc.OracleDriver"
+              url="jdbc:oracle:thin:@107.21.103.155:1521:paydb1"
+              username="crmdb" 
+              password="crmdb1234" 
+              maxActive="20"
+              maxIdle="10"
+              maxWait="20000"
+              logger="false"/>
+
+</Context>	

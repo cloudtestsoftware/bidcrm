@@ -1,0 +1,116 @@
+//*****************************************************************//
+//Adding Object Rule
+//Table Name:Profile
+//Attribute Name:Profile Rule
+//********************************************************************//
+
+	<ObjectRule>
+		Name=Profile Rule
+		TableName=Profile
+		EffectedTable=ProfileSetting
+		Description=Calling Upadte and Insert Rule for object Profile
+		Reason=1
+		ActionState=1
+		Condition=objid$gt$0
+		RuleIndex=1
+		Status=1
+	</ObjectRule>
+
+//*****************************************************************//
+//Adding Action Query
+//Table Name:Profile
+//Name:Call Insert_Profile procedure
+//Step No:1
+//**************************************************************//
+
+	<ActionQuery>
+		Name=Call Insert_Profile procedure
+		TableName=Profile
+		Description=Call Insert_Profile procedure
+		StepNo=1
+		Input=@Objid
+		InputDataType=@Integer
+		Output=$activityId
+		QueryType=0
+		HasRecordSet=0
+		OracleQuery=exec Insert_Profile(@objid)
+		MssqlQuery=exec Insert_Profile @objid
+		Status=0
+	</ActionQuery>
+
+	<ActionQuery>
+		Name=Select -ve objid for child ProfileSetting
+		TableName=ProfileSetting
+		Description=Select -ve objid for child ProfileSetting
+		StepNo=2
+		Input=@Objid
+		InputDataType=@Integer
+		Output=$objid $name $ProfileSettingid
+		QueryType=0
+		HasRecordSet=0
+		OracleQuery=select objid, name ,objid ProfileSettingid from table_ProfileSetting where objid like \'-%\' and ProfileSetting2Profile=@objid
+		MssqlQuery=select objid, name ,objid ProfileSettingid from table_ProfileSetting where objid like \'-%\' and ProfileSetting2Profile=@objid
+		Status=0
+	</ActionQuery>
+
+	<ActionQuery>
+		Name=Update -ve objid for child ProfileSetting
+		TableName=ProfileSetting
+		Description=Update -ve objid for child ProfileSetting
+		StepNo=3
+		Input=@objid @name @ProfileSettingid
+		InputDataType=@Integer @Varchar @Integer
+		Output=$count
+		QueryType=0
+		HasRecordSet=0
+		OracleQuery=update table_ProfileSetting set objid=@objid where objid=@ProfileSettingid and name=@name
+		MssqlQuery=update table_ProfileSetting set objid=@objid where objid=@ProfileSettingid and name=@name
+		Status=0
+	</ActionQuery>
+
+
+	<ActionQuery>
+		Name=Select -ve objid for child Subscription
+		TableName=Subscription
+		Description=Select -ve objid for child Subscription
+		StepNo=4
+		Input=@Objid
+		InputDataType=@Integer
+		Output=$objid $name $Subscriptionid
+		QueryType=0
+		HasRecordSet=0
+		OracleQuery=select objid, name ,objid Subscriptionid from table_Subscription where objid like \'-%\' and Subscription2Profile=@objid
+		MssqlQuery=select objid, name ,objid Subscriptionid from table_Subscription where objid like \'-%\' and Subscription2Profile=@objid
+		Status=0
+	</ActionQuery>
+
+	<ActionQuery>
+		Name=Update -ve objid for child Subscription
+		TableName=Subscription
+		Description=Update -ve objid for child Subscription
+		StepNo=5
+		Input=@objid @name @Subscriptionid
+		InputDataType=@Integer @Varchar @Integer
+		Output=$count
+		QueryType=0
+		HasRecordSet=0
+		OracleQuery=update table_Subscription set objid=@objid where objid=@Subscriptionid and name=@name
+		MssqlQuery=update table_Subscription set objid=@objid where objid=@Subscriptionid and name=@name
+		Status=0
+	</ActionQuery>
+
+
+	<ActionQuery>
+		Name=Call Upadte_Profile procedure
+		TableName=Profile
+		Description=Call Update_Profile procedure
+		StepNo=6
+		Input=@Objid
+		InputDataType=@Integer
+		Output=$activityId
+		QueryType=0
+		HasRecordSet=0
+		OracleQuery=exec Update_Profile(@objid)
+		MssqlQuery=exec Update_Profile @objid
+		Status=0
+	</ActionQuery>

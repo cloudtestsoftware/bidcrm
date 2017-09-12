@@ -1,0 +1,17 @@
+Hi @member,
+
+Please look at the latest summary report for your campaign "@campaign".
+
+We have received lead since last reported date @lastreported
+
+Total new leads opened/clicked   :   @totallead
+Lead Assigned to you per setting :   @leadassigned
+
+Please login and look at your console for these new leads if you not looked at yet. 
+
+https://www.bidcrm.com/bidcrm/service
+
+Thank you,
+
+Artitelly Campaign Management Team,
+https://www.bidcrm.com

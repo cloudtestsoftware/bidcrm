@@ -1,0 +1,85 @@
+//*****************************************************************//
+//Adding Object Rule
+//Table Name:Storepartlist
+//Attribute Name:Storepartlist Rule
+//********************************************************************//
+
+	<ObjectRule>
+		Name=Storepartlist Rule
+		TableName=Storepartlist
+		EffectedTable=StoreParts
+		Description=Calling Upadte and Insert Rule for object Storepartlist
+		Reason=1
+		ActionState=1
+		Condition=objid$gt$0
+		RuleIndex=1
+		Status=1
+	</ObjectRule>
+
+//*****************************************************************//
+//Adding Action Query
+//Table Name:Storepartlist
+//Name:Call Insert_Storepartlist procedure
+//Step No:1
+//**************************************************************//
+
+	<ActionQuery>
+		Name=Call Insert_Storepartlist procedure
+		TableName=Storepartlist
+		Description=Call Insert_Storepartlist procedure
+		StepNo=1
+		Input=@Objid
+		InputDataType=@Integer
+		Output=$activityId
+		QueryType=0
+		HasRecordSet=0
+		OracleQuery=exec Insert_Storepartlist(@objid)
+		MssqlQuery=exec Insert_Storepartlist @objid
+		Status=0
+	</ActionQuery>
+
+	<ActionQuery>
+		Name=Select -ve objid for child StoreParts
+		TableName=StoreParts
+		Description=Select -ve objid for child StoreParts
+		StepNo=2
+		Input=@Objid
+		InputDataType=@Integer
+		Output=$objid $name $StorePartsid
+		QueryType=0
+		HasRecordSet=0
+		OracleQuery=select objid, name ,objid StorePartsid from table_StoreParts where objid like \'-%\' and StoreParts2Storepartlist=@objid
+		MssqlQuery=select objid, name ,objid StorePartsid from table_StoreParts where objid like \'-%\' and StoreParts2Storepartlist=@objid
+		Status=0
+	</ActionQuery>
+
+	<ActionQuery>
+		Name=Update -ve objid for child StoreParts
+		TableName=StoreParts
+		Description=Update -ve objid for child StoreParts
+		StepNo=3
+		Input=@objid @name @StorePartsid
+		InputDataType=@Integer @Varchar @Integer
+		Output=$count
+		QueryType=0
+		HasRecordSet=0
+		OracleQuery=update table_StoreParts set objid=@objid where objid=@StorePartsid and name=@name
+		MssqlQuery=update table_StoreParts set objid=@objid where objid=@StorePartsid and name=@name
+		Status=0
+	</ActionQuery>
+
+
+	<ActionQuery>
+		Name=Call Upadte_Storepartlist procedure
+		TableName=Storepartlist
+		Description=Call Update_Storepartlist procedure
+		StepNo=4
+		Input=@Objid
+		InputDataType=@Integer
+		Output=$activityId
+		QueryType=0
+		HasRecordSet=0
+		OracleQuery=exec Update_Storepartlist(@objid)
+		MssqlQuery=exec Update_Storepartlist @objid
+		Status=0
+	</ActionQuery>

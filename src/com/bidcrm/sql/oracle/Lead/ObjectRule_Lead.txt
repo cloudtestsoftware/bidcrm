@@ -1,0 +1,85 @@
+//*****************************************************************//
+//Adding Object Rule
+//Table Name:Lead
+//Attribute Name:Lead Rule
+//********************************************************************//
+
+	<ObjectRule>
+		Name=Lead Rule
+		TableName=Lead
+		EffectedTable=Samples
+		Description=Calling Upadte and Insert Rule for object Lead
+		Reason=1
+		ActionState=1
+		Condition=objid$gt$0
+		RuleIndex=1
+		Status=1
+	</ObjectRule>
+
+//*****************************************************************//
+//Adding Action Query
+//Table Name:Lead
+//Name:Call Insert_Lead procedure
+//Step No:1
+//**************************************************************//
+
+	<ActionQuery>
+		Name=Call Insert_Lead procedure
+		TableName=Lead
+		Description=Call Insert_Lead procedure
+		StepNo=1
+		Input=@Objid
+		InputDataType=@Integer
+		Output=$activityId
+		QueryType=0
+		HasRecordSet=0
+		OracleQuery=exec Insert_Lead(@objid)
+		MssqlQuery=exec Insert_Lead @objid
+		Status=0
+	</ActionQuery>
+
+	<ActionQuery>
+		Name=Select -ve objid for child Samples
+		TableName=Samples
+		Description=Select -ve objid for child Samples
+		StepNo=2
+		Input=@Objid
+		InputDataType=@Integer
+		Output=$objid $name $Samplesid
+		QueryType=0
+		HasRecordSet=0
+		OracleQuery=select objid, name ,objid Samplesid from table_Samples where objid like \'-%\' and Samples2Lead=@objid
+		MssqlQuery=select objid, name ,objid Samplesid from table_Samples where objid like \'-%\' and Samples2Lead=@objid
+		Status=0
+	</ActionQuery>
+
+	<ActionQuery>
+		Name=Update -ve objid for child Samples
+		TableName=Samples
+		Description=Update -ve objid for child Samples
+		StepNo=3
+		Input=@objid @name @Samplesid
+		InputDataType=@Integer @Varchar @Integer
+		Output=$count
+		QueryType=0
+		HasRecordSet=0
+		OracleQuery=update table_Samples set objid=@objid where objid=@Samplesid and name=@name
+		MssqlQuery=update table_Samples set objid=@objid where objid=@Samplesid and name=@name
+		Status=0
+	</ActionQuery>
+
+
+	<ActionQuery>
+		Name=Call Upadte_Lead procedure
+		TableName=Lead
+		Description=Call Update_Lead procedure
+		StepNo=4
+		Input=@Objid
+		InputDataType=@Integer
+		Output=$activityId
+		QueryType=0
+		HasRecordSet=0
+		OracleQuery=exec Update_Lead(@objid)
+		MssqlQuery=exec Update_Lead @objid
+		Status=0
+	</ActionQuery>

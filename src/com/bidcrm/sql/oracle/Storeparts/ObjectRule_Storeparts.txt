@@ -1,0 +1,85 @@
+//*****************************************************************//
+//Adding Object Rule
+//Table Name:Storeparts
+//Attribute Name:Storeparts Rule
+//********************************************************************//
+
+	<ObjectRule>
+		Name=Storeparts Rule
+		TableName=Storeparts
+		EffectedTable=AddInventory
+		Description=Calling Upadte and Insert Rule for object Storeparts
+		Reason=1
+		ActionState=1
+		Condition=objid$gt$0
+		RuleIndex=1
+		Status=1
+	</ObjectRule>
+
+//*****************************************************************//
+//Adding Action Query
+//Table Name:Storeparts
+//Name:Call Insert_Storeparts procedure
+//Step No:1
+//**************************************************************//
+
+	<ActionQuery>
+		Name=Call Insert_Storeparts procedure
+		TableName=Storeparts
+		Description=Call Insert_Storeparts procedure
+		StepNo=1
+		Input=@Objid
+		InputDataType=@Integer
+		Output=$activityId
+		QueryType=0
+		HasRecordSet=0
+		OracleQuery=exec Insert_Storeparts(@objid)
+		MssqlQuery=exec Insert_Storeparts @objid
+		Status=0
+	</ActionQuery>
+
+	<ActionQuery>
+		Name=Select -ve objid for child AddInventory
+		TableName=AddInventory
+		Description=Select -ve objid for child AddInventory
+		StepNo=2
+		Input=@Objid
+		InputDataType=@Integer
+		Output=$objid $name $AddInventoryid
+		QueryType=0
+		HasRecordSet=0
+		OracleQuery=select objid, name ,objid AddInventoryid from table_AddInventory where objid like \'-%\' and AddInventory2Storeparts=@objid
+		MssqlQuery=select objid, name ,objid AddInventoryid from table_AddInventory where objid like \'-%\' and AddInventory2Storeparts=@objid
+		Status=0
+	</ActionQuery>
+
+	<ActionQuery>
+		Name=Update -ve objid for child AddInventory
+		TableName=AddInventory
+		Description=Update -ve objid for child AddInventory
+		StepNo=3
+		Input=@objid @name @AddInventoryid
+		InputDataType=@Integer @Varchar @Integer
+		Output=$count
+		QueryType=0
+		HasRecordSet=0
+		OracleQuery=update table_AddInventory set objid=@objid where objid=@AddInventoryid and name=@name
+		MssqlQuery=update table_AddInventory set objid=@objid where objid=@AddInventoryid and name=@name
+		Status=0
+	</ActionQuery>
+
+
+	<ActionQuery>
+		Name=Call Upadte_Storeparts procedure
+		TableName=Storeparts
+		Description=Call Update_Storeparts procedure
+		StepNo=4
+		Input=@Objid
+		InputDataType=@Integer
+		Output=$activityId
+		QueryType=0
+		HasRecordSet=0
+		OracleQuery=exec Update_Storeparts(@objid)
+		MssqlQuery=exec Update_Storeparts @objid
+		Status=0
+	</ActionQuery>

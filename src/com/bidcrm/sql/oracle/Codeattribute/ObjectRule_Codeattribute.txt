@@ -1,0 +1,116 @@
+//*****************************************************************//
+//Adding Object Rule
+//Table Name:Codeattribute
+//Attribute Name:Codeattribute Rule
+//********************************************************************//
+
+	<ObjectRule>
+		Name=Codeattribute Rule
+		TableName=Codeattribute
+		EffectedTable=CustomCode
+		Description=Calling Upadte and Insert Rule for object Codeattribute
+		Reason=1
+		ActionState=1
+		Condition=objid$gt$0
+		RuleIndex=1
+		Status=1
+	</ObjectRule>
+
+//*****************************************************************//
+//Adding Action Query
+//Table Name:Codeattribute
+//Name:Call Insert_Codeattribute procedure
+//Step No:1
+//**************************************************************//
+
+	<ActionQuery>
+		Name=Call Insert_Codeattribute procedure
+		TableName=Codeattribute
+		Description=Call Insert_Codeattribute procedure
+		StepNo=1
+		Input=@Objid
+		InputDataType=@Integer
+		Output=$activityId
+		QueryType=0
+		HasRecordSet=0
+		OracleQuery=exec Insert_Codeattribute(@objid)
+		MssqlQuery=exec Insert_Codeattribute @objid
+		Status=0
+	</ActionQuery>
+
+	<ActionQuery>
+		Name=Select -ve objid for child CustomCode
+		TableName=CustomCode
+		Description=Select -ve objid for child CustomCode
+		StepNo=2
+		Input=@Objid
+		InputDataType=@Integer
+		Output=$objid $name $CustomCodeid
+		QueryType=0
+		HasRecordSet=0
+		OracleQuery=select objid, name ,objid CustomCodeid from table_CustomCode where objid like \'-%\' and CustomCode2Codeattribute=@objid
+		MssqlQuery=select objid, name ,objid CustomCodeid from table_CustomCode where objid like \'-%\' and CustomCode2Codeattribute=@objid
+		Status=0
+	</ActionQuery>
+
+	<ActionQuery>
+		Name=Update -ve objid for child CustomCode
+		TableName=CustomCode
+		Description=Update -ve objid for child CustomCode
+		StepNo=3
+		Input=@objid @name @CustomCodeid
+		InputDataType=@Integer @Varchar @Integer
+		Output=$count
+		QueryType=0
+		HasRecordSet=0
+		OracleQuery=update table_CustomCode set objid=@objid where objid=@CustomCodeid and name=@name
+		MssqlQuery=update table_CustomCode set objid=@objid where objid=@CustomCodeid and name=@name
+		Status=0
+	</ActionQuery>
+
+
+	<ActionQuery>
+		Name=Select -ve objid for child GenericCode
+		TableName=GenericCode
+		Description=Select -ve objid for child GenericCode
+		StepNo=4
+		Input=@Objid
+		InputDataType=@Integer
+		Output=$objid $name $GenericCodeid
+		QueryType=0
+		HasRecordSet=0
+		OracleQuery=select objid, name ,objid GenericCodeid from table_GenericCode where objid like \'-%\' and GenericCode2Codeattribute=@objid
+		MssqlQuery=select objid, name ,objid GenericCodeid from table_GenericCode where objid like \'-%\' and GenericCode2Codeattribute=@objid
+		Status=0
+	</ActionQuery>
+
+	<ActionQuery>
+		Name=Update -ve objid for child GenericCode
+		TableName=GenericCode
+		Description=Update -ve objid for child GenericCode
+		StepNo=5
+		Input=@objid @name @GenericCodeid
+		InputDataType=@Integer @Varchar @Integer
+		Output=$count
+		QueryType=0
+		HasRecordSet=0
+		OracleQuery=update table_GenericCode set objid=@objid where objid=@GenericCodeid and name=@name
+		MssqlQuery=update table_GenericCode set objid=@objid where objid=@GenericCodeid and name=@name
+		Status=0
+	</ActionQuery>
+
+
+	<ActionQuery>
+		Name=Call Upadte_Codeattribute procedure
+		TableName=Codeattribute
+		Description=Call Update_Codeattribute procedure
+		StepNo=6
+		Input=@Objid
+		InputDataType=@Integer
+		Output=$activityId
+		QueryType=0
+		HasRecordSet=0
+		OracleQuery=exec Update_Codeattribute(@objid)
+		MssqlQuery=exec Update_Codeattribute @objid
+		Status=0
+	</ActionQuery>

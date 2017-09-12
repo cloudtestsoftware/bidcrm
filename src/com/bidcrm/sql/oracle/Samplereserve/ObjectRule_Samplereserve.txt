@@ -1,0 +1,116 @@
+//*****************************************************************//
+//Adding Object Rule
+//Table Name:Samplereserve
+//Attribute Name:Samplereserve Rule
+//********************************************************************//
+
+	<ObjectRule>
+		Name=Samplereserve Rule
+		TableName=Samplereserve
+		EffectedTable=Samples
+		Description=Calling Upadte and Insert Rule for object Samplereserve
+		Reason=1
+		ActionState=1
+		Condition=objid$gt$0
+		RuleIndex=1
+		Status=1
+	</ObjectRule>
+
+//*****************************************************************//
+//Adding Action Query
+//Table Name:Samplereserve
+//Name:Call Insert_Samplereserve procedure
+//Step No:1
+//**************************************************************//
+
+	<ActionQuery>
+		Name=Call Insert_Samplereserve procedure
+		TableName=Samplereserve
+		Description=Call Insert_Samplereserve procedure
+		StepNo=1
+		Input=@Objid
+		InputDataType=@Integer
+		Output=$activityId
+		QueryType=0
+		HasRecordSet=0
+		OracleQuery=exec Insert_Samplereserve(@objid)
+		MssqlQuery=exec Insert_Samplereserve @objid
+		Status=0
+	</ActionQuery>
+
+	<ActionQuery>
+		Name=Select -ve objid for child Samples
+		TableName=Samples
+		Description=Select -ve objid for child Samples
+		StepNo=2
+		Input=@Objid
+		InputDataType=@Integer
+		Output=$objid $name $Samplesid
+		QueryType=0
+		HasRecordSet=0
+		OracleQuery=select objid, name ,objid Samplesid from table_Samples where objid like \'-%\' and Samples2Samplereserve=@objid
+		MssqlQuery=select objid, name ,objid Samplesid from table_Samples where objid like \'-%\' and Samples2Samplereserve=@objid
+		Status=0
+	</ActionQuery>
+
+	<ActionQuery>
+		Name=Update -ve objid for child Samples
+		TableName=Samples
+		Description=Update -ve objid for child Samples
+		StepNo=3
+		Input=@objid @name @Samplesid
+		InputDataType=@Integer @Varchar @Integer
+		Output=$count
+		QueryType=0
+		HasRecordSet=0
+		OracleQuery=update table_Samples set objid=@objid where objid=@Samplesid and name=@name
+		MssqlQuery=update table_Samples set objid=@objid where objid=@Samplesid and name=@name
+		Status=0
+	</ActionQuery>
+
+
+	<ActionQuery>
+		Name=Select -ve objid for child ReorderSamples
+		TableName=ReorderSamples
+		Description=Select -ve objid for child ReorderSamples
+		StepNo=4
+		Input=@Objid
+		InputDataType=@Integer
+		Output=$objid $name $ReorderSamplesid
+		QueryType=0
+		HasRecordSet=0
+		OracleQuery=select objid, name ,objid ReorderSamplesid from table_ReorderSamples where objid like \'-%\' and ReorderSamples2Samplereserve=@objid
+		MssqlQuery=select objid, name ,objid ReorderSamplesid from table_ReorderSamples where objid like \'-%\' and ReorderSamples2Samplereserve=@objid
+		Status=0
+	</ActionQuery>
+
+	<ActionQuery>
+		Name=Update -ve objid for child ReorderSamples
+		TableName=ReorderSamples
+		Description=Update -ve objid for child ReorderSamples
+		StepNo=5
+		Input=@objid @name @ReorderSamplesid
+		InputDataType=@Integer @Varchar @Integer
+		Output=$count
+		QueryType=0
+		HasRecordSet=0
+		OracleQuery=update table_ReorderSamples set objid=@objid where objid=@ReorderSamplesid and name=@name
+		MssqlQuery=update table_ReorderSamples set objid=@objid where objid=@ReorderSamplesid and name=@name
+		Status=0
+	</ActionQuery>
+
+
+	<ActionQuery>
+		Name=Call Upadte_Samplereserve procedure
+		TableName=Samplereserve
+		Description=Call Update_Samplereserve procedure
+		StepNo=6
+		Input=@Objid
+		InputDataType=@Integer
+		Output=$activityId
+		QueryType=0
+		HasRecordSet=0
+		OracleQuery=exec Update_Samplereserve(@objid)
+		MssqlQuery=exec Update_Samplereserve @objid
+		Status=0
+	</ActionQuery>

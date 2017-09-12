@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="">
+<meta name="author" content="">
+
+<title>BidERP, Bidding & Construction ERP in Cloud</title>
+
+<!-- Bootstrap Core CSS -->
+<link href="css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Custom CSS -->
+<link href="css/modern-business.css" rel="stylesheet">
+
+<!-- Custom Fonts -->
+<!--<link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">-->
+<link href="http://fonts.googleapis.com/css?family=Inconsolata"
+	rel="stylesheet" type="text/css">
+<style>
+.navbar-inverse .navbar-brand {
+	color: #fff;
+	font-size: 22px;
+}
+
+.navbar-inverse {
+	border-color: #00BCD4;
+}
+
+.navbar-inverse {
+	background-color: #00BCD4;
+	box-shadow: 0 3px 3px rgba(0, 0, 0, .29);
+	/* border-color: #080808; */
+}
+
+.navbar-inverse .navbar-nav>li>a {
+	color: #fff;
+	text-transform: uppercase;
+}
+
+.panel {
+	box-shadow: 2px 2px 5px rgba(0, 0, 0, .1);
+	border-radius: 0;
+	cursor: pointer;
+	border: 1px solid #dedede;
+}
+
+.panel-default>.panel-heading {
+	color: #333;
+	background-color: #00BCD4;
+	border-color: none;
+	color: #fff;
+	text-align: center;
+	font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.panel-body {
+	font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	text-align: left;
+}
+
+.card-panel {
+	transition: box-shadow .25s;
+	padding: 24px;
+	margin: .5rem 0 1rem 0;
+	border-radius: 2px;
+	background-color: #fff;
+	box-shadow: 2px 2px 5px rgba(0, 0, 0, .1);
+	border-left: 10px solid #CDDC39;
+}
+
+img.responsive-img, video.responsive-video {
+	max-width: 100%;
+	height: auto;
+}
+
+.circle {
+	border-radius: 50%;
+}
+
+img.responsive-img, video.responsive-video {
+	max-width: 100%;
+	height: auto;
+	width: 60px;
+	background-color: #fafafa
+}
+
+.navbar-inverse .navbar-nav>li>a:hover {
+	background-color: rgba(63, 81, 181, 0.63);
+}
+
+panel-heading {
+	padding: 10px 15px;
+	border-bottom: 0px solid transparent;
+	border-top-left-radius: 0px;
+	border-top-right-radius: 0px;
+}
+
+.portfolio {
+	box-shadow: 2px 2px 5px rgba(0, 0, 0, .1);
+	background-color: #fff;
+}
+
+.img-portfolio {
+	margin: 0px;
+	padding: 10px;
+}
+
+.iconImage {
+	display: block;
+	text-align: center;
+	margin: 0 auto;
+}
+
+.panelFooter {
+	background-color: #607D8B;
+	padding: 10px;
+	box-shadow: 2px 2px 2px #888888;
+}
+
+.circle1 {
+	width: 9px;
+	height: 9px;
+	-webkit-border-radius: 25px;
+	-moz-border-radius: 25px;
+	border-radius: 20px;
+	background-color: #AED581;
+	display: inline-block;
+	margin-right: 10px;
+}
+
+.circle2 {
+	width: 9px;
+	height: 9px;
+	-webkit-border-radius: 25px;
+	-moz-border-radius: 25px;
+	border-radius: 20px;
+	background-color: #FFF176;
+	display: inline-block;
+	margin-right: 10px;
+}
+
+.circle3 {
+	width: 9px;
+	height: 9px;
+	-webkit-border-radius: 25px;
+	-moz-border-radius: 25px;
+	border-radius: 20px;
+	background-color: #f3b49f;
+	display: inline-block;
+	margin-right: 10px;
+}
+
+.circle4 {
+	width: 9px;
+	height: 9px;
+	-webkit-border-radius: 25px;
+	-moz-border-radius: 25px;
+	border-radius: 20px;
+	background-color: #80DEEA;
+	display: inline-block;
+	margin-right: 10px;
+}
+
+.circle5 {
+	width: 9px;
+	height: 9px;
+	-webkit-border-radius: 25px;
+	-moz-border-radius: 25px;
+	border-radius: 20px;
+	background-color: #8BC34A;
+	display: inline-block;
+	margin-right: 10px;
+}
+
+.mini-timeline:before {
+	content: '';
+	position: absolute;
+	top: 8px;
+	bottom: 0;
+	width: 2px;
+	background: #eeeeee;
+	left: 8px;
+}
+
+.mini-timeline {
+	padding-left: 0;
+	list-style: none;
+	position: relative;
+	margin-left: 7%;
+}
+
+.mini-timeline>li {
+	position: relative;
+}
+
+li {
+	display: list-item;
+	text-align: -webkit-match-parent;
+}
+
+.mini-timeline-lime .timeline-icon {
+	border: 2px solid #cddc39 !important;
+}
+
+.mini-timeline>li .timeline-body {
+	margin: 0 0px 20px 32px;
+	padding: 0;
+	position: relative;
+	background-color: #fff;
+}
+
+.mini-timeline>li .timeline-icon {
+	position: absolute;
+	border-radius: 50%;
+	left: 3px;
+	top: 3px;
+	margin: 0;
+	padding: 0;
+	width: 12px;
+	height: 12px;
+	background: #fff;
+}
+
+.mini-timeline-deeporange .timeline-icon {
+	border: 2px solid #ff5722 !important;
+}
+
+.mini-timeline-info .timeline-icon {
+	border: 2px solid #00bcd4 !important;
+}
+
+.mini-timeline-indigo .timeline-icon {
+	border: 2px solid #3f51b5 !important;
+}
+
+li {
+	list-style: none;
+}
+
+.modal-content {
+	border-radius: none;
+}
+
+#success_message {
+	display: none;
+}
+
+body {
+	background: rgba(238, 238, 238, 0.63);
+	font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+</style>
+
+
+
+
+
+</head>
+
+<body>
+
+	<!-- Navigation -->
+	<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+		<div class="container">
+			<!-- Brand and toggle get grouped for better mobile display -->
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse"
+					data-target="#bs-example-navbar-collapse-1">
+					<span class="sr-only">Toggle navigation</span> <span
+						class="icon-bar"></span> <span class="icon-bar"></span> <span
+						class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="index.html">BidERP</a>
+			</div>
+			<!-- Collect the nav links, forms, and other content for toggling -->
+			<div class="collapse navbar-collapse"
+				id="bs-example-navbar-collapse-1">
+				<ul class="nav navbar-nav navbar-right">
+					<li><a href="index.html">Home</a></li>
+					<li><a href="About.html">About</a></li>
+					<li><a href="Product.html">Products</a></li>
+					<li><a href="contact.html">Contact</a></li>
+					<li><a href="Blog.html">Blog</a></li>
+					<li><a href="./bidcrm/service">LogIn</a></li>
+				</ul>
+			</div>
+			<!-- /.navbar-collapse -->
+		</div>
+		<!-- /.container -->
+	</nav>
+
+
+
+	<!-- Page Content -->
+	<div class="container">
+
+
+		<div class="col-lg-7">
+
+			<form class="well form-horizontal" action=" " method="post"
+				id="contact_form">
+				<fieldset>
+
+					<!-- Form Name -->
+					<img src="./img/phone.png" style="height: 100px" /><span
+						class="modal-title"
+						style="padding-left: 20px; font-size: 20px; color: #607D8B;">Contact
+						Us</span>
+
+					<!-- Text input-->
+
+					<div class="form-group">
+						<label class="col-md-4 control-label"> Name</label>
+						<div class="col-md-4 inputGroupContainer">
+							<div class="input-group">
+								<span class="input-group-addon"><i
+									class="glyphicon glyphicon-user"></i></span> <input name="first_name"
+									placeholder=" Name" class="form-control" type="text" required>
+							</div>
+						</div>
+					</div>
+
+
+					<!-- Text input-->
+					<div class="form-group">
+						<label class="col-md-4 control-label">E-Mail</label>
+						<div class="col-md-4 inputGroupContainer">
+							<div class="input-group">
+								<span class="input-group-addon"><i
+									class="glyphicon glyphicon-envelope"></i></span> <input name="email"
+									placeholder="E-Mail Address" class="form-control" type="email"
+									required>
+							</div>
+						</div>
+					</div>
+
+					<!-- Text input-->
+
+					<div class="form-group">
+						<label class="col-md-4 control-label">Subject</label>
+						<div class="col-md-4 inputGroupContainer">
+							<div class="input-group">
+								<span class="input-group-addon"><i
+									class="glyphicon glyphicon-user"></i></span> <input name="last_name"
+									placeholder="Subject" class="form-control" type="text" required>
+							</div>
+						</div>
+					</div>
+
+
+
+
+
+					<!-- Text area -->
+
+					<div class="form-group">
+						<label class="col-md-4 control-label">Message</label>
+						<div class="col-md-4 inputGroupContainer">
+							<div class="input-group">
+								<span class="input-group-addon"><i
+									class="glyphicon glyphicon-pencil"></i></span>
+								<textarea class="form-control" name="comment"
+									placeholder="Comment" required></textarea>
+							</div>
+						</div>
+					</div>
+
+					<!-- Success message -->
+					<div class="alert alert-success" role="alert" id="success_message">
+						Success <i class="glyphicon glyphicon-thumbs-up"></i> Thanks for
+						contacting us, we will get back to you shortly.
+					</div>
+
+					<!-- Button -->
+					<div class="form-group">
+						<label class="col-md-4 control-label"></label>
+						<div class="col-md-4">
+							<button type="submit" class="btn btn-warning">
+								Send <span class="glyphicon glyphicon-send"></span>
+							</button>
+						</div>
+					</div>
+
+				</fieldset>
+			</form>
+
+		</div>
+
+		<div class="col-lg-5" style="margin-top: 2%">
+
+			<img src="./img/location.png" style="height: 100px" /> <span
+				class="modal-title"
+				style="padding-left: 20px; font-size: 20px; color: #607D8B;">Locate
+				Us</span>
+
+
+			<iframe
+				src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3169.6898505796926!2d-121.98370194365539!3d37.39716638422361!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808fc9d06d91d2d9%3A0xfb190b675e59161d!2sCloudTestSoftware.com+Artitelly+Solutions%2C+Inc!5e0!3m2!1sen!2sin!4v1489417613946"
+				frameborder="0" style="border: 0; width: 100%; height: 300px"
+				allowfullscreen></iframe>
+		</div>
+
+		<div>
+
+			<div class="col-lg-4">
+
+				<div
+					style="padding: 10px; text-align: center; background-color: #F5625B; color: #fff; box-shadow: 2px 2px 5px rgba(0, 0, 0, .1);">
+
+					Address</div>
+
+				<div
+					style="padding: 10px; text-align: center; background-color: #28475B; color: #fff">
+					<ul>
+						<li>4701 Patrick Henry Dr</li>
+						<li></li>
+						<li>Santa Clara</li>
+						<li>CA 95054</li>
+						<li></li> info@cloudtestsoftware.com
+						<li>Tel 408-390-9131</li>
+						<li>Fax 408-416-0907</li>
+
+					</ul>
+				</div>
+
+			</div>
+
+		</div>
+	</div>
+	<footer>
+		<div class="container-fluid"
+			style="padding: 20px; background-color: #607D8B; color: #fff">
+			<div class="col-lg-12">
+				<p>© 2015 by Artitelly Solutions , Inc</p>
+				<p>info@CloudTestSoftware.com | Tel: 1-650-823-2300</p>
+			</div>
+		</div>
+	</footer>
+	<!-- Footer -->
+
+
+	<!-- jQuery -->
+	<script src="js/jquery.js"></script>
+
+	<!-- Bootstrap Core JavaScript -->
+	<script src="js/bootstrap.min.js"></script>
+
+	<!-- Script to Activate the Carousel -->
+	<script>
+
+        </script>
+
+</body>
+
+</html>

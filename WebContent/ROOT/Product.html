@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="">
+<meta name="author" content="">
+
+<title>BidERP, Bidding & Construction ERP in Cloud</title>
+
+<!-- Bootstrap Core CSS -->
+<link href="css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Custom CSS -->
+<link href="css/modern-business.css" rel="stylesheet">
+
+<!-- Custom Fonts -->
+<!--<link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">-->
+<link href="http://fonts.googleapis.com/css?family=Inconsolata"
+	rel="stylesheet" type="text/css">
+<style>
+.navbar-inverse .navbar-brand {
+	color: #fff;
+	font-size: 22px;
+}
+
+.navbar-inverse {
+	border-color: #00BCD4;
+}
+
+.navbar-inverse {
+	background-color: #00BCD4;
+	box-shadow: 0 3px 3px rgba(0, 0, 0, .29);
+	/* border-color: #080808; */
+}
+
+.navbar-inverse .navbar-nav>li>a {
+	color: #fff;
+	text-transform: uppercase;
+}
+
+.panel {
+	box-shadow: 2px 2px 5px rgba(0, 0, 0, .1);
+	border-radius: 0;
+	cursor: pointer;
+	border: 1px solid #dedede;
+}
+
+.panel-default>.panel-heading {
+	color: #333;
+	background-color: #00BCD4;
+	border-color: none;
+	color: #fff;
+	text-align: center;
+	font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.panel-body {
+	font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	text-align: left;
+}
+
+.card-panel {
+	transition: box-shadow .25s;
+	padding: 24px;
+	margin: .5rem 0 1rem 0;
+	border-radius: 2px;
+	background-color: #607D8B;
+	box-shadow: 2px 2px 5px rgba(0, 0, 0, .1);
+	border-left: 10px solid #CDDC39;
+	color: ghostwhite;
+}
+
+img.responsive-img, video.responsive-video {
+	max-width: 100%;
+	height: auto;
+}
+
+.circle {
+	border-radius: 50%;
+}
+
+img.responsive-img, video.responsive-video {
+	max-width: 100%;
+	height: auto;
+	width: 60px;
+	background-color: #fafafa
+}
+
+.navbar-inverse .navbar-nav>li>a:hover {
+	background-color: rgba(63, 81, 181, 0.63);
+}
+
+panel-heading {
+	padding: 10px 15px;
+	border-bottom: 0px solid transparent;
+	border-top-left-radius: 0px;
+	border-top-right-radius: 0px;
+}
+
+.portfolio {
+	box-shadow: 2px 2px 5px rgba(0, 0, 0, .1);
+	background-color: #fff;
+}
+
+.img-portfolio {
+	margin: 0px;
+	padding: 10px;
+}
+
+.iconImage {
+	display: block;
+	text-align: center;
+	margin: 0 auto;
+}
+
+.panelFooter {
+	background-color: #607D8B;
+	padding: 10px;
+	box-shadow: 2px 2px 2px #888888;
+}
+
+.circle1 {
+	width: 9px;
+	height: 9px;
+	-webkit-border-radius: 25px;
+	-moz-border-radius: 25px;
+	border-radius: 20px;
+	background-color: #AED581;
+	display: inline-block;
+	margin-right: 10px;
+}
+
+.circle2 {
+	width: 9px;
+	height: 9px;
+	-webkit-border-radius: 25px;
+	-moz-border-radius: 25px;
+	border-radius: 20px;
+	background-color: #FFF176;
+	display: inline-block;
+	margin-right: 10px;
+}
+
+.circle3 {
+	width: 9px;
+	height: 9px;
+	-webkit-border-radius: 25px;
+	-moz-border-radius: 25px;
+	border-radius: 20px;
+	background-color: #f3b49f;
+	display: inline-block;
+	margin-right: 10px;
+}
+
+.circle4 {
+	width: 9px;
+	height: 9px;
+	-webkit-border-radius: 25px;
+	-moz-border-radius: 25px;
+	border-radius: 20px;
+	background-color: #80DEEA;
+	display: inline-block;
+	margin-right: 10px;
+}
+
+.circle5 {
+	width: 9px;
+	height: 9px;
+	-webkit-border-radius: 25px;
+	-moz-border-radius: 25px;
+	border-radius: 20px;
+	background-color: #8BC34A;
+	display: inline-block;
+	margin-right: 10px;
+}
+
+.mini-timeline:before {
+	content: '';
+	position: absolute;
+	top: 8px;
+	bottom: 0;
+	width: 2px;
+	background: #eeeeee;
+	left: 8px;
+}
+
+.mini-timeline {
+	padding-left: 0;
+	list-style: none;
+	position: relative;
+	margin-left: 7%;
+}
+
+.mini-timeline>li {
+	position: relative;
+}
+
+li {
+	display: list-item;
+	text-align: -webkit-match-parent;
+}
+
+.mini-timeline-lime .timeline-icon {
+	border: 2px solid #cddc39 !important;
+}
+
+.mini-timeline>li .timeline-body {
+	margin: 0 0px 20px 32px;
+	padding: 0;
+	position: relative;
+	background-color: #fff;
+}
+
+.mini-timeline>li .timeline-icon {
+	position: absolute;
+	border-radius: 50%;
+	left: 3px;
+	top: 3px;
+	margin: 0;
+	padding: 0;
+	width: 12px;
+	height: 12px;
+	background: #fff;
+}
+
+.mini-timeline-deeporange .timeline-icon {
+	border: 2px solid #ff5722 !important;
+}
+
+.mini-timeline-info .timeline-icon {
+	border: 2px solid #00bcd4 !important;
+}
+
+.mini-timeline-indigo .timeline-icon {
+	border: 2px solid #3f51b5 !important;
+}
+
+li {
+	list-style: none;
+}
+
+.modal-content {
+	border-radius: none;
+}
+
+#success_message {
+	display: none;
+}
+
+.intro-header {
+	background: center center no-repeat;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	background-size: cover;
+	-o-background-size: cover;
+	margin-bottom: 50px;
+}
+
+.intro-header .site-heading {
+	padding: 100px 0;
+}
+
+.intro-header .page-heading .subheading, .intro-header .site-heading .subheading
+	{
+	font-size: 24px;
+	line-height: 1.1;
+	display: block;
+	font-weight: 300;
+	margin: 10px 0 0;
+}
+
+body {
+	background: rgba(238, 238, 238, 0.63);
+	font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+</style>
+
+
+
+
+
+</head>
+
+<body>
+
+	<!-- Navigation -->
+	<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+		<div class="container">
+			<!-- Brand and toggle get grouped for better mobile display -->
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse"
+					data-target="#bs-example-navbar-collapse-1">
+					<span class="sr-only">Toggle navigation</span> <span
+						class="icon-bar"></span> <span class="icon-bar"></span> <span
+						class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="index.html">BidERP</a>
+			</div>
+			<!-- Collect the nav links, forms, and other content for toggling -->
+			<div class="collapse navbar-collapse"
+				id="bs-example-navbar-collapse-1">
+				<ul class="nav navbar-nav navbar-right">
+					<li><a href="index.html">Home</a></li>
+					<li><a href="About.html">About</a></li>
+					<li><a href="Product.html">Products</a></li>
+					<li><a href="contact.html">Contact</a></li>
+					<li><a href="Blog.html">Blog</a></li>
+					<li><a href="./bidcrm/service">LogIn</a></li>
+
+				</ul>
+			</div>
+			<!-- /.navbar-collapse -->
+		</div>
+		<!-- /.container -->
+	</nav>
+
+	<header class="intro-header"
+		style="background-image: url('https://static.wixstatic.com/media/cddd59278e114d2392d4458e3efb7660.jpg/v1/fill/w_1263,h_263,al_c,q_85,usm_0.66_1.00_0.01/cddd59278e114d2392d4458e3efb7660.webp'); height: 300px; box-shadow: 2px 2px 5px rgba(0, 0, 0, .1);">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+					<div class="site-heading">
+						<h1>Our Products</h1>
+						<br /> <span class="subheading"
+							style="padding: 10px; background-color: #00BCD5; color: #fff; display: inline-block; box-shadow: 2px 2px 5px rgba(0, 0, 0, .1);">Believe
+							in quality of product</span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+
+
+
+
+	<!-- Page Content -->
+	<div class="container">
+
+		<div class="row">
+			<div class="card-panel grey lighten-5 z-depth-1"
+				style="margin-top: 1%;">
+				<div class="row valign-wrapper">
+					<div class="col-lg-1">
+
+						<img src="./img/profilePic.png" class="circle responsive-img">
+						<!-- notice the "circle" class -->
+					</div>
+					<div class="col-lg-11">
+
+						<span> BidERP is an integrated cloud platform for bidding,
+							contracting and construction management for any size of
+							construction project. Our simplified platform can save your time
+							and money by solving critical business challenges and you can
+							focus your energy for faster cost effective project delivery by
+							engaging contractor and sub contractor in single platform. You
+							can gather project critical data and take quicker decision to
+							avoid project delivery issues . and save cost due to delay. </span> <span>
+							We provide complete ERP solutions in cloud with mode than 20
+							modules for Bid and Construction management. Below are few sample
+							modules in BidERP. </span>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-lg-6" style="text-align: center">
+				<button type="button" class="btn  btn-success" data-toggle="modal"
+					data-target="#myModal">START A TRAIL</button>
+			</div>
+			<div class="col-lg-6" style="text-align: center">
+				<button type="button" class="btn  btn-warning" data-toggle="modal"
+					data-target="#myModal">TRY OPEN SOURCE</button>
+			</div>
+		</div>
+
+
+		<div class="row" style="margin-top: 2%">
+			<div class="col-md-6">
+				<div style="box-shadow: 2px 2px 5px rgba(0, 0, 0, .1);">
+					<div
+						style="background-color: #fff; padding: 20px; font-size: 600px">
+						<h4>
+							Step-1: Setup project template, site, phases and part list
+							</h3>
+					</div>
+					<div style="box-shadow: 2px 2px 5px rgba(0, 0, 0, .1);">
+
+						<img src="./img/setup.png" alt="Lights"
+							style="width: 100%; height: 300px;">
+
+					</div>
+					<div style="padding: 20px; background-color: tomato; color: #fff">
+
+						Create reusable project template data, create project site and
+						identify different phases of the project, create part lists from
+						different suppliers and vendors.</div>
+				</div>
+			</div>
+			<div class="col-md-6">
+				<div style="box-shadow: 2px 2px 5px rgba(0, 0, 0, .1);">
+					<div
+						style="background-color: #fff; padding: 20px; font-size: 600px">
+						<h4>
+							Step-2 :Prepare initial quote and identify lists of items
+							</h3>
+					</div>
+					<div style="box-shadow: 2px 2px 5px rgba(0, 0, 0, .1);">
+
+						<img src="./img/quote.png" alt="Lights"
+							style="width: 100%; height: 300px;">
+
+					</div>
+					<div
+						style="padding: 20px; background-color: steelblue; color: #fff">
+
+						Prepare initial Quote for each project for your site as rate
+						basis, MMN or both. Prepare list of material and resources you
+						need to procure. Compare cost and profitability against initial
+						estimation.</div>
+				</div>
+			</div>
+		</div>
+		<div class="row" style="margin-top: 2%">
+			<div class="col-md-6">
+				<div style="box-shadow: 2px 2px 5px rgba(0, 0, 0, .1);">
+					<div
+						style="background-color: #fff; padding: 20px; font-size: 600px;">
+						<h4>
+							Step-3: Start Bidding process
+							</h3>
+					</div>
+					<div style="box-shadow: 2px 2px 5px rgba(0, 0, 0, .1);">
+
+						<img src="./img/tender.png" alt="Lights"
+							style="width: 100%; height: 300px">
+
+					</div>
+					<div style="padding: 20px; background-color: #2196F3; color: #fff">
+
+						After you made initial project estimation and prepared list of
+						jobs need to be completed with Bill of materials and resources,
+						ready with project specifications and bidding documents, you can
+						start the bidding process for your project and send invitation to
+						list of vendors. Once you receive the Bid from list of qualified
+						vendors, you can evaluate bids and select Qualified bidder and
+						make a contract.</div>
+				</div>
+			</div>
+			<div class="col-md-6">
+				<div style="box-shadow: 2px 2px 5px rgba(0, 0, 0, .1);">
+					<div
+						style="background-color: #fff; padding: 20px; font-size: 600px">
+						<h4>
+							Step-4 : Prepare and Submit Bid
+							</h3>
+					</div>
+					<div style="box-shadow: 2px 2px 5px rgba(0, 0, 0, .1);">
+
+						<img src="./img/bidding.png" alt="Lights"
+							style="width: 100%; height: 300px;">
+
+					</div>
+					<div style="padding: 20px; background-color: #FF9800;; color: #fff">
+
+						After bidders are notified, they can accept or reject the
+						invitation. On acceptance of invitation , they can prepare
+						required Bid proposal, cost of items , plan and other supporting
+						documents, reply Bid Quiz sent by the owner. If your Bid is
+						accepted selected bidder will be notified and a contract will be
+						signed.</div>
+				</div>
+			</div>
+		</div>
+		<div class="row" style="margin-top: 2%">
+			<div class="col-md-6">
+				<div style="box-shadow: 2px 2px 5px rgba(0, 0, 0, .1);">
+					<div
+						style="background-color: #fff; padding: 20px; font-size: 600px;">
+						<h4>
+							Step-5 : Create project contract , monitor progress & costs
+							</h3>
+					</div>
+					<div style="box-shadow: 2px 2px 5px rgba(0, 0, 0, .1);">
+
+						<img src="./img/project.png" alt="Lights"
+							style="width: 100%; height: 300px">
+
+					</div>
+					<div style="padding: 20px; background-color: #4196F3; color: #fff">
+
+						Once the contract is signed, Owner can create a project and
+						evaluate each jobs, activities, cost and progress. Owner can
+						assign budget and evaluate actual cost, estimation , change order
+						cost and profitability in real time. Monitor purchase order ,
+						material delivery, scheduling and many more..</div>
+				</div>
+			</div>
+			<div class="col-md-6">
+				<div style="box-shadow: 2px 2px 5px rgba(0, 0, 0, .1);">
+					<div
+						style="background-color: #fff; padding: 20px; font-size: 600px">
+						<h4>
+							Step-6: Final estimation , cost differences and profitability
+							</h3>
+					</div>
+					<div style="box-shadow: 2px 2px 5px rgba(0, 0, 0, .1);">
+
+						<img src="./img/estimation.png" alt="Lights"
+							style="width: 100%; height: 300px;">
+
+					</div>
+					<div style="padding: 20px; background-color: #FF2200;; color: #fff">
+
+						Real time data against planned resource vs. actual cost, change
+						order cost , resource supplement , cost of delay , budget
+						deficiency are critical parameters to measure the overall health
+						of the project. Take necessary action to adjust the project and
+						its time line to achieve desired result.</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="row" style="margin-top: 2%">
+			<div class="col-md-6">
+				<div style="box-shadow: 2px 2px 5px rgba(0, 0, 0, .1);">
+					<div
+						style="background-color: #fff; padding: 20px; font-size: 600px;">
+						<h4>
+							Step-7 : Project scheduling & planning
+							</h3>
+					</div>
+					<div style="box-shadow: 2px 2px 5px rgba(0, 0, 0, .1);">
+
+						<img src="./img/planning.png" alt="Lights"
+							style="width: 100%; height: 300px">
+
+					</div>
+					<div style="padding: 20px; background-color: #2196F3; color: #fff">
+
+						Project planning and scheduling are very important functions to
+						complete project within time line. Real time monitoring of each
+						plan, it's progress, risk and identifying required adjustment in
+						ahead of time is very important to hit any milestone. Identifying
+						the impact of any delay to any critical milestone to the overall
+						project schedule is very important to achieve the target delivery
+						date.</div>
+				</div>
+			</div>
+			<div class="col-md-6">
+				<div style="box-shadow: 2px 2px 5px rgba(0, 0, 0, .1);">
+					<div
+						style="background-color: #fff; padding: 20px; font-size: 600px">
+						<h4>
+							Step-8: Monitor budget and financial planning
+							</h3>
+					</div>
+					<div style="box-shadow: 2px 2px 5px rgba(0, 0, 0, .1);">
+
+						<img src="./img/budget.png" alt="Lights"
+							style="width: 100%; height: 300px;">
+
+					</div>
+					<div style="padding: 20px; background-color: #FF9800;; color: #fff">
+
+						For any project to be successful, it is very important to plan and
+						measure the allocation of budget, , overall financial planning
+						against real time project progress, delivery time line vs. budget
+						burned out, cash flow and pending cost of invoices, delay in
+						financial transactions and delivery of critical milestones,
+						financial projection and planning are very important parameters to
+						look at and take preventive action in ahead of time.</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+	<footer>
+		<div class="container-fluid"
+			style="padding: 20px; background-color: #607D8B; color: #fff">
+			<div class="col-lg-12">
+				<p>© 2015 by Artitelly Solutions , Inc</p>
+				<p>info@CloudTestSoftware.com | Tel: 1-650-823-2300</p>
+			</div>
+		</div>
+	</footer>
+	<!-- Footer -->
+
+	<div id="myModal" class="modal fade" role="dialog">
+		<div class="modal-dialog">
+
+			<!-- Modal content-->
+			<div class="modal-content">
+				<a href="index.html"> <img src="./img/error-page.jpg">
+				</a>
+			</div>
+
+		</div>
+	</div>
+
+
+	<!-- jQuery -->
+	<script src="js/jquery.js"></script>
+
+	<!-- Bootstrap Core JavaScript -->
+	<script src="js/bootstrap.min.js"></script>
+
+	<!-- Script to Activate the Carousel -->
+	<script>
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,13 @@
+Hi @firstname,
+
+We are inviting you to participate in our product evaluation process for our company @company. 
+
+Please order few free samples for this evaluation following the below link
+
+Click here to participate @url
+
+Thank you,
+Artek Medical, Inc,
+https://www.artek.com
+
+

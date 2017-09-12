@@ -1,0 +1,116 @@
+//*****************************************************************//
+//Adding Object Rule
+//Table Name:Module
+//Attribute Name:Module Rule
+//********************************************************************//
+
+	<ObjectRule>
+		Name=Module Rule
+		TableName=Module
+		EffectedTable=ModuleObject
+		Description=Calling Upadte and Insert Rule for object Module
+		Reason=1
+		ActionState=1
+		Condition=objid$gt$0
+		RuleIndex=1
+		Status=1
+	</ObjectRule>
+
+//*****************************************************************//
+//Adding Action Query
+//Table Name:Module
+//Name:Call Insert_Module procedure
+//Step No:1
+//**************************************************************//
+
+	<ActionQuery>
+		Name=Call Insert_Module procedure
+		TableName=Module
+		Description=Call Insert_Module procedure
+		StepNo=1
+		Input=@Objid
+		InputDataType=@Integer
+		Output=$activityId
+		QueryType=0
+		HasRecordSet=0
+		OracleQuery=exec Insert_Module(@objid)
+		MssqlQuery=exec Insert_Module @objid
+		Status=0
+	</ActionQuery>
+
+	<ActionQuery>
+		Name=Select -ve objid for child ModuleObject
+		TableName=ModuleObject
+		Description=Select -ve objid for child ModuleObject
+		StepNo=2
+		Input=@Objid
+		InputDataType=@Integer
+		Output=$objid $name $ModuleObjectid
+		QueryType=0
+		HasRecordSet=0
+		OracleQuery=select objid, name ,objid ModuleObjectid from table_ModuleObject where objid like \'-%\' and ModuleObject2Module=@objid
+		MssqlQuery=select objid, name ,objid ModuleObjectid from table_ModuleObject where objid like \'-%\' and ModuleObject2Module=@objid
+		Status=0
+	</ActionQuery>
+
+	<ActionQuery>
+		Name=Update -ve objid for child ModuleObject
+		TableName=ModuleObject
+		Description=Update -ve objid for child ModuleObject
+		StepNo=3
+		Input=@objid @name @ModuleObjectid
+		InputDataType=@Integer @Varchar @Integer
+		Output=$count
+		QueryType=0
+		HasRecordSet=0
+		OracleQuery=update table_ModuleObject set objid=@objid where objid=@ModuleObjectid and name=@name
+		MssqlQuery=update table_ModuleObject set objid=@objid where objid=@ModuleObjectid and name=@name
+		Status=0
+	</ActionQuery>
+
+
+	<ActionQuery>
+		Name=Select -ve objid for child SubModule
+		TableName=SubModule
+		Description=Select -ve objid for child SubModule
+		StepNo=4
+		Input=@Objid
+		InputDataType=@Integer
+		Output=$objid $name $SubModuleid
+		QueryType=0
+		HasRecordSet=0
+		OracleQuery=select objid, name ,objid SubModuleid from table_SubModule where objid like \'-%\' and SubModule2Module=@objid
+		MssqlQuery=select objid, name ,objid SubModuleid from table_SubModule where objid like \'-%\' and SubModule2Module=@objid
+		Status=0
+	</ActionQuery>
+
+	<ActionQuery>
+		Name=Update -ve objid for child SubModule
+		TableName=SubModule
+		Description=Update -ve objid for child SubModule
+		StepNo=5
+		Input=@objid @name @SubModuleid
+		InputDataType=@Integer @Varchar @Integer
+		Output=$count
+		QueryType=0
+		HasRecordSet=0
+		OracleQuery=update table_SubModule set objid=@objid where objid=@SubModuleid and name=@name
+		MssqlQuery=update table_SubModule set objid=@objid where objid=@SubModuleid and name=@name
+		Status=0
+	</ActionQuery>
+
+
+	<ActionQuery>
+		Name=Call Upadte_Module procedure
+		TableName=Module
+		Description=Call Update_Module procedure
+		StepNo=6
+		Input=@Objid
+		InputDataType=@Integer
+		Output=$activityId
+		QueryType=0
+		HasRecordSet=0
+		OracleQuery=exec Update_Module(@objid)
+		MssqlQuery=exec Update_Module @objid
+		Status=0
+	</ActionQuery>

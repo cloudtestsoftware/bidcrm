@@ -1,0 +1,24 @@
+
+biderp_latest
+	
+Consumer Key	
+3MVG9zlTNB8o8BA32YeSR9Ga8STo7_UuG4_aV9XIgTyTeDTqdC5_a17IF5lclph85W2WSmSwnCYs1KTuQaBMX
+	Consumer Secret	
+4218160418630961729
+
+biderp
+
+Consumer Key	
+3MVG9zlTNB8o8BA32YeSR9Ga8SW_lT.6.DjLfuBaCD5gXF5vJwevmIcLJS8rw6b4vb7VW68E7DvbIbjutM1ZY
+	Consumer Secret	
+8124551328878097836
+
+Username: sjana@cloudtestsoftware.com
+Security token (case-sensitive): ZBgo3XpvMrHOM082uxp08NAT
+
+curl https://na59.salesforce.com/services/data/
+
+curl https://na59.salesforce.com/services/data/v37.0/sobjects/ 
+-H "Authorization: Bearer 00Df4000001QQI1!ARkAQAOGLkH.IleO34BUpu3rNNjEcLeT0ykyNc.S2.OjnUFmJm1zjHUJjjVtMEthM.na_uWO4de7lGPXnRxqZdCUs6zJ2NCO"
+
+

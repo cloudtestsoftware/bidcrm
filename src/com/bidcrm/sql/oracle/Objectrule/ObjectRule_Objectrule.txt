@@ -1,0 +1,85 @@
+//*****************************************************************//
+//Adding Object Rule
+//Table Name:Objectrule
+//Attribute Name:Objectrule Rule
+//********************************************************************//
+
+	<ObjectRule>
+		Name=Objectrule Rule
+		TableName=Objectrule
+		EffectedTable=ActionQuery
+		Description=Calling Upadte and Insert Rule for object Objectrule
+		Reason=1
+		ActionState=1
+		Condition=objid$gt$0
+		RuleIndex=1
+		Status=1
+	</ObjectRule>
+
+//*****************************************************************//
+//Adding Action Query
+//Table Name:Objectrule
+//Name:Call Insert_Objectrule procedure
+//Step No:1
+//**************************************************************//
+
+	<ActionQuery>
+		Name=Call Insert_Objectrule procedure
+		TableName=Objectrule
+		Description=Call Insert_Objectrule procedure
+		StepNo=1
+		Input=@Objid
+		InputDataType=@Integer
+		Output=$activityId
+		QueryType=0
+		HasRecordSet=0
+		OracleQuery=exec Insert_Objectrule(@objid)
+		MssqlQuery=exec Insert_Objectrule @objid
+		Status=0
+	</ActionQuery>
+
+	<ActionQuery>
+		Name=Select -ve objid for child ActionQuery
+		TableName=ActionQuery
+		Description=Select -ve objid for child ActionQuery
+		StepNo=2
+		Input=@Objid
+		InputDataType=@Integer
+		Output=$objid $name $ActionQueryid
+		QueryType=0
+		HasRecordSet=0
+		OracleQuery=select objid, name ,objid ActionQueryid from table_ActionQuery where objid like \'-%\' and ActionQuery2Objectrule=@objid
+		MssqlQuery=select objid, name ,objid ActionQueryid from table_ActionQuery where objid like \'-%\' and ActionQuery2Objectrule=@objid
+		Status=0
+	</ActionQuery>
+
+	<ActionQuery>
+		Name=Update -ve objid for child ActionQuery
+		TableName=ActionQuery
+		Description=Update -ve objid for child ActionQuery
+		StepNo=3
+		Input=@objid @name @ActionQueryid
+		InputDataType=@Integer @Varchar @Integer
+		Output=$count
+		QueryType=0
+		HasRecordSet=0
+		OracleQuery=update table_ActionQuery set objid=@objid where objid=@ActionQueryid and name=@name
+		MssqlQuery=update table_ActionQuery set objid=@objid where objid=@ActionQueryid and name=@name
+		Status=0
+	</ActionQuery>
+
+
+	<ActionQuery>
+		Name=Call Upadte_Objectrule procedure
+		TableName=Objectrule
+		Description=Call Update_Objectrule procedure
+		StepNo=4
+		Input=@Objid
+		InputDataType=@Integer
+		Output=$activityId
+		QueryType=0
+		HasRecordSet=0
+		OracleQuery=exec Update_Objectrule(@objid)
+		MssqlQuery=exec Update_Objectrule @objid
+		Status=0
+	</ActionQuery>

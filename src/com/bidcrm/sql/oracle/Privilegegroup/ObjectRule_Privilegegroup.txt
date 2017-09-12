@@ -1,0 +1,147 @@
+//*****************************************************************//
+//Adding Object Rule
+//Table Name:Privilegegroup
+//Attribute Name:Privilegegroup Rule
+//********************************************************************//
+
+	<ObjectRule>
+		Name=Privilegegroup Rule
+		TableName=Privilegegroup
+		EffectedTable=User
+		Description=Calling Upadte and Insert Rule for object Privilegegroup
+		Reason=1
+		ActionState=1
+		Condition=objid$gt$0
+		RuleIndex=1
+		Status=1
+	</ObjectRule>
+
+//*****************************************************************//
+//Adding Action Query
+//Table Name:Privilegegroup
+//Name:Call Insert_Privilegegroup procedure
+//Step No:1
+//**************************************************************//
+
+	<ActionQuery>
+		Name=Call Insert_Privilegegroup procedure
+		TableName=Privilegegroup
+		Description=Call Insert_Privilegegroup procedure
+		StepNo=1
+		Input=@Objid
+		InputDataType=@Integer
+		Output=$activityId
+		QueryType=0
+		HasRecordSet=0
+		OracleQuery=exec Insert_Privilegegroup(@objid)
+		MssqlQuery=exec Insert_Privilegegroup @objid
+		Status=0
+	</ActionQuery>
+
+	<ActionQuery>
+		Name=Select -ve objid for child User
+		TableName=User
+		Description=Select -ve objid for child User
+		StepNo=2
+		Input=@Objid
+		InputDataType=@Integer
+		Output=$objid $name $Userid
+		QueryType=0
+		HasRecordSet=0
+		OracleQuery=select objid, name ,objid Userid from table_User where objid like \'-%\' and User2Privilegegroup=@objid
+		MssqlQuery=select objid, name ,objid Userid from table_User where objid like \'-%\' and User2Privilegegroup=@objid
+		Status=0
+	</ActionQuery>
+
+	<ActionQuery>
+		Name=Update -ve objid for child User
+		TableName=User
+		Description=Update -ve objid for child User
+		StepNo=3
+		Input=@objid @name @Userid
+		InputDataType=@Integer @Varchar @Integer
+		Output=$count
+		QueryType=0
+		HasRecordSet=0
+		OracleQuery=update table_User set objid=@objid where objid=@Userid and name=@name
+		MssqlQuery=update table_User set objid=@objid where objid=@Userid and name=@name
+		Status=0
+	</ActionQuery>
+
+
+	<ActionQuery>
+		Name=Select -ve objid for child Module
+		TableName=Module
+		Description=Select -ve objid for child Module
+		StepNo=4
+		Input=@Objid
+		InputDataType=@Integer
+		Output=$objid $name $Moduleid
+		QueryType=0
+		HasRecordSet=0
+		OracleQuery=select objid, name ,objid Moduleid from table_Module where objid like \'-%\' and Module2Privilegegroup=@objid
+		MssqlQuery=select objid, name ,objid Moduleid from table_Module where objid like \'-%\' and Module2Privilegegroup=@objid
+		Status=0
+	</ActionQuery>
+
+	<ActionQuery>
+		Name=Update -ve objid for child Module
+		TableName=Module
+		Description=Update -ve objid for child Module
+		StepNo=5
+		Input=@objid @name @Moduleid
+		InputDataType=@Integer @Varchar @Integer
+		Output=$count
+		QueryType=0
+		HasRecordSet=0
+		OracleQuery=update table_Module set objid=@objid where objid=@Moduleid and name=@name
+		MssqlQuery=update table_Module set objid=@objid where objid=@Moduleid and name=@name
+		Status=0
+	</ActionQuery>
+
+
+	<ActionQuery>
+		Name=Select -ve objid for child ObjectPrivilege
+		TableName=ObjectPrivilege
+		Description=Select -ve objid for child ObjectPrivilege
+		StepNo=6
+		Input=@Objid
+		InputDataType=@Integer
+		Output=$objid $name $ObjectPrivilegeid
+		QueryType=0
+		HasRecordSet=0
+		OracleQuery=select objid, name ,objid ObjectPrivilegeid from table_ObjectPrivilege where objid like \'-%\' and ObjectPrivilege2Privilegegroup=@objid
+		MssqlQuery=select objid, name ,objid ObjectPrivilegeid from table_ObjectPrivilege where objid like \'-%\' and ObjectPrivilege2Privilegegroup=@objid
+		Status=0
+	</ActionQuery>
+
+	<ActionQuery>
+		Name=Update -ve objid for child ObjectPrivilege
+		TableName=ObjectPrivilege
+		Description=Update -ve objid for child ObjectPrivilege
+		StepNo=7
+		Input=@objid @name @ObjectPrivilegeid
+		InputDataType=@Integer @Varchar @Integer
+		Output=$count
+		QueryType=0
+		HasRecordSet=0
+		OracleQuery=update table_ObjectPrivilege set objid=@objid where objid=@ObjectPrivilegeid and name=@name
+		MssqlQuery=update table_ObjectPrivilege set objid=@objid where objid=@ObjectPrivilegeid and name=@name
+		Status=0
+	</ActionQuery>
+
+
+	<ActionQuery>
+		Name=Call Upadte_Privilegegroup procedure
+		TableName=Privilegegroup
+		Description=Call Update_Privilegegroup procedure
+		StepNo=8
+		Input=@Objid
+		InputDataType=@Integer
+		Output=$activityId
+		QueryType=0
+		HasRecordSet=0
+		OracleQuery=exec Update_Privilegegroup(@objid)
+		MssqlQuery=exec Update_Privilegegroup @objid
+		Status=0
+	</ActionQuery>

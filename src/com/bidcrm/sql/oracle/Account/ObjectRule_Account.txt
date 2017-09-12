@@ -1,0 +1,85 @@
+//*****************************************************************//
+//Adding Object Rule
+//Table Name:Account
+//Attribute Name:Account Rule
+//********************************************************************//
+
+	<ObjectRule>
+		Name=Account Rule
+		TableName=Account
+		EffectedTable=Contact
+		Description=Calling Upadte and Insert Rule for object Account
+		Reason=1
+		ActionState=1
+		Condition=objid$gt$0
+		RuleIndex=1
+		Status=1
+	</ObjectRule>
+
+//*****************************************************************//
+//Adding Action Query
+//Table Name:Account
+//Name:Call Insert_Account procedure
+//Step No:1
+//**************************************************************//
+
+	<ActionQuery>
+		Name=Call Insert_Account procedure
+		TableName=Account
+		Description=Call Insert_Account procedure
+		StepNo=1
+		Input=@Objid
+		InputDataType=@Integer
+		Output=$activityId
+		QueryType=0
+		HasRecordSet=0
+		OracleQuery=exec Insert_Account(@objid)
+		MssqlQuery=exec Insert_Account @objid
+		Status=0
+	</ActionQuery>
+
+	<ActionQuery>
+		Name=Select -ve objid for child Contact
+		TableName=Contact
+		Description=Select -ve objid for child Contact
+		StepNo=2
+		Input=@Objid
+		InputDataType=@Integer
+		Output=$objid $name $Contactid
+		QueryType=0
+		HasRecordSet=0
+		OracleQuery=select objid, name ,objid Contactid from table_Contact where objid like \'-%\' and Contact2Account=@objid
+		MssqlQuery=select objid, name ,objid Contactid from table_Contact where objid like \'-%\' and Contact2Account=@objid
+		Status=0
+	</ActionQuery>
+
+	<ActionQuery>
+		Name=Update -ve objid for child Contact
+		TableName=Contact
+		Description=Update -ve objid for child Contact
+		StepNo=3
+		Input=@objid @name @Contactid
+		InputDataType=@Integer @Varchar @Integer
+		Output=$count
+		QueryType=0
+		HasRecordSet=0
+		OracleQuery=update table_Contact set objid=@objid where objid=@Contactid and name=@name
+		MssqlQuery=update table_Contact set objid=@objid where objid=@Contactid and name=@name
+		Status=0
+	</ActionQuery>
+
+
+	<ActionQuery>
+		Name=Call Upadte_Account procedure
+		TableName=Account
+		Description=Call Update_Account procedure
+		StepNo=4
+		Input=@Objid
+		InputDataType=@Integer
+		Output=$activityId
+		QueryType=0
+		HasRecordSet=0
+		OracleQuery=exec Update_Account(@objid)
+		MssqlQuery=exec Update_Account @objid
+		Status=0
+	</ActionQuery>

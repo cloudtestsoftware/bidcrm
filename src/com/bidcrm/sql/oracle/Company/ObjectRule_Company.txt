@@ -1,0 +1,147 @@
+//*****************************************************************//
+//Adding Object Rule
+//Table Name:Company
+//Attribute Name:Company Rule
+//********************************************************************//
+
+	<ObjectRule>
+		Name=Company Rule
+		TableName=Company
+		EffectedTable=Currency
+		Description=Calling Upadte and Insert Rule for object Company
+		Reason=1
+		ActionState=1
+		Condition=objid$gt$0
+		RuleIndex=1
+		Status=1
+	</ObjectRule>
+
+//*****************************************************************//
+//Adding Action Query
+//Table Name:Company
+//Name:Call Insert_Company procedure
+//Step No:1
+//**************************************************************//
+
+	<ActionQuery>
+		Name=Call Insert_Company procedure
+		TableName=Company
+		Description=Call Insert_Company procedure
+		StepNo=1
+		Input=@Objid
+		InputDataType=@Integer
+		Output=$activityId
+		QueryType=0
+		HasRecordSet=0
+		OracleQuery=exec Insert_Company(@objid)
+		MssqlQuery=exec Insert_Company @objid
+		Status=0
+	</ActionQuery>
+
+	<ActionQuery>
+		Name=Select -ve objid for child Currency
+		TableName=Currency
+		Description=Select -ve objid for child Currency
+		StepNo=2
+		Input=@Objid
+		InputDataType=@Integer
+		Output=$objid $name $Currencyid
+		QueryType=0
+		HasRecordSet=0
+		OracleQuery=select objid, name ,objid Currencyid from table_Currency where objid like \'-%\' and Currency2Company=@objid
+		MssqlQuery=select objid, name ,objid Currencyid from table_Currency where objid like \'-%\' and Currency2Company=@objid
+		Status=0
+	</ActionQuery>
+
+	<ActionQuery>
+		Name=Update -ve objid for child Currency
+		TableName=Currency
+		Description=Update -ve objid for child Currency
+		StepNo=3
+		Input=@objid @name @Currencyid
+		InputDataType=@Integer @Varchar @Integer
+		Output=$count
+		QueryType=0
+		HasRecordSet=0
+		OracleQuery=update table_Currency set objid=@objid where objid=@Currencyid and name=@name
+		MssqlQuery=update table_Currency set objid=@objid where objid=@Currencyid and name=@name
+		Status=0
+	</ActionQuery>
+
+
+	<ActionQuery>
+		Name=Select -ve objid for child Territory
+		TableName=Territory
+		Description=Select -ve objid for child Territory
+		StepNo=4
+		Input=@Objid
+		InputDataType=@Integer
+		Output=$objid $name $Territoryid
+		QueryType=0
+		HasRecordSet=0
+		OracleQuery=select objid, name ,objid Territoryid from table_Territory where objid like \'-%\' and Territory2Company=@objid
+		MssqlQuery=select objid, name ,objid Territoryid from table_Territory where objid like \'-%\' and Territory2Company=@objid
+		Status=0
+	</ActionQuery>
+
+	<ActionQuery>
+		Name=Update -ve objid for child Territory
+		TableName=Territory
+		Description=Update -ve objid for child Territory
+		StepNo=5
+		Input=@objid @name @Territoryid
+		InputDataType=@Integer @Varchar @Integer
+		Output=$count
+		QueryType=0
+		HasRecordSet=0
+		OracleQuery=update table_Territory set objid=@objid where objid=@Territoryid and name=@name
+		MssqlQuery=update table_Territory set objid=@objid where objid=@Territoryid and name=@name
+		Status=0
+	</ActionQuery>
+
+
+	<ActionQuery>
+		Name=Select -ve objid for child User
+		TableName=User
+		Description=Select -ve objid for child User
+		StepNo=6
+		Input=@Objid
+		InputDataType=@Integer
+		Output=$objid $name $Userid
+		QueryType=0
+		HasRecordSet=0
+		OracleQuery=select objid, name ,objid Userid from table_User where objid like \'-%\' and User2Company=@objid
+		MssqlQuery=select objid, name ,objid Userid from table_User where objid like \'-%\' and User2Company=@objid
+		Status=0
+	</ActionQuery>
+
+	<ActionQuery>
+		Name=Update -ve objid for child User
+		TableName=User
+		Description=Update -ve objid for child User
+		StepNo=7
+		Input=@objid @name @Userid
+		InputDataType=@Integer @Varchar @Integer
+		Output=$count
+		QueryType=0
+		HasRecordSet=0
+		OracleQuery=update table_User set objid=@objid where objid=@Userid and name=@name
+		MssqlQuery=update table_User set objid=@objid where objid=@Userid and name=@name
+		Status=0
+	</ActionQuery>
+
+
+	<ActionQuery>
+		Name=Call Upadte_Company procedure
+		TableName=Company
+		Description=Call Update_Company procedure
+		StepNo=8
+		Input=@Objid
+		InputDataType=@Integer
+		Output=$activityId
+		QueryType=0
+		HasRecordSet=0
+		OracleQuery=exec Update_Company(@objid)
+		MssqlQuery=exec Update_Company @objid
+		Status=0
+	</ActionQuery>

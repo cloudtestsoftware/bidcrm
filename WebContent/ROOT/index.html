@@ -1,0 +1,1155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="">
+<meta name="author" content="">
+
+<title>BidCRM, Bidding, Sales, Marketing & Campaign Management
+	in Cloud</title>
+
+<!-- Bootstrap Core CSS -->
+<link href="css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Custom CSS -->
+<link href="css/modern-business.css" rel="stylesheet">
+
+<!-- Custom Fonts -->
+<!--<link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">-->
+<link href="http://fonts.googleapis.com/css?family=Inconsolata"
+	rel="stylesheet" type="text/css">
+<style>
+.navbar-inverse .navbar-brand {
+	color: #fff;
+	font-size: 22px;
+}
+
+.navbar-inverse {
+	border-color: #00BCD4;
+}
+
+.navbar-inverse {
+	background-color: #00BCD4;
+	box-shadow: 0 3px 3px rgba(0, 0, 0, .29);
+
+	/* border-color: #080808; */
+}
+
+.navbar-inverse .navbar-nav>li>a {
+	color: #fff;
+	text-transform: uppercase;
+}
+
+.panel {
+	box-shadow: 2px 2px 5px rgba(0, 0, 0, .1);
+	border-radius: 0;
+	cursor: pointer;
+	border: 1px solid #dedede;
+}
+
+.panel-default>.panel-heading {
+	color: #333;
+	background-color: #00BCD4;
+	border-color: none;
+	color: #fff;
+	text-align: center;
+	font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.panel-body {
+	font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	text-align: left;
+}
+
+.card-panel {
+	transition: box-shadow .25s;
+	padding: 24px;
+	margin: .5rem 0 1rem 0;
+	border-radius: 2px;
+	background-color: #fff;
+	box-shadow: 2px 2px 5px rgba(0, 0, 0, .1);
+	border-left: 10px solid #CDDC39;
+}
+
+img.responsive-img, video.responsive-video {
+	max-width: 100%;
+	height: auto;
+}
+
+.circle {
+	border-radius: 50%;
+}
+
+img.responsive-img, video.responsive-video {
+	max-width: 100%;
+	height: auto;
+	width: 60px;
+	background-color: #fafafa
+}
+
+.navbar-inverse .navbar-nav>li>a:hover {
+	background-color: rgba(63, 81, 181, 0.63);
+}
+
+panel-heading {
+	padding: 10px 15px;
+	border-bottom: 0px solid transparent;
+	border-top-left-radius: 0px;
+	border-top-right-radius: 0px;
+}
+
+.portfolio {
+	box-shadow: 2px 2px 5px rgba(0, 0, 0, .1);
+	background-color: #fff;
+}
+
+.img-portfolio {
+	margin: 0px;
+	padding: 10px;
+}
+
+.iconImage {
+	display: block;
+	text-align: center;
+	margin: 0 auto;
+}
+
+.panelFooter {
+	background-color: #607D8B;
+	padding: 10px;
+	box-shadow: 2px 2px 2px #888888;
+}
+
+.bottomFooter {
+	font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	text-align: left;
+	font-color: "white";
+}
+
+.circle1 {
+	width: 9px;
+	height: 9px;
+	-webkit-border-radius: 25px;
+	-moz-border-radius: 25px;
+	border-radius: 20px;
+	background-color: #AED581;
+	display: inline-block;
+	margin-right: 10px;
+}
+
+.circle2 {
+	width: 9px;
+	height: 9px;
+	-webkit-border-radius: 25px;
+	-moz-border-radius: 25px;
+	border-radius: 20px;
+	background-color: #FFF176;
+	display: inline-block;
+	margin-right: 10px;
+}
+
+.circle3 {
+	width: 9px;
+	height: 9px;
+	-webkit-border-radius: 25px;
+	-moz-border-radius: 25px;
+	border-radius: 20px;
+	background-color: #f3b49f;
+	display: inline-block;
+	margin-right: 10px;
+}
+
+.circle4 {
+	width: 9px;
+	height: 9px;
+	-webkit-border-radius: 25px;
+	-moz-border-radius: 25px;
+	border-radius: 20px;
+	background-color: #80DEEA;
+	display: inline-block;
+	margin-right: 10px;
+}
+
+.circle5 {
+	width: 9px;
+	height: 9px;
+	-webkit-border-radius: 25px;
+	-moz-border-radius: 25px;
+	border-radius: 20px;
+	background-color: #8BC34A;
+	display: inline-block;
+	margin-right: 10px;
+}
+
+.mini-timeline:before {
+	content: '';
+	position: absolute;
+	top: 8px;
+	bottom: 0;
+	width: 2px;
+	background: #eeeeee;
+	left: 8px;
+}
+
+.mini-timeline {
+	padding-left: 0;
+	list-style: none;
+	position: relative;
+	margin-left: 7%;
+}
+
+.mini-timeline>li {
+	position: relative;
+}
+
+li {
+	display: list-item;
+	text-align: -webkit-match-parent;
+}
+
+.mini-timeline-lime .timeline-icon {
+	border: 2px solid #cddc39 !important;
+}
+
+.mini-timeline>li .timeline-body {
+	margin: 0 0px 20px 32px;
+	padding: 0;
+	position: relative;
+	background-color: #fff;
+}
+
+.mini-timeline>li .timeline-icon {
+	position: absolute;
+	border-radius: 50%;
+	left: 3px;
+	top: 3px;
+	margin: 0;
+	padding: 0;
+	width: 12px;
+	height: 12px;
+	background: #fff;
+}
+
+.mini-timeline-deeporange .timeline-icon {
+	border: 2px solid #ff5722 !important;
+}
+
+.mini-timeline-info .timeline-icon {
+	border: 2px solid #00bcd4 !important;
+}
+
+.mini-timeline-indigo .timeline-icon {
+	border: 2px solid #3f51b5 !important;
+}
+
+li {
+	list-style: none;
+}
+
+.modal-content {
+	border-radius: none;
+}
+
+body {
+	background: rgba(238, 238, 238, 0.63);
+	font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+</style>
+
+
+
+
+
+</head>
+
+<body>
+
+	<!-- Navigation -->
+	<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+		<div class="container">
+			<!-- Brand and toggle get grouped for better mobile display -->
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse"
+					data-target="#bs-example-navbar-collapse-1">
+					<span class="sr-only">Toggle navigation</span> <span
+						class="icon-bar"></span> <span class="icon-bar"></span> <span
+						class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="index.html">BidERP</a>
+			</div>
+			<!-- Collect the nav links, forms, and other content for toggling -->
+			<div class="collapse navbar-collapse"
+				id="bs-example-navbar-collapse-1">
+				<ul class="nav navbar-nav navbar-right">
+					<li><a href="index.html">Home</a></li>
+					<li><a href="About.html">About</a></li>
+					<li><a href="Product.html">Products</a></li>
+					<li><a href="contact.html">Contact</a></li>
+					<li><a href="Blog.html">Blog</a></li>
+					<li><a href="./bidcrm/service">LogIn</a></li>
+				</ul>
+			</div>
+			<!-- /.navbar-collapse -->
+		</div>
+		<!-- /.container -->
+	</nav>
+
+	<!-- Header Carousel -->
+	<header id="myCarousel" class="carousel slide">
+		<!-- Indicators -->
+		<ol class="carousel-indicators">
+			<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+			<li data-target="#myCarousel" data-slide-to="1"></li>
+			<li data-target="#myCarousel" data-slide-to="2"></li>
+			<li data-target="#myCarousel" data-slide-to="3"></li>
+			<li data-target="#myCarousel" data-slide-to="4"></li>
+			<li data-target="#myCarousel" data-slide-to="5"></li>
+			<li data-target="#myCarousel" data-slide-to="6"></li>
+			<li data-target="#myCarousel" data-slide-to="7"></li>
+		</ol>
+
+		<!-- Wrapper for slides -->
+		<div class="carousel-inner">
+			<div class="item active">
+				<div class="fill"
+					style="background-image: url('./img/const10.png');"></div>
+				<div class="carousel-caption">
+					<h2>Bid on Construction</h2>
+				</div>
+			</div>
+
+			<div class="item">
+				<div class="fill" style="background-image: url('./img/const9.jpg');"></div>
+				<div class="carousel-caption">
+					<h2>Plans and execution</h2>
+				</div>
+			</div>
+			<div class="item">
+				<div class="fill" style="background-image: url('./img/const3.jpg');"></div>
+				<div class="carousel-caption">
+					<h2>Schedule to Manage</h2>
+				</div>
+			</div>
+			<div class="item">
+				<div class="fill" style="background-image: url('./img/const5.png');"></div>
+				<div class="carousel-caption">
+					<h2>Believe in Quality</h2>
+				</div>
+			</div>
+			<div class="item">
+				<div class="fill"
+					style="background-image: url('./img/const12.png');"></div>
+				<div class="carousel-caption">
+					<h2>Delivers with in Time line</h2>
+				</div>
+			</div>
+			<div class="item">
+				<div class="fill" style="background-image: url('./img/const7.png');"></div>
+				<div class="carousel-caption">
+					<h2>Budget with in Estimation</h2>
+				</div>
+			</div>
+			<div class="item">
+				<div class="fill" style="background-image: url('./img/const8.jpg');"></div>
+				<div class="carousel-caption">
+					<h2>Automation of Business</h2>
+				</div>
+			</div>
+		</div>
+
+		<!-- Controls -->
+		<a class="left carousel-control" href="#myCarousel" data-slide="prev">
+			<span class="icon-prev"></span>
+		</a> <a class="right carousel-control" href="#myCarousel"
+			data-slide="next"> <span class="icon-next"></span>
+		</a>
+	</header>
+
+	<!-- Page Content -->
+	<div class="container">
+
+		<div class="card-panel grey lighten-5 z-depth-1"
+			style="margin-top: 1%;">
+			<div class="row valign-wrapper">
+				<div class="col-lg-1">
+
+					<img src="./img/profilePic.png" class="circle responsive-img"></span>
+					<!-- notice the "circle" class -->
+				</div>
+				<div class="col-lg-11">
+
+					<span> Online Bid ERP system. A cloud ERP for construction
+						Bidding, Quotation , Estimation, Planning , Procurement, Budget ,
+						Scheduling , Execution & Monitoring. Work together with General
+						and Sub contractors online within single System! </span>
+				</div>
+			</div>
+		</div>
+
+
+
+		<!-- Marketing Icons Section -->
+		<div class="row">
+			<div class="col-lg-12"></div>
+			<div class="col-md-4">
+				<div class="panel panel-default">
+					<div class="panel-heading" style="background-color: #1BBC9B">
+						<h4>
+							<i class="fa fa-fw fa-check"></i> Bid in Cloud
+						</h4>
+					</div>
+					<div class="panel-body">
+						<p>At BidERP, we are very serious about your construction
+							bidding need. We are not selling a simple tool or online system.
+							We take complete ownership and responsibility for your
+							construction bidding process by providing 5 core services.</p>
+						<!-- a href="portfolio-item.html" data-toggle="modal" data-target="#myModal" class="btn btn-default">Learn More</a -->
+						<a href="bid_on_cloud.html" class="btn btn-default">Learn More</a>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-4">
+				<div class="panel panel-default">
+					<div class="panel-heading" style="background-color: #03A9F4">
+						<h4>
+							<i class="fa fa-fw fa-gift"></i> Contract in Cloud
+						</h4>
+					</div>
+					<div class="panel-body">
+						<p>Contracts are essential part of construction. In BidERP
+							General Contractors, Business Owner and Sub Contractors use same
+							ERP system in cloud. Sharing of your project critical data is
+							just one within click away.</p>
+						<a href="Product.html" class="btn btn-default">Learn More</a>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-4">
+				<div class="panel panel-default">
+					<div class="panel-heading" style="background-color: #EE6E73">
+						<h4>
+							<i class="fa fa-fw fa-compass"></i> Construct in Cloud
+						</h4>
+					</div>
+					<div class="panel-body">
+						<p>In Construction, measurement of cost, budget, progress ,
+							schedule , time line and profitability are very critical to every
+							project success. Intigrate your entire business process within
+							single cloud ERP system with no headache and gimmick.</p>
+						<a href="Product.html" class="btn btn-default">Learn More</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- /.row -->
+
+		<!-- Portfolio Section -->
+		<div class="row">
+			<div class="col-lg-12">
+				<h2 class="page-header" style="color: #607D8B">Operations</h2>
+			</div>
+
+			<div class="col-md-4 col-sm-6">
+				<div class="portfolio">
+					<a href="portfolio-item.html" data-toggle="modal"
+						data-target="#pluginModal"> <img
+						class="img-responsive img-portfolio img-hover iconImage"
+						src="./img/plugin.png" alt="">
+					</a>
+				</div>
+				<div class="panelFooter">
+					<span style="font-size: 16px; font-weight: 100; color: #fff">Adopt
+						cloud to run multiple projects in multiple sites. </span>
+				</div>
+
+			</div>
+
+			<div class="col-md-4 col-sm-6">
+				<div class="portfolio">
+					<a href="portfolio-item.html" data-toggle="modal"
+						data-target="#bidModal"> <img
+						class="img-responsive img-portfolio img-hover iconImage"
+						src="./img/script.png" alt="">
+					</a>
+					<div class="panelFooter">
+						<span style="font-size: 16px; font-weight: 100; color: #fff">Bid,
+							contract and share documents between stake holders </span>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-4 col-sm-6">
+				<div class="portfolio">
+					<a href="portfolio-item.html" data-toggle="modal"
+						data-target="#planModal"> <img
+						class="img-responsive img-portfolio img-hover iconImage"
+						src="./img/disc.png" alt="">
+					</a>
+					<div class="panelFooter">
+						<span style="font-size: 16px; font-weight: 100; color: #fff">Plan
+							, estimate and measure cost with target against progress </span>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-4 col-sm-6" style="margin-top: 2%;">
+				<div class="portfolio">
+					<a href="portfolio-item.html" data-toggle="modal"
+						data-target="#colaborateModal"> <img
+						class="img-responsive img-portfolio img-hover iconImage"
+						src="./img/main.png" alt="">
+					</a>
+					<div class="panelFooter">
+						<span style="font-size: 16px; font-weight: 100; color: #fff">Collaborate
+							with your team, contractors and sub contractors </span>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-4 col-sm-6" style="margin-top: 2%;">
+				<div class="portfolio">
+					<a href="portfolio-item.html" data-toggle="modal"
+						data-target="#budgetModal"> <img
+						class="img-responsive img-portfolio img-hover iconImage"
+						src="./img/report.png" alt="">
+					</a>
+					<div class="panelFooter">
+						<span style="font-size: 16px; font-weight: 100; color: #fff">Manage
+							your financial, account , budget against actual cost & estimates
+						</span>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-4 col-sm-6" style="margin-top: 2%;">
+				<div class="portfolio">
+					<a href="portfolio-item.html" data-toggle="modal"
+						data-target="#reportModal"> <img
+						class="img-responsive img-portfolio img-hover iconImage"
+						src="./img/responsive.png" alt="">
+					</a>
+					<div class="panelFooter">
+						<span style="font-size: 16px; font-weight: 100; color: #fff">Generate
+							necessary reports, use web interface in cloud ... </span>
+					</div>
+				</div>
+			</div>
+
+		</div>
+		<!-- /.row -->
+
+		<!-- Features Section -->
+		<div class="row">
+			<div class="col-lg-12">
+				<h2 class="page-header">What We Do...</h2>
+			</div>
+			<div
+				style="background-color: #fff !important; display: inline-block; padding: 20px; box-shadow: 2px 2px 5px rgba(0, 0, 0, .1); border-left: 5px solid #607D8B">
+				<div class="col-md-6">
+					<p>Our team does the best and delivers good quality ERP system
+						you need to solve many of these issues:</p>
+					<ul class="mini-timeline">
+						<li class="mini-timeline-lime">
+							<div class="timeline-icon"></div>
+							<div class="timeline-body">
+								<div class="timeline-content">Bidding and Construction
+									project management within single ERP system is high in demand.
+									Bidding process needs critical information sharing , planning &
+									estimation by gathering data from multiple sources to take
+									proper decision to roll out any contract. Many companies
+									finding difficulties to use any single system to bid and sub
+									contract any part of their work within single system that can
+									help them to collaborate and fix issues earlier.</div>
+							</div>
+						</li>
+						<li class="mini-timeline-deeporange">
+							<div class="timeline-icon"></div>
+							<div class="timeline-body">
+								<div class="timeline-content">​ A recent survey of
+									executives responsible for projects of $1 billion or more by
+									the Accenture Center for Energy & Utility Innovation found that
+									only a third of respondents saw projects routinely delivered
+									within 25% of approved budget, while even fewer saw them
+									routinely delivered to the approved schedule. Such delays and
+									overruns could amount to trillions of dollars in added expenses
+									and lost revenue annually.</div>
+							</div>
+						</li>
+						<li class="mini-timeline-info">
+							<div class="timeline-icon"></div>
+							<div class="timeline-body">
+								<div class="timeline-content">
+
+									For every $1 billion spend on a capital project, $135 million
+									is at risk. 56% of that ($75 million) is at risk due to
+									ineffective communication. <br>
+									<p>–2013 Pulse of the Profession, Project Management
+										Institute</p>
+								</div>
+							</div>
+						</li>
+						<li class="mini-timeline-indigo">
+							<div class="timeline-icon"></div>
+							<div class="timeline-body">
+								<div class="timeline-content">
+									A project is considered to have failed if the schedule slips or
+									the project overspends by more than 25%, the execution time is
+									50% longer, or there are severe and continuing operational
+									problems into the second year of the project. <br>
+									<p>–Speed Kills, Klaver, Ali. 2012 Project Manager Magazine
+									
+									<p>
+								</div>
+							</div>
+						</li>
+						<li class="mini-timeline-lime">
+							<div class="timeline-icon"></div>
+							<div class="timeline-body">
+								<div class="timeline-content">
+									Up to 30 percent of anticipated value disappears during the
+									turnover/ commissioning and ramp-up phases of new asset
+									lifecycles. <br>
+									<p>–Deloitte. Effective Operational Readiness of Large
+										Mining Capital Projects - Avoiding value leakage in the
+										transition from project execution into operations. Article,
+										2012.
+									<p>
+								</div>
+							</div>
+						</li>
+						<li class="mini-timeline-deeporange">
+							<div class="timeline-icon"></div>
+							<div class="timeline-body">
+								<div class="timeline-content">
+
+									​ Good front end planning leads to as much as 20% cost savings
+									and 39% schedule reduction for total project design and
+									construction.
+									<p>–Construction Industry Institute: Adding Value Through
+										Front End Planning. CII Special Publication 268-3</p>
+								</div>
+							</div>
+						</li>
+						<li class="mini-timeline-deeporange">
+							<div class="timeline-icon"></div>
+							<div class="timeline-body">
+								<div class="timeline-content">BidERP is a unique cloud
+									based ERP solution provider that can help you to automate your
+									complete business process for any kind of projects with small
+									to large financial budget with minimum data entry and
+									maintenance effort. Our re-usable projects templates will help
+									you from day one to save your time and cost starting from
+									project initiation phase ,initial quotation, bidding,
+									estimation , planning , budgeting, accounting, inventory
+									management , scheduling , project execution and measurement,
+									sub contracting and many more ....</div>
+							</div>
+						</li>
+
+					</ul>
+				</div>
+				<div class="col-md-6">
+					<img class="img-responsive" src="./img/bid2.jpg" alt="">
+				</div>
+				<div class="col-md-6">
+					<img class="img-responsive" src="./img/pm2.jpg" alt="">
+				</div>
+			</div>
+		</div>
+		<!-- /.row -->
+
+		<hr>
+	</div>
+	<!-- Footer -->
+	<footer>
+		<div class="container-fluid"
+			style="padding: 20px; background-color: #607D8B; color: #fff">
+			<div class="col-lg-12">
+				<p>© 2015 by Artitelly Solutions , Inc</p>
+				<p>info@CloudTestSoftware.com | Tel: 1-650-823-2300</p>
+			</div>
+		</div>
+	</footer>
+
+
+	<div id="pluginModal" class="modal fade" role="dialog">
+		<div class="modal-dialog modal-lg" style="width: 80%">
+
+			<!-- Modal content-->
+			<div class="modal-content" style="border-radius: 0px">
+
+				<div class="modal-header" style="border-bottom: none">
+
+					<button type="button" class="close" data-dismiss="modal">&times;</button>
+					<img src="./img/plugin.png" /> <span class="modal-title"
+						style="padding-left: 20px; font-size: 20px; color: #607D8B;">Multi
+						Sites & Multi Projects</span>
+				</div>
+
+				<div class="modal-body">
+					<div class="row">
+						<div class="col-lg-9">
+							<div
+								style="padding-left: 10px; text-align: left; border-left: 5px solid rgba(255, 99, 71, 0.68)">
+								<p>Depending on your type of construction projects, you may
+									be doing construction in multiple projects in different sites.
+									Sometimes, it could be that you have multiple units of
+									construction in same site. Each of these units may have
+									different cost and budget. There could be multiple sub
+									contractors in each unit. It is very difficult to manage such a
+									huge construction project and monitor each level of
+									construction within single application. Pulling necessary data
+									into a single report is much more difficult task.</p>
+							</div>
+							<div
+								style="padding-left: 10px; text-align: left; border-left: 5px solid rgba(0, 150, 136, 0.65)">
+								<p>A cloud based solution could be much more easier way of
+									managing multi sites and multi projects constructions where you
+									need not to put extra effort to manage and generate critical
+									site or project specific data from multiple stake holders or
+									applications. BidERP provides complete integrated solution in
+									cloud and save your cost and resources to secure and manage
+									critical data. You have multiple options how you can scale up
+									your construction project even from single unit to multiple
+									units and even single site to multiple sites based on your
+									need.</p>
+							</div>
+							<div
+								style="padding-left: 10px; text-align: left; border-left: 5px solid rgba(255, 193, 7, 0.79)">
+								<p>BidERP provides you necessary software tools and
+									resources to scale up your construction activities even
+									starting with a single unit of construction work to very large
+									complex construction enterprise. Despite the size of your
+									construction work BidERP can manage and help you to grow your
+									business on demand basis and you do not have any investment on
+									your software resource in ahead of time.</p>
+							</div>
+						</div>
+
+						<div class="col-lg-3">
+
+							<div style="box-shadow: 2px 2px 5px rgba(0, 0, 0, .1);">
+								<img src="./img/multiunits.jpg" style="width: 100%" />
+							</div>
+							<div
+								style="padding: 10px; background-color: rgba(0, 150, 136, 0.69); box-shadow: 2px 2px 3px #888888; text-align: center; color: #fff">
+
+								<a style="color: #fff; font-weight: bold; font-size: 20px;">
+									Contact Us </a>
+
+							</div>
+
+						</div>
+					</div>
+				</div>
+
+
+			</div>
+
+		</div>
+
+	</div>
+
+
+	<div id="bidModal" class="modal fade" role="dialog">
+		<div class="modal-dialog modal-lg" style="width: 80%">
+
+			<!-- Modal content-->
+			<div class="modal-content" style="border-radius: 0px">
+
+				<div class="modal-header" style="border-bottom: none">
+
+					<button type="button" class="close" data-dismiss="modal">&times;</button>
+					<img src="./img/script.png" /><span class="modal-title"
+						style="padding-left: 20px; font-size: 20px; color: #607D8B;">Multi
+						Level Bid & Contract</span>
+				</div>
+
+				<div class="modal-body">
+					<div class="row">
+						<div class="col-lg-9">
+							<div
+								style="padding-left: 10px; text-align: left; border-left: 5px solid rgba(255, 99, 71, 0.68)">
+								<p>Whether for a small or large construction project,
+									bidding is a very necessary function in construction process.
+									In many companies, the bidding process is very complex and
+									involved with multiple level of approvals, require tools to
+									store and publish documents, need to capture necessary parts
+									and resources against specifications, need selection of
+									qualified bidders with different ratings and experience to
+									invite, needs tool to generate and get reply against different
+									compliance and regulatory issues, need to compare compliance by
+									vendors and supplier to design specifications to select winning
+									bid and finally creating any managing the contract as per
+									schedule and delivery time line.</p>
+							</div>
+							<div
+								style="padding-left: 10px; text-align: left; border-left: 5px solid rgba(0, 150, 136, 0.65)">
+								<p>BidERP provides a cloud based solution for entire bidding
+									process, provide interface to capture and store necessary
+									documents and data to invite qualified bidders, evaluates their
+									bids with set of prerequisites qualifying rule, compare their
+									bids and select winning bidder.</p>
+							</div>
+							<div
+								style="padding-left: 10px; text-align: left; border-left: 5px solid rgba(255, 193, 7, 0.79)">
+								<p>BidERP also supports multi level bidding between General
+									Contractor and Sub Contractor, ease to pull out data and
+									prepare reports as necessary.</p>
+							</div>
+						</div>
+
+						<div class="col-lg-3">
+
+							<div style="box-shadow: 2px 2px 5px rgba(0, 0, 0, .1);">
+								<img src="./img/bid1.jpg" style="width: 100%" />
+							</div>
+							<div
+								style="padding: 10px; background-color: rgba(0, 150, 136, 0.69); box-shadow: 2px 2px 3px #888888; text-align: center; color: #fff">
+
+								<a style="color: #fff; font-weight: bold; font-size: 20px;">
+									Contact Us </a>
+
+							</div>
+
+						</div>
+					</div>
+				</div>
+
+
+			</div>
+
+		</div>
+
+	</div>
+
+	<div id="planModal" class="modal fade" role="dialog">
+		<div class="modal-dialog modal-lg" style="width: 80%">
+
+			<!-- Modal content-->
+			<div class="modal-content" style="border-radius: 0px">
+
+				<div class="modal-header" style="border-bottom: none">
+
+					<button type="button" class="close" data-dismiss="modal">&times;</button>
+					<img src="./img/disc.png" /><span class="modal-title"
+						style="padding-left: 20px; font-size: 20px; color: #607D8B;">Plan,
+						Estimate & Measure Cost</span>
+				</div>
+
+				<div class="modal-body">
+					<div class="row">
+						<div class="col-lg-9">
+							<div
+								style="padding-left: 10px; text-align: left; border-left: 5px solid rgba(255, 99, 71, 0.68)">
+								<p>In Construction project achieving project time line is
+									very important to reduce cost. If any project gets delays, the
+									cost increases subsequently and the profitability of the
+									project is reduced. So project estimation and monitoring of
+									cost against critical mile stones should be in cycle and
+									require necessary actions in planning and adjusting cost of
+									project in adverse situation is in highest priority. Real time
+									monitoring is important business function mostly the software
+									application platform should provide tools and support to
+									achieve this critical objective. An automatic alert mechanism
+									for that purpose could an effective solution against any preset
+									mark up for any critical milestone.</p>
+							</div>
+							<div
+								style="padding-left: 10px; text-align: left; border-left: 5px solid rgba(0, 150, 136, 0.65)">
+								<p>BidERP provides project estimating and monitoring tool
+									out of box which can fulfill this critical business need and
+									allow to adjust cost and resources against each plan to improve
+									profitability of any construction project.</p>
+							</div>
+							<div
+								style="padding-left: 10px; text-align: left; border-left: 5px solid rgba(255, 193, 7, 0.79)">
+								<p>BidERP supports traditional and also design build
+									construction estimation process. In the traditional process,
+									you can establish your cost after the bidding is completed and
+									you can measure your cost against the contract you signed with
+									the other party. While the design build is very effective for
+									the General contractor who own a single piece of work against
+									their contract and establish their after finishing the design.
+									This is very time saving approach in many case compare to the
+									traditional process with bidding.</p>
+							</div>
+						</div>
+
+						<div class="col-lg-3">
+
+							<div style="box-shadow: 2px 2px 5px rgba(0, 0, 0, .1);">
+								<img src="./img/bidestimate.png" style="width: 100%" />
+							</div>
+							<div
+								style="padding: 10px; background-color: rgba(0, 150, 136, 0.69); box-shadow: 2px 2px 3px #888888; text-align: center; color: #fff">
+
+								<a style="color: #fff; font-weight: bold; font-size: 20px;">
+									Contact Us </a>
+
+							</div>
+
+						</div>
+					</div>
+				</div>
+
+
+			</div>
+
+		</div>
+
+	</div>
+
+
+	<div id="colaborateModal" class="modal fade" role="dialog">
+		<div class="modal-dialog modal-lg" style="width: 80%">
+
+			<!-- Modal content-->
+			<div class="modal-content" style="border-radius: 0px">
+
+				<div class="modal-header" style="border-bottom: none">
+
+					<button type="button" class="close" data-dismiss="modal">&times;</button>
+					<img src="./img/main.png" /><span class="modal-title"
+						style="padding-left: 20px; font-size: 20px; color: #607D8B;">Collaborate
+						with Contractor</span>
+				</div>
+
+				<div class="modal-body">
+					<div class="row">
+						<div class="col-lg-9">
+							<div
+								style="padding-left: 10px; text-align: left; border-left: 5px solid rgba(255, 99, 71, 0.68)">
+								<p>In any construction project collaboration between
+									principle and contractor is very important part of construction
+									process. Specially when multilevel contract is awarded the
+									collaboration becomes very difficult process between multiple
+									parties and correlating each piece of information to the
+									principle contract becomes very difficult. The schedule between
+									principle and main contractor or between main contractor and
+									sub contractor could be different in that case. So sharing of
+									the information and plan between parties are more important
+									such that actual project progress can be measured with real
+									time data.</p>
+							</div>
+							<div
+								style="padding-left: 10px; text-align: left; border-left: 5px solid rgba(0, 150, 136, 0.65)">
+								<p>BidERP provides a complete real time solution by engaging
+									multiple parties and only the data which is common could be
+									shared between parties. The data can flow in more secure manner
+									between the level of planning and contract between parties. For
+									example the principle can share its own project plan with
+									different milestones to the main contractor and the main
+									contractor can share its own plan to the sub contractor or vice
+									versa. So in that process you can measure progress between
+									parties without any conflict of interest.</p>
+							</div>
+							<div
+								style="padding-left: 10px; text-align: left; border-left: 5px solid rgba(255, 193, 7, 0.79)">
+								<p>BidERP supports multilevel communication between general
+									contractor and sub contractor, helps to share information
+									related to project milestones based on the schedule and
+									progress, resolves up front issues , generate alerts specific
+									to deliverables by using single system in cloud where chances
+									of loosing information is very negligible.</p>
+							</div>
+						</div>
+
+						<div class="col-lg-3">
+
+							<div style="box-shadow: 2px 2px 5px rgba(0, 0, 0, .1);">
+								<img src="./img/collaboration.gif" style="width: 100%" />
+							</div>
+							<div
+								style="padding: 10px; background-color: rgba(0, 150, 136, 0.69); box-shadow: 2px 2px 3px #888888; text-align: center; color: #fff">
+
+								<a style="color: #fff; font-weight: bold; font-size: 20px;">
+									Contact Us </a>
+
+							</div>
+
+						</div>
+					</div>
+				</div>
+
+
+			</div>
+
+		</div>
+
+	</div>
+
+
+	<div id="budgetModal" class="modal fade" role="dialog">
+		<div class="modal-dialog modal-lg" style="width: 80%">
+
+			<!-- Modal content-->
+			<div class="modal-content" style="border-radius: 0px">
+
+				<div class="modal-header" style="border-bottom: none">
+
+					<button type="button" class="close" data-dismiss="modal">&times;</button>
+					<img src="./img/report.png" /><span class="modal-title"
+						style="padding-left: 20px; font-size: 20px; color: #607D8B;">Establish
+						Budget & Monitor Costs</span>
+				</div>
+
+				<div class="modal-body">
+					<div class="row">
+						<div class="col-lg-9">
+							<div
+								style="padding-left: 10px; text-align: left; border-left: 5px solid rgba(255, 99, 71, 0.68)">
+								<p>In many cases, in construction it is difficult to
+									establish linkage between cost of actual job with its initial
+									and final estimation in multiple level of contract and it's
+									changes. Sometimes it becomes an issue where the cost is
+									because of new changes or was part of the initial contract. If
+									it is covered within initial scope of work what is the
+									difference of cost because of any new change after the initial
+									scope. Also it may necessary to measure the percentage of
+									budget which already spent and compare to the cost estimated.
+									Whether the projected cost is much higher than initial budget
+									and how soon we can know about the latest change of budget that
+									is needed to avoid further delay of the project.</p>
+							</div>
+							<div
+								style="padding-left: 10px; text-align: left; border-left: 5px solid rgba(0, 150, 136, 0.65)">
+								<p>BidERP provides a direct linkage between your different
+									level of estimations within and outside of the scope of work
+									and also identify in which level of contract the change cost is
+									coming higher than the estimation. BidERP also supports changes
+									in multiple stages of the project, add new changes, measure
+									change cost separately compare to initial scope, provides
+									linkage between cost of initial contract and sub contract,
+									generates alerts based on the budget setting, resolves timely
+									payment issues and avoids delay of work.</p>
+							</div>
+							<div
+								style="padding-left: 10px; text-align: left; border-left: 5px solid rgba(255, 193, 7, 0.79)">
+								<p>BidERP also supports a single platform for budgeting and
+									accounting of the project cost, provides direct linkage of
+									funds and expenses, measures funds available to spend vs.
+									burned out, generates alerts to take preventive measure in
+									ahead of time such that unnecessary delay of project can be
+									avoided due to the flow of funds.</p>
+							</div>
+						</div>
+
+						<div class="col-lg-3">
+
+							<div style="box-shadow: 2px 2px 5px rgba(0, 0, 0, .1);">
+								<img src="./img/accountbudget.png" style="width: 100%" />
+							</div>
+							<div
+								style="padding: 10px; background-color: rgba(0, 150, 136, 0.69); box-shadow: 2px 2px 3px #888888; text-align: center; color: #fff">
+
+								<a style="color: #fff; font-weight: bold; font-size: 20px;">
+									Contact Us </a>
+
+							</div>
+
+						</div>
+					</div>
+				</div>
+
+
+			</div>
+
+		</div>
+
+	</div>
+
+
+	<div id="reportModal" class="modal fade" role="dialog">
+		<div class="modal-dialog modal-lg" style="width: 80%">
+
+			<!-- Modal content-->
+			<div class="modal-content" style="border-radius: 0px">
+
+				<div class="modal-header" style="border-bottom: none">
+
+					<button type="button" class="close" data-dismiss="modal">&times;</button>
+					<img src="./img/responsive.png" /><span class="modal-title"
+						style="padding-left: 20px; font-size: 20px; color: #607D8B;">Web
+						platform with ease of reporting</span>
+				</div>
+
+				<div class="modal-body">
+					<div class="row">
+						<div class="col-lg-9">
+							<div
+								style="padding-left: 10px; text-align: left; border-left: 5px solid rgba(255, 99, 71, 0.68)">
+								<p>According to a recent survey conducted, superintendents,
+									subcontractors, and general managers all listed daily reporting
+									as one of their top five industry challenges. This is a big
+									indicator of a growing concern regarding their ability to keep
+									track of critical information, report incidents, review and
+									update construction reports all while managing current
+									projects.</p>
+							</div>
+							<div
+								style="padding-left: 10px; text-align: left; border-left: 5px solid rgba(0, 150, 136, 0.65)">
+								<p>The first and most all-encompassing challenge that we
+									heard across the board was finding the time to sit down,
+									compile, and complete daily reporting – while trying to grow
+									their business. This boils down to time management, an
+									essential skill for any Contractor or Project Manager.</p>
+							</div>
+							<div
+								style="padding-left: 10px; text-align: left; border-left: 5px solid rgba(255, 193, 7, 0.79)">
+								<p>BidERP provides you necessary software tools and
+									resources to get real time summary update for each object
+									level. When you navigate to any of the application menu and
+									select any menu item, you will find a summary reports which is
+									readable and graphical format. In each record you open up using
+									BidERP application , you will find a consolidated summary
+									report in ground up model. It helps you to make proper decision
+									and take necessary action in case there is any missing target
+									or expected result.</p>
+							</div>
+						</div>
+
+						<div class="col-lg-3">
+
+							<div style="box-shadow: 2px 2px 5px rgba(0, 0, 0, .1);">
+								<img src="./img/summaryreport.png" style="width: 100%" />
+							</div>
+							<div
+								style="padding: 10px; background-color: rgba(0, 150, 136, 0.69); box-shadow: 2px 2px 3px #888888; text-align: center; color: #fff">
+
+								<a style="color: #fff; font-weight: bold; font-size: 20px;">
+									Contact Us </a>
+
+							</div>
+
+						</div>
+					</div>
+				</div>
+
+
+			</div>
+
+		</div>
+
+	</div>
+	<!-- end of models -->
+	</div>
+
+
+
+	<!-- jQuery -->
+	<script src="js/jquery.js"></script>
+
+	<!-- Bootstrap Core JavaScript -->
+	<script src="js/bootstrap.min.js"></script>
+
+	<!-- Script to Activate the Carousel -->
+	<script>
+    $('.carousel').carousel({
+        //interval: 5000 //changes the speed
+    })
+    </script>
+
+</body>
+
+</html>

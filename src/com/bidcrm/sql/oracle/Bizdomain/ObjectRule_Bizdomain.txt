@@ -1,0 +1,116 @@
+//*****************************************************************//
+//Adding Object Rule
+//Table Name:Bizdomain
+//Attribute Name:Bizdomain Rule
+//********************************************************************//
+
+	<ObjectRule>
+		Name=Bizdomain Rule
+		TableName=Bizdomain
+		EffectedTable=BizProfile
+		Description=Calling Upadte and Insert Rule for object Bizdomain
+		Reason=1
+		ActionState=1
+		Condition=objid$gt$0
+		RuleIndex=1
+		Status=1
+	</ObjectRule>
+
+//*****************************************************************//
+//Adding Action Query
+//Table Name:Bizdomain
+//Name:Call Insert_Bizdomain procedure
+//Step No:1
+//**************************************************************//
+
+	<ActionQuery>
+		Name=Call Insert_Bizdomain procedure
+		TableName=Bizdomain
+		Description=Call Insert_Bizdomain procedure
+		StepNo=1
+		Input=@Objid
+		InputDataType=@Integer
+		Output=$activityId
+		QueryType=0
+		HasRecordSet=0
+		OracleQuery=exec Insert_Bizdomain(@objid)
+		MssqlQuery=exec Insert_Bizdomain @objid
+		Status=0
+	</ActionQuery>
+
+	<ActionQuery>
+		Name=Select -ve objid for child BizProfile
+		TableName=BizProfile
+		Description=Select -ve objid for child BizProfile
+		StepNo=2
+		Input=@Objid
+		InputDataType=@Integer
+		Output=$objid $name $BizProfileid
+		QueryType=0
+		HasRecordSet=0
+		OracleQuery=select objid, name ,objid BizProfileid from table_BizProfile where objid like \'-%\' and BizProfile2Bizdomain=@objid
+		MssqlQuery=select objid, name ,objid BizProfileid from table_BizProfile where objid like \'-%\' and BizProfile2Bizdomain=@objid
+		Status=0
+	</ActionQuery>
+
+	<ActionQuery>
+		Name=Update -ve objid for child BizProfile
+		TableName=BizProfile
+		Description=Update -ve objid for child BizProfile
+		StepNo=3
+		Input=@objid @name @BizProfileid
+		InputDataType=@Integer @Varchar @Integer
+		Output=$count
+		QueryType=0
+		HasRecordSet=0
+		OracleQuery=update table_BizProfile set objid=@objid where objid=@BizProfileid and name=@name
+		MssqlQuery=update table_BizProfile set objid=@objid where objid=@BizProfileid and name=@name
+		Status=0
+	</ActionQuery>
+
+
+	<ActionQuery>
+		Name=Select -ve objid for child PartList
+		TableName=PartList
+		Description=Select -ve objid for child PartList
+		StepNo=4
+		Input=@Objid
+		InputDataType=@Integer
+		Output=$objid $name $PartListid
+		QueryType=0
+		HasRecordSet=0
+		OracleQuery=select objid, name ,objid PartListid from table_PartList where objid like \'-%\' and PartList2Bizdomain=@objid
+		MssqlQuery=select objid, name ,objid PartListid from table_PartList where objid like \'-%\' and PartList2Bizdomain=@objid
+		Status=0
+	</ActionQuery>
+
+	<ActionQuery>
+		Name=Update -ve objid for child PartList
+		TableName=PartList
+		Description=Update -ve objid for child PartList
+		StepNo=5
+		Input=@objid @name @PartListid
+		InputDataType=@Integer @Varchar @Integer
+		Output=$count
+		QueryType=0
+		HasRecordSet=0
+		OracleQuery=update table_PartList set objid=@objid where objid=@PartListid and name=@name
+		MssqlQuery=update table_PartList set objid=@objid where objid=@PartListid and name=@name
+		Status=0
+	</ActionQuery>
+
+
+	<ActionQuery>
+		Name=Call Upadte_Bizdomain procedure
+		TableName=Bizdomain
+		Description=Call Update_Bizdomain procedure
+		StepNo=6
+		Input=@Objid
+		InputDataType=@Integer
+		Output=$activityId
+		QueryType=0
+		HasRecordSet=0
+		OracleQuery=exec Update_Bizdomain(@objid)
+		MssqlQuery=exec Update_Bizdomain @objid
+		Status=0
+	</ActionQuery>

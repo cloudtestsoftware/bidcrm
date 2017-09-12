@@ -1,0 +1,178 @@
+//*****************************************************************//
+//Adding Object Rule
+//Table Name:Emailsetting
+//Attribute Name:Emailsetting Rule
+//********************************************************************//
+
+	<ObjectRule>
+		Name=Emailsetting Rule
+		TableName=Emailsetting
+		EffectedTable=EmailAttribute
+		Description=Calling Upadte and Insert Rule for object Emailsetting
+		Reason=1
+		ActionState=1
+		Condition=objid$gt$0
+		RuleIndex=1
+		Status=1
+	</ObjectRule>
+
+//*****************************************************************//
+//Adding Action Query
+//Table Name:Emailsetting
+//Name:Call Insert_Emailsetting procedure
+//Step No:1
+//**************************************************************//
+
+	<ActionQuery>
+		Name=Call Insert_Emailsetting procedure
+		TableName=Emailsetting
+		Description=Call Insert_Emailsetting procedure
+		StepNo=1
+		Input=@Objid
+		InputDataType=@Integer
+		Output=$activityId
+		QueryType=0
+		HasRecordSet=0
+		OracleQuery=exec Insert_Emailsetting(@objid)
+		MssqlQuery=exec Insert_Emailsetting @objid
+		Status=0
+	</ActionQuery>
+
+	<ActionQuery>
+		Name=Select -ve objid for child EmailAttribute
+		TableName=EmailAttribute
+		Description=Select -ve objid for child EmailAttribute
+		StepNo=2
+		Input=@Objid
+		InputDataType=@Integer
+		Output=$objid $name $EmailAttributeid
+		QueryType=0
+		HasRecordSet=0
+		OracleQuery=select objid, name ,objid EmailAttributeid from table_EmailAttribute where objid like \'-%\' and EmailAttribute2Emailsetting=@objid
+		MssqlQuery=select objid, name ,objid EmailAttributeid from table_EmailAttribute where objid like \'-%\' and EmailAttribute2Emailsetting=@objid
+		Status=0
+	</ActionQuery>
+
+	<ActionQuery>
+		Name=Update -ve objid for child EmailAttribute
+		TableName=EmailAttribute
+		Description=Update -ve objid for child EmailAttribute
+		StepNo=3
+		Input=@objid @name @EmailAttributeid
+		InputDataType=@Integer @Varchar @Integer
+		Output=$count
+		QueryType=0
+		HasRecordSet=0
+		OracleQuery=update table_EmailAttribute set objid=@objid where objid=@EmailAttributeid and name=@name
+		MssqlQuery=update table_EmailAttribute set objid=@objid where objid=@EmailAttributeid and name=@name
+		Status=0
+	</ActionQuery>
+
+
+	<ActionQuery>
+		Name=Select -ve objid for child ReviewNote
+		TableName=ReviewNote
+		Description=Select -ve objid for child ReviewNote
+		StepNo=4
+		Input=@Objid
+		InputDataType=@Integer
+		Output=$objid $name $ReviewNoteid
+		QueryType=0
+		HasRecordSet=0
+		OracleQuery=select objid, name ,objid ReviewNoteid from table_ReviewNote where objid like \'-%\' and ReviewNote2Emailsetting=@objid
+		MssqlQuery=select objid, name ,objid ReviewNoteid from table_ReviewNote where objid like \'-%\' and ReviewNote2Emailsetting=@objid
+		Status=0
+	</ActionQuery>
+
+	<ActionQuery>
+		Name=Update -ve objid for child ReviewNote
+		TableName=ReviewNote
+		Description=Update -ve objid for child ReviewNote
+		StepNo=5
+		Input=@objid @name @ReviewNoteid
+		InputDataType=@Integer @Varchar @Integer
+		Output=$count
+		QueryType=0
+		HasRecordSet=0
+		OracleQuery=update table_ReviewNote set objid=@objid where objid=@ReviewNoteid and name=@name
+		MssqlQuery=update table_ReviewNote set objid=@objid where objid=@ReviewNoteid and name=@name
+		Status=0
+	</ActionQuery>
+
+
+	<ActionQuery>
+		Name=Select -ve objid for child Reviewer
+		TableName=Reviewer
+		Description=Select -ve objid for child Reviewer
+		StepNo=6
+		Input=@Objid
+		InputDataType=@Integer
+		Output=$objid $name $Reviewerid
+		QueryType=0
+		HasRecordSet=0
+		OracleQuery=select objid, name ,objid Reviewerid from table_Reviewer where objid like \'-%\' and Reviewer2Emailsetting=@objid
+		MssqlQuery=select objid, name ,objid Reviewerid from table_Reviewer where objid like \'-%\' and Reviewer2Emailsetting=@objid
+		Status=0
+	</ActionQuery>
+
+	<ActionQuery>
+		Name=Update -ve objid for child Reviewer
+		TableName=Reviewer
+		Description=Update -ve objid for child Reviewer
+		StepNo=7
+		Input=@objid @name @Reviewerid
+		InputDataType=@Integer @Varchar @Integer
+		Output=$count
+		QueryType=0
+		HasRecordSet=0
+		OracleQuery=update table_Reviewer set objid=@objid where objid=@Reviewerid and name=@name
+		MssqlQuery=update table_Reviewer set objid=@objid where objid=@Reviewerid and name=@name
+		Status=0
+	</ActionQuery>
+
+
+	<ActionQuery>
+		Name=Select -ve objid for child Automation
+		TableName=Automation
+		Description=Select -ve objid for child Automation
+		StepNo=8
+		Input=@Objid
+		InputDataType=@Integer
+		Output=$objid $name $Automationid
+		QueryType=0
+		HasRecordSet=0
+		OracleQuery=select objid, name ,objid Automationid from table_Automation where objid like \'-%\' and Automation2Emailsetting=@objid
+		MssqlQuery=select objid, name ,objid Automationid from table_Automation where objid like \'-%\' and Automation2Emailsetting=@objid
+		Status=0
+	</ActionQuery>
+
+	<ActionQuery>
+		Name=Update -ve objid for child Automation
+		TableName=Automation
+		Description=Update -ve objid for child Automation
+		StepNo=9
+		Input=@objid @name @Automationid
+		InputDataType=@Integer @Varchar @Integer
+		Output=$count
+		QueryType=0
+		HasRecordSet=0
+		OracleQuery=update table_Automation set objid=@objid where objid=@Automationid and name=@name
+		MssqlQuery=update table_Automation set objid=@objid where objid=@Automationid and name=@name
+		Status=0
+	</ActionQuery>
+
+
+	<ActionQuery>
+		Name=Call Upadte_Emailsetting procedure
+		TableName=Emailsetting
+		Description=Call Update_Emailsetting procedure
+		StepNo=10
+		Input=@Objid
+		InputDataType=@Integer
+		Output=$activityId
+		QueryType=0
+		HasRecordSet=0
+		OracleQuery=exec Update_Emailsetting(@objid)
+		MssqlQuery=exec Update_Emailsetting @objid
+		Status=0
+	</ActionQuery>

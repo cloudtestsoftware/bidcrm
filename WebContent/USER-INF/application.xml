@@ -1,0 +1,15 @@
+
+<Context>
+
+
+	<Resource name="amazonEmailResource" smtp="email-smtp.us-east-1.amazonaws.com"
+		amazonemailuser="AKIAJGRQ5GEWKSQWIXOQ" amazonemialpassword="AlV91FKPngN0to3s/BvwoCprrqs7zO/tm7A8zdZEzVWE"
+		amazonverifiedemail="no-reply@biderp.site" port="465" />
+	<Resource name="attachmentPath" path="/u02/app/apache/tomcat9crm/webapps/userdoc/"
+		uri="attachments/" />
+
+	<Resource name="attachmentPathDev"
+		path="/home/srimanta/erp/bidcrm/WebContent/attachments" uri="attachments/" />
+
+
+</Context>	

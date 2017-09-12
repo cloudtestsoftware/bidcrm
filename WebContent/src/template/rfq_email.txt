@@ -1,0 +1,19 @@
+Hello,
+
+Please take appropriate action for the below task
+
+@taskname
+
+@message
+
+Below are few attachments for your reference
+
+@attachment
+
+Please send your reply to this email
+
+@email
+
+Thank you,
+BidERP Support Team,
+https://www.biderp.com

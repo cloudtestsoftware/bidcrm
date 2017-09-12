@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<console>
+<record id="0">
+<objid isRequired="true" type="RAW">588C049C02500007E050960A6B3A015F</objid>
+<console2assignto isRequired="false" type="RAW"></console2assignto>
+<name isRequired="true" type="VARCHAR">Campaign</name>
+<title isRequired="true" type="VARCHAR">Summer Campaign 2017</title>
+<description isRequired="true" type="VARCHAR">Summer Campaign 2017</description>
+<note isRequired="false" type="VARCHAR"></note>
+<status isRequired="true" type="VARCHAR">Opened</status>
+<keyobjid isRequired="false" type="RAW">575BE01BD441AA63E050960A6B3A25C3</keyobjid>
+<isread isRequired="false" type="VARCHAR">1</isread>
+<isarchived isRequired="false" type="VARCHAR">0</isarchived>
+<entrydate isRequired="false" type="DATE">08/06/2017</entrydate>
+<assignedby isRequired="false" type="DATE"></assignedby>
+</record>
+</console>

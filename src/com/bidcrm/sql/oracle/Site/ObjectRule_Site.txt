@@ -1,0 +1,85 @@
+//*****************************************************************//
+//Adding Object Rule
+//Table Name:Site
+//Attribute Name:Site Rule
+//********************************************************************//
+
+	<ObjectRule>
+		Name=Site Rule
+		TableName=Site
+		EffectedTable=Store
+		Description=Calling Upadte and Insert Rule for object Site
+		Reason=1
+		ActionState=1
+		Condition=objid$gt$0
+		RuleIndex=1
+		Status=1
+	</ObjectRule>
+
+//*****************************************************************//
+//Adding Action Query
+//Table Name:Site
+//Name:Call Insert_Site procedure
+//Step No:1
+//**************************************************************//
+
+	<ActionQuery>
+		Name=Call Insert_Site procedure
+		TableName=Site
+		Description=Call Insert_Site procedure
+		StepNo=1
+		Input=@Objid
+		InputDataType=@Integer
+		Output=$activityId
+		QueryType=0
+		HasRecordSet=0
+		OracleQuery=exec Insert_Site(@objid)
+		MssqlQuery=exec Insert_Site @objid
+		Status=0
+	</ActionQuery>
+
+	<ActionQuery>
+		Name=Select -ve objid for child Store
+		TableName=Store
+		Description=Select -ve objid for child Store
+		StepNo=2
+		Input=@Objid
+		InputDataType=@Integer
+		Output=$objid $name $Storeid
+		QueryType=0
+		HasRecordSet=0
+		OracleQuery=select objid, name ,objid Storeid from table_Store where objid like \'-%\' and Store2Site=@objid
+		MssqlQuery=select objid, name ,objid Storeid from table_Store where objid like \'-%\' and Store2Site=@objid
+		Status=0
+	</ActionQuery>
+
+	<ActionQuery>
+		Name=Update -ve objid for child Store
+		TableName=Store
+		Description=Update -ve objid for child Store
+		StepNo=3
+		Input=@objid @name @Storeid
+		InputDataType=@Integer @Varchar @Integer
+		Output=$count
+		QueryType=0
+		HasRecordSet=0
+		OracleQuery=update table_Store set objid=@objid where objid=@Storeid and name=@name
+		MssqlQuery=update table_Store set objid=@objid where objid=@Storeid and name=@name
+		Status=0
+	</ActionQuery>
+
+
+	<ActionQuery>
+		Name=Call Upadte_Site procedure
+		TableName=Site
+		Description=Call Update_Site procedure
+		StepNo=4
+		Input=@Objid
+		InputDataType=@Integer
+		Output=$activityId
+		QueryType=0
+		HasRecordSet=0
+		OracleQuery=exec Update_Site(@objid)
+		MssqlQuery=exec Update_Site @objid
+		Status=0
+	</ActionQuery>

@@ -1,0 +1,147 @@
+//*****************************************************************//
+//Adding Object Rule
+//Table Name:Attribute
+//Attribute Name:Attribute Rule
+//********************************************************************//
+
+	<ObjectRule>
+		Name=Attribute Rule
+		TableName=Attribute
+		EffectedTable=AttrPrivilege
+		Description=Calling Upadte and Insert Rule for object Attribute
+		Reason=1
+		ActionState=1
+		Condition=objid$gt$0
+		RuleIndex=1
+		Status=1
+	</ObjectRule>
+
+//*****************************************************************//
+//Adding Action Query
+//Table Name:Attribute
+//Name:Call Insert_Attribute procedure
+//Step No:1
+//**************************************************************//
+
+	<ActionQuery>
+		Name=Call Insert_Attribute procedure
+		TableName=Attribute
+		Description=Call Insert_Attribute procedure
+		StepNo=1
+		Input=@Objid
+		InputDataType=@Integer
+		Output=$activityId
+		QueryType=0
+		HasRecordSet=0
+		OracleQuery=exec Insert_Attribute(@objid)
+		MssqlQuery=exec Insert_Attribute @objid
+		Status=0
+	</ActionQuery>
+
+	<ActionQuery>
+		Name=Select -ve objid for child AttrPrivilege
+		TableName=AttrPrivilege
+		Description=Select -ve objid for child AttrPrivilege
+		StepNo=2
+		Input=@Objid
+		InputDataType=@Integer
+		Output=$objid $name $AttrPrivilegeid
+		QueryType=0
+		HasRecordSet=0
+		OracleQuery=select objid, name ,objid AttrPrivilegeid from table_AttrPrivilege where objid like \'-%\' and AttrPrivilege2Attribute=@objid
+		MssqlQuery=select objid, name ,objid AttrPrivilegeid from table_AttrPrivilege where objid like \'-%\' and AttrPrivilege2Attribute=@objid
+		Status=0
+	</ActionQuery>
+
+	<ActionQuery>
+		Name=Update -ve objid for child AttrPrivilege
+		TableName=AttrPrivilege
+		Description=Update -ve objid for child AttrPrivilege
+		StepNo=3
+		Input=@objid @name @AttrPrivilegeid
+		InputDataType=@Integer @Varchar @Integer
+		Output=$count
+		QueryType=0
+		HasRecordSet=0
+		OracleQuery=update table_AttrPrivilege set objid=@objid where objid=@AttrPrivilegeid and name=@name
+		MssqlQuery=update table_AttrPrivilege set objid=@objid where objid=@AttrPrivilegeid and name=@name
+		Status=0
+	</ActionQuery>
+
+
+	<ActionQuery>
+		Name=Select -ve objid for child CustomList
+		TableName=CustomList
+		Description=Select -ve objid for child CustomList
+		StepNo=4
+		Input=@Objid
+		InputDataType=@Integer
+		Output=$objid $name $CustomListid
+		QueryType=0
+		HasRecordSet=0
+		OracleQuery=select objid, name ,objid CustomListid from table_CustomList where objid like \'-%\' and CustomList2Attribute=@objid
+		MssqlQuery=select objid, name ,objid CustomListid from table_CustomList where objid like \'-%\' and CustomList2Attribute=@objid
+		Status=0
+	</ActionQuery>
+
+	<ActionQuery>
+		Name=Update -ve objid for child CustomList
+		TableName=CustomList
+		Description=Update -ve objid for child CustomList
+		StepNo=5
+		Input=@objid @name @CustomListid
+		InputDataType=@Integer @Varchar @Integer
+		Output=$count
+		QueryType=0
+		HasRecordSet=0
+		OracleQuery=update table_CustomList set objid=@objid where objid=@CustomListid and name=@name
+		MssqlQuery=update table_CustomList set objid=@objid where objid=@CustomListid and name=@name
+		Status=0
+	</ActionQuery>
+
+
+	<ActionQuery>
+		Name=Select -ve objid for child ListProperty
+		TableName=ListProperty
+		Description=Select -ve objid for child ListProperty
+		StepNo=6
+		Input=@Objid
+		InputDataType=@Integer
+		Output=$objid $name $ListPropertyid
+		QueryType=0
+		HasRecordSet=0
+		OracleQuery=select objid, name ,objid ListPropertyid from table_ListProperty where objid like \'-%\' and ListProperty2Attribute=@objid
+		MssqlQuery=select objid, name ,objid ListPropertyid from table_ListProperty where objid like \'-%\' and ListProperty2Attribute=@objid
+		Status=0
+	</ActionQuery>
+
+	<ActionQuery>
+		Name=Update -ve objid for child ListProperty
+		TableName=ListProperty
+		Description=Update -ve objid for child ListProperty
+		StepNo=7
+		Input=@objid @name @ListPropertyid
+		InputDataType=@Integer @Varchar @Integer
+		Output=$count
+		QueryType=0
+		HasRecordSet=0
+		OracleQuery=update table_ListProperty set objid=@objid where objid=@ListPropertyid and name=@name
+		MssqlQuery=update table_ListProperty set objid=@objid where objid=@ListPropertyid and name=@name
+		Status=0
+	</ActionQuery>
+
+
+	<ActionQuery>
+		Name=Call Upadte_Attribute procedure
+		TableName=Attribute
+		Description=Call Update_Attribute procedure
+		StepNo=8
+		Input=@Objid
+		InputDataType=@Integer
+		Output=$activityId
+		QueryType=0
+		HasRecordSet=0
+		OracleQuery=exec Update_Attribute(@objid)
+		MssqlQuery=exec Update_Attribute @objid
+		Status=0
+	</ActionQuery>

@@ -1,0 +1,7855 @@
+//Attribute:Status
+<ListProperty>
+
+    Object=EmailAttribute
+
+    Attribute=AttributeType
+
+    PropertyString=Link
+
+    PropertyValue=Link
+
+    Scope=
+
+    PropIndex=1
+
+</ListProperty>
+<ListProperty>
+
+    Object=EmailAttribute
+
+    Attribute=AttributeType
+
+    PropertyString=Text
+
+    PropertyValue=Text
+
+    Scope=
+
+    PropIndex=2
+
+</ListProperty>
+<ListProperty>
+
+    Object=EmailAttribute
+
+    Attribute=AttributeType
+
+    PropertyString=Image
+
+    PropertyValue=Image
+
+    Scope=
+
+    PropIndex=3
+
+</ListProperty>
+//Attribute:Status
+<ListProperty>
+
+    Object=Reviewer
+
+    Attribute=Status
+
+    PropertyString=Not Approved
+
+    PropertyValue=Not Approved
+
+    Scope=Button:Not Approved
+
+    PropIndex=1
+
+</ListProperty>
+<ListProperty>
+
+    Object=Reviewer
+
+    Attribute=Status
+
+    PropertyString=Approved
+
+    PropertyValue=Aproved
+
+    Scope=Button:Approved
+
+    PropIndex=2
+
+</ListProperty>
+//Attribute:ContentType
+
+
+//Attribute:CampaignType
+<ListProperty>
+
+	Object=Campaign
+
+	Attribute=CampaignType
+
+	PropertyString=Email Campaign
+
+	PropertyValue=Email Campaign
+
+	Scope=
+
+	PropIndex=1
+
+</ListProperty>
+<ListProperty>
+
+	Object=Campaign
+
+	Attribute=CampaignType
+
+	PropertyString=Product Sample
+
+	PropertyValue=Product Sample
+
+	Scope=
+
+	PropIndex=2
+
+</ListProperty>
+
+<ListProperty>
+
+	Object=Campaign
+
+	Attribute=CampaignType
+
+	PropertyString=Product Survey
+
+	PropertyValue=Product Survey
+
+	Scope=
+
+	PropIndex=3
+
+</ListProperty>
+
+<ListProperty>
+
+	Object=Campaign
+
+	Attribute=CampaignType
+
+	PropertyString=Existing Account
+
+	PropertyValue=Existing Account
+
+	Scope=
+
+	PropIndex=4
+
+</ListProperty>
+
+
+
+//Attribute:DataSource
+<ListProperty>
+
+	Object=DataImport
+
+	Attribute=DataSource
+
+	PropertyString=Sales Force
+
+	PropertyValue=Sales Force
+
+	Scope=
+
+	PropIndex=1
+
+</ListProperty>
+
+<ListProperty>
+
+	Object=DataImport
+
+	Attribute=DataSource
+
+	PropertyString=Oracle CRM
+
+	PropertyValue=Oracle CRM
+
+	Scope=
+
+	PropIndex=2
+
+</ListProperty>
+
+<ListProperty>
+
+	Object=DataImport
+
+	Attribute=DataSource
+
+	PropertyString=File Data
+
+	PropertyValue=File Data
+
+	Scope=
+
+	PropIndex=3
+
+</ListProperty>
+
+
+
+
+//Attribute:Name
+<ListProperty>
+
+	Object=DataImport
+
+	Attribute=Name
+
+	PropertyString=Account
+
+	PropertyValue=Account
+
+	Scope=
+
+	PropIndex=1
+
+</ListProperty>
+
+<ListProperty>
+
+	Object=DataImport
+
+	Attribute=Name
+
+	PropertyString=Contact
+
+	PropertyValue=Contact
+
+	Scope=
+
+	PropIndex=2
+
+</ListProperty>
+
+<ListProperty>
+
+	Object=DataImport
+
+	Attribute=Name
+
+	PropertyString=Lead
+
+	PropertyValue=Lead
+
+	Scope=
+
+	PropIndex=3
+
+</ListProperty>
+
+<ListProperty>
+
+	Object=DataImport
+
+	Attribute=Name
+
+	PropertyString=Opportunity
+
+	PropertyValue=Opportunity
+
+	Scope=
+
+	PropIndex=4
+
+</ListProperty>
+<ListProperty>
+
+	Object=DataImport
+
+	Attribute=Name
+
+	PropertyString=Customer
+
+	PropertyValue=Customer
+
+	Scope=
+
+	PropIndex=5
+
+</ListProperty>
+
+<ListProperty>
+
+	Object=DataImport
+
+	Attribute=Name
+
+	PropertyString=Supplier
+
+	PropertyValue=Supplier
+
+	Scope=
+
+	PropIndex=6
+
+</ListProperty>
+<ListProperty>
+
+	Object=DataImport
+
+	Attribute=Name
+
+	PropertyString=EmailContact
+
+	PropertyValue=EmailContact
+
+	Scope=
+
+	PropIndex=7
+
+</ListProperty>
+<ListProperty>
+
+	Object=DataImport
+
+	Attribute=Name
+
+	PropertyString=Employee
+
+	PropertyValue=Employee
+
+	Scope=
+
+	PropIndex=8
+
+</ListProperty>
+
+
+
+
+//Attribute:Name
+<ListProperty>
+
+	Object=CmpMember
+
+	Attribute=Name
+
+	PropertyString=Campaign Manager
+
+	PropertyValue=Campaign Manager
+
+	Scope=
+
+	PropIndex=1
+
+</ListProperty>
+
+<ListProperty>
+
+	Object=CmpMember
+
+	Attribute=Name
+
+	PropertyString=Sales Manager
+
+	PropertyValue=Sales Manager
+
+	Scope=
+
+	PropIndex=2
+
+</ListProperty>
+
+<ListProperty>
+
+	Object=CmpMember
+
+	Attribute=Name
+
+	PropertyString=Sales Agent
+
+	PropertyValue=Sales Agent
+
+	Scope=
+
+	PropIndex=3
+
+</ListProperty>
+<ListProperty>
+
+	Object=CmpMember
+
+	Attribute=Name
+
+	PropertyString=Store Manager
+
+	PropertyValue=Store Manager
+
+	Scope=
+
+	PropIndex=4
+
+</ListProperty>
+
+<ListProperty>
+
+	Object=CmpMember
+
+	Attribute=Name
+
+	PropertyString=Marketing Manager
+
+	PropertyValue=Marketing Manager
+
+	Scope=
+
+	PropIndex=5
+
+</ListProperty>
+<ListProperty>
+
+	Object=CmpMember
+
+	Attribute=Name
+
+	PropertyString=Director
+
+	PropertyValue=Director
+
+	Scope=
+
+	PropIndex=6
+
+</ListProperty>
+
+
+
+
+//Attribute:Status
+<ListProperty>
+
+	Object=SampleOrder
+
+	Attribute=Status
+
+	PropertyString=Open
+
+	PropertyValue=Open
+
+	Scope=
+
+	PropIndex=1
+
+</ListProperty>
+
+<ListProperty>
+
+	Object=SampleOrder
+
+	Attribute=Status
+
+	PropertyString=Dispatched 
+
+	PropertyValue=Dispatched
+
+	Scope=Button:Dispatched
+
+	PropIndex=2
+
+</ListProperty>
+
+<ListProperty>
+
+	Object=SampleOrder
+
+	Attribute=Status
+
+	PropertyString=Pending
+
+	PropertyValue=Pending
+
+	Scope=Button:Pending
+
+	PropIndex=3
+
+</ListProperty>
+
+//Attribute:Status
+
+
+
+//Attribute:Status
+<ListProperty>
+
+	Object=ContactList
+
+	Attribute=Status
+
+	PropertyString=First Round
+
+	PropertyValue=10
+
+	Scope=Button:Send Round 1
+
+	PropIndex=1
+
+</ListProperty>
+
+<ListProperty>
+
+	Object=ContactList
+
+	Attribute=Status
+
+	PropertyString=Second Round
+
+	PropertyValue=20
+
+	Scope=Button:Send Round 2
+
+	PropIndex=2
+
+</ListProperty>
+
+<ListProperty>
+
+	Object=ContactList
+
+	Attribute=Status
+
+	PropertyString=Third Round
+
+	PropertyValue=30
+
+	Scope=Button:Send Round 3
+
+	PropIndex=3
+
+</ListProperty>
+
+//Attribute:Status
+<ListProperty>
+
+	Object=SampleReserve
+
+	Attribute=Status
+
+	PropertyString=Open
+
+	PropertyValue=Open
+
+	Scope=
+
+	PropIndex=1
+
+</ListProperty>
+
+<ListProperty>
+
+	Object=SampleReserve
+
+	Attribute=Status
+
+	PropertyString=Approved
+
+	PropertyValue=Approved
+
+	Scope=Button:Approved
+
+	PropIndex=2
+
+</ListProperty>
+
+<ListProperty>
+
+	Object=SampleReserve
+
+	Attribute=Status
+
+	PropertyString=Not Approved
+
+	PropertyValue=Not Approved
+
+	Scope=Button:Not Approved
+
+	PropIndex=3
+
+</ListProperty>
+
+//Attribute:Status
+<ListProperty>
+
+	Object=ReorderSamples
+
+	Attribute=Status
+
+	PropertyString=Open
+
+	PropertyValue=Open
+
+	Scope=
+
+	PropIndex=1
+
+</ListProperty>
+
+<ListProperty>
+
+	Object=ReorderSamples
+
+	Attribute=Status
+
+	PropertyString=Approved
+
+	PropertyValue=Approved
+
+	Scope=Button:Approved
+
+	PropIndex=2
+
+</ListProperty>
+
+<ListProperty>
+
+	Object=ReorderSamples
+
+	Attribute=Status
+
+	PropertyString=Not Approved
+
+	PropertyValue=Not Approved
+
+	Scope=Button:Not Approved
+
+	PropIndex=3
+
+</ListProperty>
+
+
+
+//Attribute:Status
+<ListProperty>
+
+	Object=Samples
+
+	Attribute=Status
+
+	PropertyString=Open
+
+	PropertyValue=Open
+
+	Scope=
+
+	PropIndex=1
+
+</ListProperty>
+
+<ListProperty>
+
+	Object=Samples
+
+	Attribute=Status
+
+	PropertyString=Approved
+
+	PropertyValue=Approved
+
+	Scope=Button:Approved
+
+	PropIndex=2
+
+</ListProperty>
+
+<ListProperty>
+
+	Object=Samples
+
+	Attribute=Status
+
+	PropertyString=Not Approved
+
+	PropertyValue=Not Approved
+
+	Scope=Button:Not Approved
+
+	PropIndex=3
+
+</ListProperty>
+
+
+//Attribute:LeadSource
+<ListProperty>
+
+	Object=Lead
+
+	Attribute=LeadSource
+
+	PropertyString=Internet Survey
+
+	PropertyValue=Internet Survey
+
+	Scope=
+
+	PropIndex=1
+
+</ListProperty>
+
+<ListProperty>
+
+	Object=Lead
+
+	Attribute=LeadSource
+
+	PropertyString=Networking
+
+	PropertyValue=Networking
+
+	Scope=
+
+	PropIndex=2
+
+</ListProperty>
+
+<ListProperty>
+
+	Object=Lead
+
+	Attribute=LeadSource
+
+	PropertyString=Events
+
+	PropertyValue=Events
+
+	Scope=
+
+	PropIndex=3
+
+</ListProperty>
+<ListProperty>
+
+	Object=Lead
+
+	Attribute=LeadSource
+
+	PropertyString=Trade Show
+
+	PropertyValue=Trade Show
+
+	Scope=
+
+	PropIndex=4
+
+</ListProperty>
+
+<ListProperty>
+
+	Object=Lead
+
+	Attribute=LeadSource
+
+	PropertyString=Google Search
+
+	PropertyValue=Google Search
+
+	Scope=
+
+	PropIndex=5
+
+</ListProperty>
+<ListProperty>
+
+	Object=Lead
+
+	Attribute=LeadSource
+
+	PropertyString=Internet Search
+
+	PropertyValue=Internet Search
+
+	Scope=
+
+	PropIndex=6
+
+</ListProperty>
+<ListProperty>
+
+	Object=Lead
+
+	Attribute=LeadSource
+
+	PropertyString=Google Ads
+
+	PropertyValue=Google Ads
+
+	Scope=
+
+	PropIndex=7
+
+</ListProperty>
+<ListProperty>
+
+	Object=Lead
+
+	Attribute=LeadSource
+
+	PropertyString=Facebook Ads
+
+	PropertyValue=Facebook Ads
+
+	Scope=
+
+	PropIndex=8
+
+</ListProperty>
+<ListProperty>
+
+	Object=Lead
+
+	Attribute=LeadSource
+
+	PropertyString=LinkedIn Ads
+
+	PropertyValue=LinkedIn Ads
+
+	Scope=
+
+	PropIndex=9
+
+</ListProperty>
+<ListProperty>
+
+	Object=Lead
+
+	Attribute=LeadSource
+
+	PropertyString=Twitter Ads
+
+	PropertyValue=Twitter Ads
+
+	Scope=
+
+	PropIndex=10
+
+</ListProperty>
+<ListProperty>
+
+	Object=Lead
+
+	Attribute=LeadSource
+
+	PropertyString=Reference
+
+	PropertyValue=Reference
+
+	Scope=
+
+	PropIndex=11
+
+</ListProperty>
+<ListProperty>
+
+	Object=Lead
+
+	Attribute=LeadSource
+
+	PropertyString=Friends
+
+	PropertyValue=Friends
+
+	Scope=
+
+	PropIndex=12
+
+</ListProperty>
+<ListProperty>
+
+	Object=Lead
+
+	Attribute=LeadSource
+
+	PropertyString=Other Ads
+
+	PropertyValue=Other Ads
+
+	Scope=
+
+	PropIndex=13
+
+</ListProperty>
+<ListProperty>
+
+	Object=Lead
+
+	Attribute=LeadSource
+
+	PropertyString=Word Of Mouth
+
+	PropertyValue=Word Of Mouth
+
+	Scope=
+
+	PropIndex=14
+
+</ListProperty>
+
+//Attribute:LeadStatus
+<ListProperty>
+
+	Object=Lead
+
+	Attribute=LeadStatus
+
+	PropertyString=None
+
+	PropertyValue=None
+
+	Scope=
+
+	PropIndex=1
+
+</ListProperty>
+<ListProperty>
+
+	Object=Lead
+
+	Attribute=LeadStatus
+
+	PropertyString=Intro Email
+
+	PropertyValue=Intro Email
+
+	Scope=
+
+	PropIndex=2
+
+</ListProperty>
+
+<ListProperty>
+
+	Object=Lead
+
+	Attribute=LeadStatus
+
+	PropertyString=Appointment Email
+
+	PropertyValue=Appointment Email
+
+	Scope=
+
+	PropIndex=3
+
+</ListProperty>
+<ListProperty>
+
+	Object=Lead
+
+	Attribute=LeadStatus
+
+	PropertyString=Followup Email
+
+	PropertyValue=Followup Email
+
+	Scope=
+
+	PropIndex=4
+
+</ListProperty>
+
+<ListProperty>
+
+	Object=Lead
+
+	Attribute=LeadStatus
+
+	PropertyString=1st Phone Call
+
+	PropertyValue=1st Phone Call
+
+	Scope=
+
+	PropIndex=5
+
+</ListProperty>
+<ListProperty>
+
+	Object=Lead
+
+	Attribute=LeadStatus
+
+	PropertyString=2nd Phone Call
+
+	PropertyValue=2nd Phone Call
+
+	Scope=
+
+	PropIndex=6
+
+</ListProperty>
+<ListProperty>
+
+	Object=Lead
+
+	Attribute=LeadStatus
+
+	PropertyString=3rd Phone Call
+
+	PropertyValue=3rd Phone Call
+
+	Scope=
+
+	PropIndex=7
+
+</ListProperty>
+<ListProperty>
+
+	Object=Lead
+
+	Attribute=LeadStatus
+
+	PropertyString=4th Phone Call
+
+	PropertyValue=4th Phone Call
+
+	Scope=
+
+	PropIndex=8
+
+</ListProperty>
+<ListProperty>
+
+	Object=Lead
+
+	Attribute=LeadStatus
+
+	PropertyString=5th Phone Call
+
+	PropertyValue=5th Phone Call
+
+	Scope=
+
+	PropIndex=9
+
+</ListProperty>
+
+<ListProperty>
+
+	Object=Lead
+
+	Attribute=LeadStatus
+
+	PropertyString=Closed
+
+	PropertyValue=Closed
+
+	Scope=
+
+	PropIndex=10
+
+</ListProperty>
+
+//Attribute:DealStage
+<ListProperty>
+
+	Object=Deal
+
+	Attribute=DealStage
+
+	PropertyString=Proposed
+
+	PropertyValue=Proposed
+
+	Scope=
+
+	PropIndex=1
+
+</ListProperty>
+<ListProperty>
+
+	Object=Deal
+
+	Attribute=DealStage
+
+	PropertyString=Negotiation
+
+	PropertyValue=Negotiation
+
+	Scope=
+
+	PropIndex=2
+
+</ListProperty>
+
+<ListProperty>
+
+	Object=Deal
+
+	Attribute=DealStage
+
+	PropertyString=Optional
+
+	PropertyValue=Optional
+
+	Scope=
+
+	PropIndex=3
+
+</ListProperty>
+<ListProperty>
+
+	Object=Deal
+
+	Attribute=DealStage
+
+	PropertyString=Final
+
+	PropertyValue=Final
+
+	Scope=
+
+	PropIndex=4
+
+</ListProperty>
+<ListProperty>
+
+	Object=Deal
+
+	Attribute=DealStage
+
+	PropertyString=Discarded
+
+	PropertyValue=Discarded
+
+	Scope=
+
+	PropIndex=5
+
+</ListProperty>
+<ListProperty>
+
+	Object=Deal
+
+	Attribute=DealStage
+
+	PropertyString=Next Year
+
+	PropertyValue=Next Year
+
+	Scope=
+
+	PropIndex=6
+
+</ListProperty>
+
+
+
+
+//Attribute:LeadStage
+<ListProperty>
+
+	Object=Lead
+
+	Attribute=LeadStage
+
+	PropertyString=Raw
+
+	PropertyValue=Raw
+
+	Scope=
+
+	PropIndex=1
+
+</ListProperty>
+<ListProperty>
+
+	Object=Lead
+
+	Attribute=LeadStage
+
+	PropertyString=Call
+
+	PropertyValue=Call
+
+	Scope=
+
+	PropIndex=2
+
+</ListProperty>
+
+<ListProperty>
+
+	Object=Lead
+
+	Attribute=LeadStage
+
+	PropertyString=Appointment
+
+	PropertyValue=Appointment
+
+	Scope=
+
+	PropIndex=3
+
+</ListProperty>
+<ListProperty>
+
+	Object=Lead
+
+	Attribute=LeadStage
+
+	PropertyString=Contact
+
+	PropertyValue=Contact
+
+	Scope=
+
+	PropIndex=4
+
+</ListProperty>
+<ListProperty>
+
+	Object=Lead
+
+	Attribute=LeadStage
+
+	PropertyString=Opportunity
+
+	PropertyValue=Opportunity
+
+	Scope=
+
+	PropIndex=5
+
+</ListProperty>
+
+<ListProperty>
+
+	Object=Lead
+
+	Attribute=LeadStage
+
+	PropertyString=Customer
+
+	PropertyValue=Customer
+
+	Scope=
+
+	PropIndex=6
+
+</ListProperty>
+
+<ListProperty>
+
+	Object=Lead
+
+	Attribute=LeadStage
+
+	PropertyString=Closed
+
+	PropertyValue=Closed
+
+	Scope=
+
+	PropIndex=7
+
+</ListProperty>
+
+//Attribute:ContactStage
+<ListProperty>
+
+	Object=Contact
+
+	Attribute=ContactStage
+
+	PropertyString=Raw
+
+	PropertyValue=Raw
+
+	Scope=
+
+	PropIndex=1
+
+</ListProperty>
+<ListProperty>
+
+	Object=Contact
+
+	Attribute=ContactStage
+
+	PropertyString=Prospect
+
+	PropertyValue=Prospect
+
+	Scope=
+
+	PropIndex=2
+
+</ListProperty>
+<ListProperty>
+
+	Object=Contact
+
+	Attribute=ContactStage
+
+	PropertyString=Opportunity
+
+	PropertyValue=Opportunity
+
+	Scope=
+
+	PropIndex=3
+
+</ListProperty>
+
+<ListProperty>
+
+	Object=Contact
+
+	Attribute=ContactStage
+
+	PropertyString=Customer
+
+	PropertyValue=Customer
+
+	Scope=
+
+	PropIndex=4
+
+</ListProperty>
+
+<ListProperty>
+
+	Object=Contact
+
+	Attribute=ContactStage
+
+	PropertyString=Not Interested
+
+	PropertyValue=Not Interested
+
+	Scope=
+
+	PropIndex=5
+
+</ListProperty>
+
+<ListProperty>
+
+	Object=Contact
+
+	Attribute=ContactStage
+
+	PropertyString=Obsolete
+
+	PropertyValue=Obsolete
+
+	Scope=
+
+	PropIndex=6
+
+</ListProperty>
+//*****************************************************************//
+//ListProperty:Attribute
+//**************************************************************//
+
+
+//Attribute:HasCodeObject
+
+<ListProperty>
+
+	Object=Attribute
+
+	Attribute=HasCodeObject
+
+	PropertyString=No
+
+	PropertyValue=1
+
+	Scope=
+
+	PropIndex=1
+
+</ListProperty>
+
+<ListProperty>
+
+	Object=Attribute
+
+	Attribute=HasCodeObject
+
+	PropertyString=Yes
+
+	PropertyValue=2
+
+	Scope=
+
+	PropIndex=2
+
+</ListProperty>
+
+//Attribute:HasProperty
+
+<ListProperty>
+
+	Object=Attribute
+
+	Attribute=HasProperty
+
+	PropertyString=No
+
+	PropertyValue=1
+
+	Scope=
+
+	PropIndex=1
+
+</ListProperty>
+
+<ListProperty>
+
+	Object=Attribute
+
+	Attribute=HasProperty
+
+	PropertyString=Yes
+
+	PropertyValue=2
+
+	Scope=
+
+	PropIndex=2
+
+</ListProperty>
+
+//*****************************************************************//
+//ListProperty:BidTasks
+//**************************************************************//
+
+
+//Attribute:Stage
+
+<ListProperty>
+
+	Object=BidTasks
+
+	Attribute=Stage
+
+	PropertyString=Open
+
+	PropertyValue=10
+
+	Scope=
+
+	PropIndex=1
+
+</ListProperty>
+
+<ListProperty>
+
+	Object=BidTasks
+
+	Attribute=Stage
+
+	PropertyString=Email Created
+
+	PropertyValue=20
+
+	Scope=Button:Create Email
+
+	PropIndex=2
+
+</ListProperty>
+
+<ListProperty>
+
+	Object=BidTasks
+
+	Attribute=Stage
+
+	PropertyString=Emailed To Suppliers
+
+	PropertyValue=30
+
+	Scope=
+
+	PropIndex=3
+
+</ListProperty>
+
+<ListProperty>
+
+	Object=BidTasks
+
+	Attribute=Stage
+
+	PropertyString=Email Acknowledged
+
+	PropertyValue=40
+
+	Scope=
+
+	PropIndex=4
+
+</ListProperty>
+
+<ListProperty>
+
+	Object=BidTasks
+
+	Attribute=Stage
+
+	PropertyString=Supplier Sent Quote
+
+	PropertyValue=50
+
+	Scope=
+
+	PropIndex=5
+
+</ListProperty>
+
+<ListProperty>
+
+	Object=BidTasks
+
+	Attribute=Stage
+
+	PropertyString=Quote Reviewed
+
+	PropertyValue=60
+
+	Scope=
+
+	PropIndex=6
+
+</ListProperty>
+
+<ListProperty>
+
+	Object=BidTasks
+
+	Attribute=Stage
+
+	PropertyString=Negotiation Progress
+
+	PropertyValue=70
+
+	Scope=
+
+	PropIndex=7
+
+</ListProperty>
+
+<ListProperty>
+
+	Object=BidTasks
+
+	Attribute=Stage
+
+	PropertyString=Quote Accepted
+
+	PropertyValue=80
+
+	Scope=
+
+	PropIndex=8
+
+</ListProperty>
+
+<ListProperty>
+
+	Object=BidTasks
+
+	Attribute=Stage
+
+	PropertyString=QR Price Updated
+
+	PropertyValue=90
+
+	Scope=
+
+	PropIndex=9
+
+</ListProperty>
+
+<ListProperty>
+
+	Object=BidTasks
+
+	Attribute=Stage
+
+	PropertyString=QR Approved
+
+	PropertyValue=100
+
+	Scope=
+
+	PropIndex=10
+
+</ListProperty>
+
+//*****************************************************************//
+//ListProperty:Currency
+//**************************************************************//
+
+
+//Attribute:Type
+
+<ListProperty>
+
+	Object=Currency
+
+	Attribute=Type
+
+	PropertyString=Default
+
+	PropertyValue=1
+
+	Scope=
+
+	PropIndex=1
+
+</ListProperty>
+
+<ListProperty>
+
+	Object=Currency
+
+	Attribute=Type
+
+	PropertyString=Conversion
+
+	PropertyValue=2
+
+	Scope=
+
+	PropIndex=2
+
+</ListProperty>
+
+//*****************************************************************//
+//ListProperty:Employee
+//**************************************************************//
+
+
+//Attribute:Status
+
+<ListProperty>
+
+	Object=Employee
+
+	Attribute=Status
+
+	PropertyString=Active
+
+	PropertyValue=1
+
+	Scope=Button:Make Active
+
+	PropIndex=1
+
+</ListProperty>
+
+<ListProperty>
+
+	Object=Employee
+
+	Attribute=Status
+
+	PropertyString=Resigned
+
+	PropertyValue=2
+
+	Scope=Button:Resigned
+
+	PropIndex=2
+
+</ListProperty>
+
+<ListProperty>
+
+	Object=Employee
+
+	Attribute=Status
+
+	PropertyString=Terminated
+
+	PropertyValue=3
+
+	Scope=Button:Terminate Employee
+
+	PropIndex=3
+
+</ListProperty>
+
+<ListProperty>
+
+	Object=Employee
+
+	Attribute=Status
+
+	PropertyString=In Active
+
+	PropertyValue=4
+
+	Scope=Button:Make In Active
+
+	PropIndex=4
+
+</ListProperty>
+
+//*****************************************************************//
+//ListProperty:GenericCode
+//**************************************************************//
+
+
+<ListProperty>
+
+	Object=GenericCode
+
+	Attribute=Status
+
+	PropertyString=Valid
+
+	PropertyValue=1
+
+	Scope=
+
+	PropIndex=1
+
+</ListProperty>
+
+<ListProperty>
+
+	Object=GenericCode
+
+	Attribute=Status
+
+	PropertyString=Unknown
+
+	PropertyValue=2
+
+	Scope=
+
+	PropIndex=2
+
+</ListProperty>
+
+<ListProperty>
+
+	Object=GenericCode
+
+	Attribute=Status
+
+	PropertyString=InValid
+
+	PropertyValue=3
+
+	Scope=
+
+	PropIndex=3
+
+</ListProperty>
+
+//*****************************************************************//
+//ListProperty:ItemSpec
+//**************************************************************//
+
+
+//Attribute:GroupName
+
+<ListProperty>
+
+	Object=ItemSpec
+
+	Attribute=GroupName
+
+	PropertyString=Material
+
+	PropertyValue=Material
+
+	Scope=
+
+	PropIndex=1
+
+</ListProperty>
+
+<ListProperty>
+
+	Object=ItemSpec
+
+	Attribute=GroupName
+
+	PropertyString=Dimension
+
+	PropertyValue=Dimension
+
+	Scope=
+
+	PropIndex=2
+
+</ListProperty>
+
+<ListProperty>
+
+	Object=ItemSpec
+
+	Attribute=GroupName
+
+	PropertyString=Strength
+
+	PropertyValue=Strength
+
+	Scope=
+
+	PropIndex=3
+
+</ListProperty>
+
+<ListProperty>
+
+	Object=ItemSpec
+
+	Attribute=GroupName
+
+	PropertyString=Performance
+
+	PropertyValue=Performance
+
+	Scope=
+
+	PropIndex=4
+
+</ListProperty>
+
+<ListProperty>
+
+	Object=ItemSpec
+
+	Attribute=GroupName
+
+	PropertyString=Components
+
+	PropertyValue=Components
+
+	Scope=
+
+	PropIndex=5
+
+</ListProperty>
+
+<ListProperty>
+
+	Object=ItemSpec
+
+	Attribute=GroupName
+
+	PropertyString=Tolerance
+
+	PropertyValue=Tolerance
+
+	Scope=
+
+	PropIndex=6
+
+</ListProperty>
+
+<ListProperty>
+
+	Object=ItemSpec
+
+	Attribute=GroupName
+
+	PropertyString=Operational Process
+
+	PropertyValue=Operational Process
+
+	Scope=
+
+	PropIndex=6
+
+</ListProperty>
+
+//*****************************************************************//
+//ListProperty:MessageQueue
+//**************************************************************//
+
+
+//Attribute:Status
+
+<ListProperty>
+
+	Object=MessageQueue
+
+	Attribute=Status
+
+	PropertyString=Ordinary Active
+
+	PropertyValue=1
+
+	Scope=
+
+	PropIndex=1
+
+</ListProperty>
+
+<ListProperty>
+
+	Object=MessageQueue
+
+	Attribute=Status
+
+	PropertyString=Primary Active
+
+	PropertyValue=2
+
+	Scope=
+
+	PropIndex=2
+
+</ListProperty>
+
+<ListProperty>
+
+	Object=MessageQueue
+
+	Attribute=Status
+
+	PropertyString=Not Active
+
+	PropertyValue=3
+
+	Scope=
+
+	PropIndex=3
+
+</ListProperty>
+
+//*****************************************************************//
+//ListProperty:Module
+//**************************************************************//
+
+
+//Attribute:Name
+
+<ListProperty>
+
+	Object=Module
+
+	Attribute=Name
+
+	PropertyString=Admin
+
+	PropertyValue=Admin
+
+	Scope=
+
+	PropIndex=1
+
+</ListProperty>
+
+<ListProperty>
+
+	Object=Module
+
+	Attribute=Name
+
+	PropertyString=Profile
+
+	PropertyValue=Profile
+
+	Scope=
+
+	PropIndex=2
+
+</ListProperty>
+
+<ListProperty>
+
+	Object=Module
+
+	Attribute=Name
+
+	PropertyString=Setup
+
+	PropertyValue=Setup
+
+	Scope=
+
+	PropIndex=3
+
+</ListProperty>
+
+<ListProperty>
+
+	Object=Module
+
+	Attribute=Name
+
+	PropertyString=Campaign
+
+	PropertyValue=Campaign
+
+	Scope=
+
+	PropIndex=4
+
+</ListProperty>
+
+<ListProperty>
+
+	Object=Module
+
+	Attribute=Name
+
+	PropertyString=CRM
+
+	PropertyValue=CRM
+
+	Scope=
+
+	PropIndex=5
+
+</ListProperty>
+
+<ListProperty>
+
+	Object=Module
+
+	Attribute=Name
+
+	PropertyString=RFQ
+
+	PropertyValue=RFQ
+
+	Scope=
+
+	PropIndex=6
+
+</ListProperty>
+
+<ListProperty>
+
+	Object=Module
+
+	Attribute=Name
+
+	PropertyString=Item Store
+
+	PropertyValue=Store
+
+	Scope=
+
+	PropIndex=7
+
+</ListProperty>
+
+<ListProperty>
+
+	Object=Module
+
+	Attribute=Name
+
+	PropertyString=Business Travel
+
+	PropertyValue=Travel
+
+	Scope=
+
+	PropIndex=8
+
+</ListProperty>
+<ListProperty>
+
+	Object=Module
+
+	Attribute=Name
+
+	PropertyString=Template
+
+	PropertyValue=Template
+
+	Scope=
+
+	PropIndex=9
+
+</ListProperty>
+
+<ListProperty>
+
+	Object=Module
+
+	Attribute=Name
+
+	PropertyString=Report
+
+	PropertyValue=Report
+
+	Scope=
+
+	PropIndex=10
+
+</ListProperty>
+
+
+
+//*****************************************************************//
+//ListProperty:Object
+//**************************************************************//
+
+
+//Attribute:EntityAccessType
+
+<ListProperty>
+
+	Object=Object
+
+	Attribute=EntityAccessType
+
+	PropertyString=Public
+
+	PropertyValue=1
+
+	Scope=
+
+	PropIndex=1
+
+</ListProperty>
+
+<ListProperty>
+
+	Object=Object
+
+	Attribute=EntityAccessType
+
+	PropertyString=Private
+
+	PropertyValue=2
+
+	Scope=
+
+	PropIndex=2
+
+</ListProperty>
+
+//Attribute:UserAccessType
+
+<ListProperty>
+
+	Object=Object
+
+	Attribute=UserAccessType
+
+	PropertyString=All User
+
+	PropertyValue=1
+
+	Scope=
+
+	PropIndex=1
+
+</ListProperty>
+
+<ListProperty>
+
+	Object=Object
+
+	Attribute=UserAccessType
+
+	PropertyString=Mod and Gen user
+
+	PropertyValue=2
+
+	Scope=
+
+	PropIndex=2
+
+</ListProperty>
+
+<ListProperty>
+
+	Object=Object
+
+	Attribute=UserAccessType
+
+	PropertyString=Gen User
+
+	PropertyValue=3
+
+	Scope=
+
+	PropIndex=3
+
+</ListProperty>
+
+//*****************************************************************//
+//ListProperty:ObjectPrivilege
+//**************************************************************//
+
+
+//Attribute:IsRecursive
+
+<ListProperty>
+
+	Object=ObjectPrivilege
+
+	Attribute=IsRecursive
+
+	PropertyString=No
+
+	PropertyValue=1
+
+	Scope=
+
+	PropIndex=1
+
+</ListProperty>
+
+<ListProperty>
+
+	Object=ObjectPrivilege
+
+	Attribute=IsRecursive
+
+	PropertyString=Yes
+
+	PropertyValue=2
+
+	Scope=
+
+	PropIndex=2
+
+</ListProperty>
+
+//Attribute:Type
+
+<ListProperty>
+
+	Object=ObjectPrivilege
+
+	Attribute=Type
+
+	PropertyString=Record
+
+	PropertyValue=1
+
+	Scope=
+
+	PropIndex=1
+
+</ListProperty>
+
+<ListProperty>
+
+	Object=ObjectPrivilege
+
+	Attribute=Type
+
+	PropertyString=Full
+
+	PropertyValue=2
+
+	Scope=
+
+	PropIndex=2
+
+</ListProperty>
+
+<ListProperty>
+
+	Object=ObjectPrivilege
+
+	Attribute=Type
+
+	PropertyString=Group
+
+	PropertyValue=3
+
+	Scope=
+
+	PropIndex=3
+
+</ListProperty>
+
+//Attribute:Value
+
+<ListProperty>
+
+	Object=ObjectPrivilege
+
+	Attribute=Value
+
+	PropertyString=Read
+
+	PropertyValue=1
+
+	Scope=
+
+	PropIndex=1
+
+</ListProperty>
+
+<ListProperty>
+
+	Object=ObjectPrivilege
+
+	Attribute=Value
+
+	PropertyString=Write
+
+	PropertyValue=2
+
+	Scope=
+
+	PropIndex=2
+
+</ListProperty>
+
+//*****************************************************************//
+//ListProperty:ObjectRule
+//**************************************************************//
+
+
+//Attribute:ActionState
+
+<ListProperty>
+
+	Object=ObjectRule
+
+	Attribute=ActionState
+
+	PropertyString=After
+
+	PropertyValue=1
+
+	Scope=
+
+	PropIndex=1
+
+</ListProperty>
+
+<ListProperty>
+
+	Object=ObjectRule
+
+	Attribute=ActionState
+
+	PropertyString=Before
+
+	PropertyValue=2
+
+	Scope=
+
+	PropIndex=2
+
+</ListProperty>
+
+//Attribute:Reason
+
+<ListProperty>
+
+	Object=ObjectRule
+
+	Attribute=Reason
+
+	PropertyString=Insert
+
+	PropertyValue=1
+
+	Scope=
+
+	PropIndex=1
+
+</ListProperty>
+
+<ListProperty>
+
+	Object=ObjectRule
+
+	Attribute=Reason
+
+	PropertyString=Delete
+
+	PropertyValue=2
+
+	Scope=
+
+	PropIndex=2
+
+</ListProperty>
+
+//Attribute:Status
+
+<ListProperty>
+
+	Object=ObjectRule
+
+	Attribute=Status
+
+	PropertyString=Valid
+
+	PropertyValue=1
+
+	Scope=
+
+	PropIndex=1
+
+</ListProperty>
+
+<ListProperty>
+
+	Object=ObjectRule
+
+	Attribute=Status
+
+	PropertyString=In Valid
+
+	PropertyValue=2
+
+	Scope=
+
+	PropIndex=2
+
+</ListProperty>
+
+//*****************************************************************//
+//ListProperty:POTasks
+//**************************************************************//
+
+
+//Attribute:Stage
+
+<ListProperty>
+
+	Object=POTasks
+
+	Attribute=Stage
+
+	PropertyString=Open
+
+	PropertyValue=10
+
+	Scope=
+
+	PropIndex=1
+
+</ListProperty>
+
+<ListProperty>
+
+	Object=POTasks
+
+	Attribute=Stage
+
+	PropertyString=On Delivery Schedule
+
+	PropertyValue=20
+
+	Scope=
+
+	PropIndex=2
+
+</ListProperty>
+
+<ListProperty>
+
+	Object=POTasks
+
+	Attribute=Stage
+
+	PropertyString=Item Ready
+
+	PropertyValue=30
+
+	Scope=
+
+	PropIndex=3
+
+</ListProperty>
+
+<ListProperty>
+
+	Object=POTasks
+
+	Attribute=Stage
+
+	PropertyString=Received Transit Order
+
+	PropertyValue=40
+
+	Scope=
+
+	PropIndex=4
+
+</ListProperty>
+
+<ListProperty>
+
+	Object=POTasks
+
+	Attribute=Stage
+
+	PropertyString=Delivered To Customer
+
+	PropertyValue=50
+
+	Scope=
+
+	PropIndex=5
+
+</ListProperty>
+
+<ListProperty>
+
+	Object=POTasks
+
+	Attribute=Stage
+
+	PropertyString=Transit Receipt Sent
+
+	PropertyValue=60
+
+	Scope=Button:Create Transit
+
+	PropIndex=6
+
+</ListProperty>
+
+<ListProperty>
+
+	Object=POTasks
+
+	Attribute=Stage
+
+	PropertyString=Invoice Sent
+
+	PropertyValue=80
+
+	Scope=Button:Create Invoice
+
+	PropIndex=7
+
+</ListProperty>
+
+<ListProperty>
+
+	Object=POTasks
+
+	Attribute=Stage
+
+	PropertyString=Payment Received
+
+	PropertyValue=100
+
+	Scope=
+
+	PropIndex=8
+
+</ListProperty>
+
+//*****************************************************************//
+//ListProperty:PrivilegeGroup
+//**************************************************************//
+
+
+//Attribute:Status
+
+<ListProperty>
+
+	Object=PrivilegeGroup
+
+	Attribute=Status
+
+	PropertyString=Valid
+
+	PropertyValue=1
+
+	Scope=
+
+	PropIndex=1
+
+</ListProperty>
+
+<ListProperty>
+
+	Object=PrivilegeGroup
+
+	Attribute=Status
+
+	PropertyString=Invalid
+
+	PropertyValue=2
+
+	Scope=
+
+	PropIndex=2
+
+</ListProperty>
+
+//*****************************************************************//
+//ListProperty:QRTasks
+//**************************************************************//
+
+
+//Attribute:Stage
+
+<ListProperty>
+
+	Object=QRTasks
+
+	Attribute=Stage
+
+	PropertyString=Open
+
+	PropertyValue=10
+
+	Scope=
+
+	PropIndex=1
+
+</ListProperty>
+
+<ListProperty>
+
+	Object=QRTasks
+
+	Attribute=Stage
+
+	PropertyString=Email Created
+
+	PropertyValue=20
+
+	Scope=Button:Create Email
+
+	PropIndex=2
+
+</ListProperty>
+
+<ListProperty>
+
+	Object=QRTasks
+
+	Attribute=Stage
+
+	PropertyString=Asked Approval
+
+	PropertyValue=30
+
+	Scope=
+
+	PropIndex=3
+
+</ListProperty>
+
+<ListProperty>
+
+	Object=QRTasks
+
+	Attribute=Stage
+
+	PropertyString=Acknowledged
+
+	PropertyValue=40
+
+	Scope=
+
+	PropIndex=4
+
+</ListProperty>
+
+<ListProperty>
+
+	Object=QRTasks
+
+	Attribute=Stage
+
+	PropertyString=Approved
+
+	PropertyValue=50
+
+	Scope=
+
+	PropIndex=5
+
+</ListProperty>
+
+<ListProperty>
+
+	Object=QRTasks
+
+	Attribute=Stage
+
+	PropertyString=Sent To Customer
+
+	PropertyValue=60
+
+	Scope=
+
+	PropIndex=6
+
+</ListProperty>
+
+<ListProperty>
+
+	Object=QRTasks
+
+	Attribute=Stage
+
+	PropertyString=Customer Replied
+
+	PropertyValue=70
+
+	Scope=
+
+	PropIndex=7
+
+</ListProperty>
+
+<ListProperty>
+
+	Object=QRTasks
+
+	Attribute=Stage
+
+	PropertyString=Change Request
+
+	PropertyValue=80
+
+	Scope=
+
+	PropIndex=8
+
+</ListProperty>
+
+<ListProperty>
+
+	Object=QRTasks
+
+	Attribute=Stage
+
+	PropertyString=CR Approved
+
+	PropertyValue=90
+
+	Scope=
+
+	PropIndex=8
+
+</ListProperty>
+
+<ListProperty>
+
+	Object=QRTasks
+
+	Attribute=Stage
+
+	PropertyString=Order Received
+
+	PropertyValue=100
+
+	Scope=Button:Create PO
+
+	PropIndex=9
+
+</ListProperty>
+
+<ListProperty>
+
+	Object=QRTasks
+
+	Attribute=Stage
+
+	PropertyString=Closed Without PO
+
+	PropertyValue=0
+
+	Scope=
+
+	PropIndex=10
+
+</ListProperty>
+
+//*****************************************************************//
+//ListProperty:RFQ
+//**************************************************************//
+
+
+//Attribute:Status
+
+<ListProperty>
+
+	Object=RFQ
+
+	Attribute=Status
+
+	PropertyString=Open
+
+	PropertyValue=Open
+
+	Scope=
+
+	PropIndex=1
+
+</ListProperty>
+
+<ListProperty>
+
+	Object=RFQ
+
+	Attribute=Status
+
+	PropertyString=Closed
+
+	PropertyValue=Closed
+
+	Scope=Button:Close
+
+	PropIndex=2
+
+</ListProperty>
+
+//*****************************************************************//
+//ListProperty:RFQEmail
+//**************************************************************//
+
+
+//Attribute:Stage
+
+<ListProperty>
+
+	Object=RFQEmail
+
+	Attribute=Stage
+
+	PropertyString=Not Sent
+
+	PropertyValue=10
+
+	Scope=
+
+	PropIndex=1
+
+</ListProperty>
+
+<ListProperty>
+
+	Object=RFQEmail
+
+	Attribute=Stage
+
+	PropertyString=Sent
+
+	PropertyValue=100
+
+	Scope=Button:Send Email
+
+	PropIndex=2
+
+</ListProperty>
+
+//*****************************************************************//
+//ListProperty:SubModule
+//**************************************************************//
+
+
+//Attribute:Name
+
+<ListProperty>
+
+	Object=SubModule
+
+	Attribute=Name
+
+	PropertyString=Home:Corporate
+
+	PropertyValue=Home:Corporate
+
+	Scope=
+
+	PropIndex=1
+
+</ListProperty>
+
+<ListProperty>
+
+	Object=SubModule
+
+	Attribute=Name
+
+	PropertyString=Home:Project
+
+	PropertyValue=Home:Project
+
+	Scope=
+
+	PropIndex=2
+
+</ListProperty>
+
+<ListProperty>
+
+	Object=SubModule
+
+	Attribute=Name
+
+	PropertyString=Home:Entity
+
+	PropertyValue=Home:Entity
+
+	Scope=
+
+	PropIndex=3
+
+</ListProperty>
+
+<ListProperty>
+
+	Object=SubModule
+
+	Attribute=Name
+
+	PropertyString=Home:Site
+
+	PropertyValue=Home:Site
+
+	Scope=
+
+	PropIndex=4
+
+</ListProperty>
+
+<ListProperty>
+
+	Object=SubModule
+
+	Attribute=Name
+
+	PropertyString=Home:Account
+
+	PropertyValue=Home:Account
+
+	Scope=
+
+	PropIndex=5
+
+</ListProperty>
+
+<ListProperty>
+
+	Object=SubModule
+
+	Attribute=Name
+
+	PropertyString=Admin:User
+
+	PropertyValue=Admin:User
+
+	Scope=
+
+	PropIndex=6
+
+</ListProperty>
+
+<ListProperty>
+
+	Object=SubModule
+
+	Attribute=Name
+
+	PropertyString=Admin:Object&Attribute
+
+	PropertyValue=Admin:Object&Attribute
+
+	Scope=
+
+	PropIndex=7
+
+</ListProperty>
+
+<ListProperty>
+
+	Object=SubModule
+
+	Attribute=Name
+
+	PropertyString=Admin:Employees
+
+	PropertyValue=Admin:Employees
+
+	Scope=
+
+	PropIndex=8
+
+</ListProperty>
+
+<ListProperty>
+
+	Object=SubModule
+
+	Attribute=Name
+
+	PropertyString=Admin:Code
+
+	PropertyValue=Admin:Code
+
+	Scope=
+
+	PropIndex=9
+
+</ListProperty>
+
+<ListProperty>
+
+	Object=SubModule
+
+	Attribute=Name
+
+	PropertyString=Admin:UserSetting
+
+	PropertyValue=Admin:UserSetting
+
+	Scope=
+
+	PropIndex=9
+
+</ListProperty>
+
+<ListProperty>
+
+	Object=SubModule
+
+	Attribute=Name
+
+	PropertyString=Project:Project
+
+	PropertyValue=Project:Project
+
+	Scope=
+
+	PropIndex=10
+
+</ListProperty>
+
+<ListProperty>
+
+	Object=SubModule
+
+	Attribute=Name
+
+	PropertyString=Project:Architecture
+
+	PropertyValue=Project:Architecture
+
+	Scope=
+
+	PropIndex=11
+
+</ListProperty>
+
+<ListProperty>
+
+	Object=SubModule
+
+	Attribute=Name
+
+	PropertyString=Project:System
+
+	PropertyValue=Project:System
+
+	Scope=
+
+	PropIndex=12
+
+</ListProperty>
+
+<ListProperty>
+
+	Object=SubModule
+
+	Attribute=Name
+
+	PropertyString=Project:Construction
+
+	PropertyValue=Project:Construction
+
+	Scope=
+
+	PropIndex=13
+
+</ListProperty>
+
+<ListProperty>
+
+	Object=SubModule
+
+	Attribute=Name
+
+	PropertyString=Project:Material
+
+	PropertyValue=Project:Material
+
+	Scope=
+
+	PropIndex=13
+
+</ListProperty>
+
+<ListProperty>
+
+	Object=SubModule
+
+	Attribute=Name
+
+	PropertyString=Project:Operation
+
+	PropertyValue=Project:Operation
+
+	Scope=
+
+	PropIndex=14
+
+</ListProperty>
+
+<ListProperty>
+
+	Object=SubModule
+
+	Attribute=Name
+
+	PropertyString=Project:Maintenance
+
+	PropertyValue=Project:Maintenance
+
+	Scope=
+
+	PropIndex=14
+
+</ListProperty>
+
+//*****************************************************************//
+//ListProperty:Subscription
+//**************************************************************//
+
+
+//Attribute:Status
+
+<ListProperty>
+
+	Object=Subscription
+
+	Attribute=Status
+
+	PropertyString=In Active
+
+	PropertyValue=1
+
+	Scope=
+
+	PropIndex=1
+
+</ListProperty>
+
+<ListProperty>
+
+	Object=Subscription
+
+	Attribute=Status
+
+	PropertyString=Active
+
+	PropertyValue=2
+
+	Scope=
+
+	PropIndex=2
+
+</ListProperty>
+
+//*****************************************************************//
+//ListProperty:TRTasks
+//**************************************************************//
+
+
+//Attribute:Stage
+
+<ListProperty>
+
+	Object=TRTasks
+
+	Attribute=Stage
+
+	PropertyString=Open
+
+	PropertyValue=10
+
+	Scope=
+
+	PropIndex=1
+
+</ListProperty>
+
+<ListProperty>
+
+	Object=TRTasks
+
+	Attribute=Stage
+
+	PropertyString=Email Created
+
+	PropertyValue=20
+
+	Scope=Button:Create Email
+
+	PropIndex=2
+
+</ListProperty>
+
+<ListProperty>
+
+	Object=TRTasks
+
+	Attribute=Stage
+
+	PropertyString=Email Sent
+
+	PropertyValue=30
+
+	Scope=
+
+	PropIndex=3
+
+</ListProperty>
+
+<ListProperty>
+
+	Object=TRTasks
+
+	Attribute=Stage
+
+	PropertyString=Acknowledged
+
+	PropertyValue=50
+
+	Scope=
+
+	PropIndex=4
+
+</ListProperty>
+
+<ListProperty>
+
+	Object=TRTasks
+
+	Attribute=Stage
+
+	PropertyString=Replied
+
+	PropertyValue=60
+
+	Scope=
+
+	PropIndex=5
+
+</ListProperty>
+
+<ListProperty>
+
+	Object=TRTasks
+
+	Attribute=Stage
+
+	PropertyString=Bid Task Created
+
+	PropertyValue=70
+
+	Scope=Button:Create Bid Task
+
+	PropIndex=5
+
+</ListProperty>
+
+<ListProperty>
+
+	Object=TRTasks
+
+	Attribute=Stage
+
+	PropertyString=QR Created
+
+	PropertyValue=100
+
+	Scope=Button:Create QR Task
+
+	PropIndex=6
+
+</ListProperty>
+
+//*****************************************************************//
+//ListProperty:User
+//**************************************************************//
+
+
+//Attribute:Status
+
+<ListProperty>
+
+	Object=User
+
+	Attribute=Status
+
+	PropertyString=Valid
+
+	PropertyValue=1
+
+	Scope=
+
+	PropIndex=1
+
+</ListProperty>
+
+<ListProperty>
+
+	Object=User
+
+	Attribute=Status
+
+	PropertyString=Invalid
+
+	PropertyValue=2
+
+	Scope=
+
+	PropIndex=2
+
+</ListProperty>
+
+//Attribute:UserType
+
+<ListProperty>
+
+	Object=User
+
+	Attribute=UserType
+
+	PropertyString=Employee
+
+	PropertyValue=1
+
+	Scope=
+
+	PropIndex=1
+
+</ListProperty>
+
+<ListProperty>
+
+	Object=User
+
+	Attribute=UserType
+
+	PropertyString=Vendor
+
+	PropertyValue=2
+
+	Scope=
+
+	PropIndex=2
+
+</ListProperty>
+
+
+
+	<ObjectRule>
+
+		 Name=BidTasks Rule
+
+		 TableName=BidTasks
+
+		 EffectedTable=BidTasks
+
+		 Description=Calling Upadte and Insert Rule for object BidTasks
+
+		 Reason=1
+
+		 ActionState=1
+
+		 Condition=objid$gt$0
+
+		 RuleIndex=1
+
+		 Status=1
+
+	</ObjectRule>
+
+//*****************************************************************//
+//Adding Action Query
+//Table Name:BidTasks
+//Name:Call Insert_BidTasks procedure
+//Step No:1
+//**************************************************************//
+
+
+	<ActionQuery>
+
+		 Name=Call Insert_BidTasks procedure
+
+		 TableName=BidTasks
+
+		 Description=Call Insert_BidTasks procedure
+
+		 StepNo=1
+
+		 Input=@Objid
+
+		 InputDataType=@Integer
+
+		 Output=$BidTasksId
+
+		 QueryType=0
+
+		 HasRecordSet=0
+
+		 OracleQuery=exec Insert_BidTasks(@objid)
+
+		 MssqlQuery=exec Insert_BidTasks @objid
+
+		 Status=0
+
+	</ActionQuery>
+
+
+
+//*****************************************************************//
+//Adding Object Rule
+//Table Name:Calendar
+//Attribute Name:Calendar Rule
+//**************************************************************//
+
+
+	<ObjectRule>
+
+		 Name=Calendar Rule
+
+		 TableName=Calendar
+
+		 EffectedTable=Month
+
+		 Description=Calling Upadte and Insert Rule for object Calendar
+
+		 Reason=1
+
+		 ActionState=1
+
+		 Condition=objid$gt$0
+
+		 RuleIndex=1
+
+		 Status=1
+
+	</ObjectRule>
+
+//*****************************************************************//
+//Adding Action Query
+//Table Name:Calendar
+//Name:Call Insert_Calendar procedure
+//Step No:1
+//**************************************************************//
+
+
+	<ActionQuery>
+
+		 Name=Call Insert_Calendar procedure
+
+		 TableName=Calendar
+
+		 Description=Call Insert_Calendar procedure
+
+		 StepNo=1
+
+		 Input=@Objid
+
+		 InputDataType=@Integer
+
+		 Output=$activityId
+
+		 QueryType=0
+
+		 HasRecordSet=0
+
+		 OracleQuery=exec Insert_Calendar(@objid)
+
+		 MssqlQuery=exec Insert_Calendar @objid
+
+		 Status=0
+
+	</ActionQuery>
+
+
+//*****************************************************************//
+//Adding Object Rule
+//Table Name:ItemDispatch
+//Attribute Name:ItemDispatch Rule
+//**************************************************************//
+
+
+	<ObjectRule>
+
+		 Name=ItemDispatch Rule
+
+		 TableName=ItemDispatch
+
+		 EffectedTable=ItemDispatch
+
+		 Description=Calling Upadte and Insert Rule for object Quote
+
+		 Reason=1
+
+		 ActionState=1
+
+		 Condition=objid$gt$0
+
+		 RuleIndex=1
+
+		 Status=1
+
+	</ObjectRule>
+
+//*****************************************************************//
+//Adding Action Query
+//Table Name:ItemDispatch
+//Name:Call Upadte_ItemDispatch procedure
+//Step No:1
+//**************************************************************//
+
+
+	<ActionQuery>
+
+		 Name=Call Upadte_ItemDispatch procedure
+
+		 TableName=ItemDispatch
+
+		 Description=Call Update_ItemDispatch procedure
+
+		 StepNo=1
+
+		 Input=@Objid
+
+		 InputDataType=@Integer
+
+		 Output=$ItemDispatchId
+
+		 QueryType=0
+
+		 HasRecordSet=0
+
+		 OracleQuery=exec Update_ItemDispatch(@objid)
+
+		 MssqlQuery=exec Update_ItemDispatch @objid
+
+		 Status=0
+
+	</ActionQuery>
+
+
+//*****************************************************************//
+//Adding Object Rule
+//Table Name:Lead
+//Attribute Name:Lead Rule
+//**************************************************************//
+
+
+	<ObjectRule>
+
+		 Name=Lead Rule
+
+		 TableName=Lead
+
+		 EffectedTable=LeadNote
+
+		 Description=Calling Upadte and Insert Rule for object Lead
+
+		 Reason=1
+
+		 ActionState=1
+
+		 Condition=objid$gt$0
+
+		 RuleIndex=1
+
+		 Status=1
+
+	</ObjectRule>
+
+//*****************************************************************//
+//Adding Action Query
+//Table Name:Lead
+//Name:Call Upadte_Lead procedure
+//Step No:1
+//**************************************************************//
+
+
+	<ActionQuery>
+
+		 Name=Call Upadte_Lead procedure
+
+		 TableName=Lead
+
+		 Description=Call Update_Lead procedure
+
+		 StepNo=1
+
+		 Input=@Objid
+
+		 InputDataType=@Integer
+
+		 Output=$activityId
+
+		 QueryType=0
+
+		 HasRecordSet=0
+
+		 OracleQuery=exec Update_Lead(@objid)
+
+		 MssqlQuery=exec Update_Lead @objid
+
+		 Status=0
+
+	</ActionQuery>
+
+
+//*****************************************************************//
+//Adding Object Rule
+//Table Name:Partprice
+//Attribute Name:Partprice Rule
+//**************************************************************//
+
+
+	<ObjectRule>
+
+		 Name=Partprice Rule
+
+		 TableName=Partprice
+
+		 EffectedTable=Equipment
+
+		 Description=Calling Upadte and Insert Rule for object Partprice
+
+		 Reason=1
+
+		 ActionState=1
+
+		 Condition=objid$gt$0
+
+		 RuleIndex=1
+
+		 Status=1
+
+	</ObjectRule>
+
+//*****************************************************************//
+//Adding Action Query
+//Table Name:Partprice
+//Name:Call Insert_Partprice procedure
+//Step No:1
+//**************************************************************//
+
+
+	<ActionQuery>
+
+		 Name=Call Insert_Partprice procedure
+
+		 TableName=Partprice
+
+		 Description=Call Insert_Partprice procedure
+
+		 StepNo=1
+
+		 Input=@Objid
+
+		 InputDataType=@Integer
+
+		 Output=$activityId
+
+		 QueryType=0
+
+		 HasRecordSet=0
+
+		 OracleQuery=exec Insert_Partprice(@objid)
+
+		 MssqlQuery=exec Insert_Partprice @objid
+
+		 Status=0
+
+	</ActionQuery>
+
+
+//*****************************************************************//
+//Adding Object Rule
+//Table Name:Profile
+//Attribute Name:Profile Rule
+//**************************************************************//
+
+
+	<ObjectRule>
+
+		 Name=Profile Rule
+
+		 TableName=Profile
+
+		 EffectedTable=ProfileSetting
+
+		 Description=Calling Upadte and Insert Rule for object Profile
+
+		 Reason=1
+
+		 ActionState=1
+
+		 Condition=objid$gt$0
+
+		 RuleIndex=1
+
+		 Status=1
+
+	</ObjectRule>
+
+//*****************************************************************//
+//Adding Action Query
+//Table Name:Profile
+//Name:Call Insert_Profile procedure
+//Step No:1
+//**************************************************************//
+
+
+	<ActionQuery>
+
+		 Name=Call Insert_Profile procedure
+
+		 TableName=Profile
+
+		 Description=Call Insert_Profile procedure
+
+		 StepNo=1
+
+		 Input=@Objid
+
+		 InputDataType=@Integer
+
+		 Output=$activityId
+
+		 QueryType=0
+
+		 HasRecordSet=0
+
+		 OracleQuery=exec Insert_Profile(@objid)
+
+		 MssqlQuery=exec Insert_Profile @objid
+
+		 Status=0
+
+	</ActionQuery>
+
+	<ActionQuery>
+
+		 Name=Call Upadte_Profile procedure
+
+		 TableName=Profile
+
+		 Description=Call Update_Profile procedure
+
+		 StepNo=2
+
+		 Input=@Objid
+
+		 InputDataType=@Integer
+
+		 Output=$activityId
+
+		 QueryType=0
+
+		 HasRecordSet=0
+
+		 OracleQuery=exec Update_Profile(@objid)
+
+		 MssqlQuery=exec Update_Profile @objid
+
+		 Status=0
+
+	</ActionQuery>
+
+
+//*****************************************************************//
+//Adding Object Rule
+//Table Name:QRTasks
+//Attribute Name:QRTasks Rule
+//**************************************************************//
+
+
+	<ObjectRule>
+
+		 Name=QRTasks Rule
+
+		 TableName=QRTasks
+
+		 EffectedTable=QRTasks
+
+		 Description=Calling Upadte and Insert Rule for object QRTasks
+
+		 Reason=1
+
+		 ActionState=1
+
+		 Condition=objid$gt$0
+
+		 RuleIndex=1
+
+		 Status=1
+
+	</ObjectRule>
+
+//*****************************************************************//
+//Adding Action Query
+//Table Name:QRTasks
+//Name:Call Insert_QRTasks procedure
+//Step No:1
+//**************************************************************//
+
+
+	<ActionQuery>
+
+		 Name=Call Insert_QRTasks procedure
+
+		 TableName=QRTasks
+
+		 Description=Call Insert_QRTasks procedure
+
+		 StepNo=1
+
+		 Input=@Objid
+
+		 InputDataType=@Integer
+
+		 Output=$QRTasksId
+
+		 QueryType=0
+
+		 HasRecordSet=0
+
+		 OracleQuery=exec Insert_QRTasks(@objid)
+
+		 MssqlQuery=exec Insert_QRTasks @objid
+
+		 Status=0
+
+	</ActionQuery>
+
+
+//*****************************************************************//
+//Adding Object Rule
+//Table Name:RfqParts
+//Attribute Name:RfqParts Rule
+//**************************************************************//
+
+
+	<ObjectRule>
+
+		 Name=RfqParts Rule
+
+		 TableName=RfqParts
+
+		 EffectedTable=RfqParts
+
+		 Description=Calling Upadte and Insert Rule for object RfqParts
+
+		 Reason=1
+
+		 ActionState=1
+
+		 Condition=objid$gt$0
+
+		 RuleIndex=1
+
+		 Status=1
+
+	</ObjectRule>
+
+//*****************************************************************//
+//Adding Action Query
+//Table Name:RfqParts
+//Name:Call Insert_RfqParts procedure
+//Step No:1
+//**************************************************************//
+
+
+	<ActionQuery>
+
+		 Name=Call Insert_RfqParts procedure
+
+		 TableName=RfqParts
+
+		 Description=Call Insert_RfqParts procedure
+
+		 StepNo=1
+
+		 Input=@Objid
+
+		 InputDataType=@Integer
+
+		 Output=$RfqPartsId
+
+		 QueryType=0
+
+		 HasRecordSet=0
+
+		 OracleQuery=exec Insert_RfqParts(@objid)
+
+		 MssqlQuery=exec Insert_RfqParts @objid
+
+		 Status=0
+
+	</ActionQuery>
+
+
+//*****************************************************************//
+//Adding Object Rule
+//Table Name:TRTasks
+//Attribute Name:TRTasks Rule
+//**************************************************************//
+
+
+	<ObjectRule>
+
+		 Name=TRTasks Rule
+
+		 TableName=TRTasks
+
+		 EffectedTable=TRTasks
+
+		 Description=Calling Upadte and Insert Rule for object TRTasks
+
+		 Reason=1
+
+		 ActionState=1
+
+		 Condition=objid$gt$0
+
+		 RuleIndex=1
+
+		 Status=1
+
+	</ObjectRule>
+
+//*****************************************************************//
+//Adding Action Query
+//Table Name:TRTasks
+//Name:Call Insert_TRTasks procedure
+//Step No:1
+//**************************************************************//
+
+
+	<ActionQuery>
+
+		 Name=Call Insert_TRTasks procedure
+
+		 TableName=TRTasks
+
+		 Description=Call Insert_TRTasks procedure
+
+		 StepNo=1
+
+		 Input=@Objid
+
+		 InputDataType=@Integer
+
+		 Output=$TRTasksId
+
+		 QueryType=0
+
+		 HasRecordSet=0
+
+		 OracleQuery=exec Insert_TRTasks(@objid)
+
+		 MssqlQuery=exec Insert_TRTasks @objid
+
+		 Status=0
+
+	</ActionQuery>
+
+
+//*****************************************************************//
+//Adding Object Rule
+//Table Name:User
+//Attribute Name:User Rule
+//**************************************************************//
+
+
+	<ObjectRule>
+
+		 Name=User Rule
+
+		 TableName=User
+
+		 EffectedTable=User
+
+		 Description=Calling Upadte and Insert Rule for object Quote
+
+		 Reason=1
+
+		 ActionState=1
+
+		 Condition=objid$gt$0
+
+		 RuleIndex=1
+
+		 Status=1
+
+	</ObjectRule>
+
+//*****************************************************************//
+//Adding Action Query
+//Table Name:User
+//Name:Call Insert_User procedure
+//Step No:1
+//**************************************************************//
+
+
+	<ActionQuery>
+
+		 Name=Call Insert_User procedure
+
+		 TableName=User
+
+		 Description=Call Insert_User procedure
+
+		 StepNo=1
+
+		 Input=@Objid
+
+		 InputDataType=@Integer
+
+		 Output=$activityId
+
+		 QueryType=0
+
+		 HasRecordSet=0
+
+		 OracleQuery=exec Insert_User(@objid)
+
+		 MssqlQuery=exec Insert_User @objid
+
+		 Status=0
+
+	</ActionQuery>
+
+//*****************************************************************//
+//Adding Object Rule
+//Table Name:EmailResponse
+//Attribute Name:EmailResponse Rule
+//**************************************************************//
+
+
+	<ObjectRule>
+
+		 Name=EmailResponse Rule
+
+		 TableName=EmailResponse
+
+		 EffectedTable=EmailResponse
+
+		 Description=Calling Upadte and Insert Rule for object Quote
+
+		 Reason=1
+
+		 ActionState=1
+
+		 Condition=objid$gt$0
+
+		 RuleIndex=1
+
+		 Status=1
+
+	</ObjectRule>
+
+//*****************************************************************//
+//Adding Action Query
+//Table Name:EmailResponse
+//Name:Call Insert_EmailResponse procedure
+//Step No:1
+//**************************************************************//
+
+
+	<ActionQuery>
+
+		 Name=Call Insert_EmailResponse procedure
+
+		 TableName=EmailResponse
+
+		 Description=Call Insert_EmailResponse procedure
+
+		 StepNo=1
+
+		 Input=@Objid
+
+		 InputDataType=@Integer
+
+		 Output=$activityId
+
+		 QueryType=0
+
+		 HasRecordSet=0
+
+		 OracleQuery=exec Insert_EmailResponse(@objid)
+
+		 MssqlQuery=exec Insert_EmailResponse @objid
+
+		 Status=0
+
+	</ActionQuery>
+
+//Adding Generic Code for Attribute:BizCode
+
+<GenericCode>
+
+	 Name=Consultancy
+
+	 AttributeName=BizCode
+
+	 CodeValue=CTS
+
+	 Description=No Description Available
+
+	 Status=1
+
+	 CodeIndex=6
+
+</GenericCode>
+
+<GenericCode>
+
+	 Name=Designer
+
+	 AttributeName=BizCode
+
+	 CodeValue=DSN
+
+	 Description=No Description Available
+
+	 Status=1
+
+	 CodeIndex=7
+
+</GenericCode>
+
+<GenericCode>
+
+	 Name=General Contractor
+
+	 AttributeName=BizCode
+
+	 CodeValue=GC
+
+	 Description=No Description Available
+
+	 Status=1
+
+	 CodeIndex=1
+
+</GenericCode>
+
+<GenericCode>
+
+	 Name=Information Technology
+
+	 AttributeName=BizCode
+
+	 CodeValue=IMS
+
+	 Description=No Description Available
+
+	 Status=1
+
+	 CodeIndex=8
+
+</GenericCode>
+
+<GenericCode>
+
+	 Name=Manufacturer
+
+	 AttributeName=BizCode
+
+	 CodeValue=MFN
+
+	 Description=No Description Available
+
+	 Status=1
+
+	 CodeIndex=4
+
+</GenericCode>
+
+<GenericCode>
+
+	 Name=Sub Contractor
+
+	 AttributeName=BizCode
+
+	 CodeValue=SC
+
+	 Description=No Description Available
+
+	 Status=1
+
+	 CodeIndex=2
+
+</GenericCode>
+
+<GenericCode>
+
+	 Name=Service Provider
+
+	 AttributeName=BizCode
+
+	 CodeValue=SP
+
+	 Description=No Description Available
+
+	 Status=1
+
+	 CodeIndex=9
+
+</GenericCode>
+
+<GenericCode>
+
+	 Name=Supplier
+
+	 AttributeName=BizCode
+
+	 CodeValue=SUP
+
+	 Description=No Description Available
+
+	 Status=1
+
+	 CodeIndex=3
+
+</GenericCode>
+
+<GenericCode>
+
+	 Name=Whole Seller
+
+	 AttributeName=BizCode
+
+	 CodeValue=WS
+
+	 Description=No Description Available
+
+	 Status=1
+
+	 CodeIndex=5
+
+</GenericCode>
+
+//Adding Generic Code for Attribute:CardTypeCode
+
+<GenericCode>
+
+	 Name=Visa
+
+	 AttributeName=CardTypeCode
+
+	 CodeValue=1
+
+	 Description=No Description Available
+
+	 Status=1
+
+	 CodeIndex=1
+
+</GenericCode>
+
+<GenericCode>
+
+	 Name=Master Card
+
+	 AttributeName=CardTypeCode
+
+	 CodeValue=2
+
+	 Description=No Description Available
+
+	 Status=1
+
+	 CodeIndex=2
+
+</GenericCode>
+
+<GenericCode>
+
+	 Name=Discover
+
+	 AttributeName=CardTypeCode
+
+	 CodeValue=3
+
+	 Description=No Description Available
+
+	 Status=1
+
+	 CodeIndex=3
+
+</GenericCode>
+
+//Adding Generic Code for Attribute:CountryCode
+
+<GenericCode>
+
+	 Name=Africa
+
+	 AttributeName=CountryCode
+
+	 CodeValue=Africa
+
+	 Description=Africa
+
+	 Status=1
+
+	 CodeIndex=7
+
+</GenericCode>
+
+<GenericCode>
+
+	 Name=Asia
+
+	 AttributeName=CountryCode
+
+	 CodeValue=Asia
+
+	 Description=Asia
+
+	 Status=1
+
+	 CodeIndex=8
+
+</GenericCode>
+
+<GenericCode>
+
+	 Name=Canada
+
+	 AttributeName=CountryCode
+
+	 CodeValue=CND
+
+	 Description=Canada
+
+	 Status=1
+
+	 CodeIndex=2
+
+</GenericCode>
+
+<GenericCode>
+
+	 Name=China
+
+	 AttributeName=CountryCode
+
+	 CodeValue=China
+
+	 Description=China
+
+	 Status=1
+
+	 CodeIndex=4
+
+</GenericCode>
+
+<GenericCode>
+
+	 Name=Europe
+
+	 AttributeName=CountryCode
+
+	 CodeValue=Europe
+
+	 Description=Europe
+
+	 Status=1
+
+	 CodeIndex=6
+
+</GenericCode>
+
+<GenericCode>
+
+	 Name=India
+
+	 AttributeName=CountryCode
+
+	 CodeValue=India
+
+	 Description=India
+
+	 Status=1
+
+	 CodeIndex=3
+
+</GenericCode>
+
+<GenericCode>
+
+	 Name=Middle East
+
+	 AttributeName=CountryCode
+
+	 CodeValue=Middle East
+
+	 Description=Middle East
+
+	 Status=1
+
+	 CodeIndex=5
+
+</GenericCode>
+
+<GenericCode>
+
+	 Name=Other
+
+	 AttributeName=CountryCode
+
+	 CodeValue=Other
+
+	 Description=Other
+
+	 Status=1
+
+	 CodeIndex=9
+
+</GenericCode>
+
+<GenericCode>
+
+	 Name=USA
+
+	 AttributeName=CountryCode
+
+	 CodeValue=USA
+
+	 Description=United States
+
+	 Status=1
+
+	 CodeIndex=1
+
+</GenericCode>
+
+//Adding Generic Code for Attribute:DeptCode
+
+<GenericCode>
+
+	 Name=Account
+
+	 AttributeName=DeptCode
+
+	 CodeValue=AC
+
+	 Description=No Description Available
+
+	 Status=1
+
+	 CodeIndex=10
+
+</GenericCode>
+
+<GenericCode>
+
+	 Name=Architecture
+
+	 AttributeName=DeptCode
+
+	 CodeValue=ARCH
+
+	 Description=No Description Available
+
+	 Status=1
+
+	 CodeIndex=1
+
+</GenericCode>
+
+<GenericCode>
+
+	 Name=Civil
+
+	 AttributeName=DeptCode
+
+	 CodeValue=CIVIL
+
+	 Description=No Description Available
+
+	 Status=1
+
+	 CodeIndex=2
+
+</GenericCode>
+
+<GenericCode>
+
+	 Name=Electrical
+
+	 AttributeName=DeptCode
+
+	 CodeValue=ETCL
+
+	 Description=No Description Available
+
+	 Status=1
+
+	 CodeIndex=5
+
+</GenericCode>
+
+<GenericCode>
+
+	 Name=Finance
+
+	 AttributeName=DeptCode
+
+	 CodeValue=FINC
+
+	 Description=No Description Available
+
+	 Status=1
+
+	 CodeIndex=8
+
+</GenericCode>
+
+<GenericCode>
+
+	 Name=HR
+
+	 AttributeName=DeptCode
+
+	 CodeValue=HR
+
+	 Description=No Description Available
+
+	 Status=1
+
+	 CodeIndex=11
+
+</GenericCode>
+
+<GenericCode>
+
+	 Name=Instrumentation
+
+	 AttributeName=DeptCode
+
+	 CodeValue=INST
+
+	 Description=No Description Available
+
+	 Status=1
+
+	 CodeIndex=6
+
+</GenericCode>
+
+<GenericCode>
+
+	 Name=Mechanical
+
+	 AttributeName=DeptCode
+
+	 CodeValue=MECH
+
+	 Description=No Description Available
+
+	 Status=1
+
+	 CodeIndex=3
+
+</GenericCode>
+
+<GenericCode>
+
+	 Name=Maintenance
+
+	 AttributeName=DeptCode
+
+	 CodeValue=MNTC
+
+	 Description=No Description Available
+
+	 Status=1
+
+	 CodeIndex=4
+
+</GenericCode>
+
+<GenericCode>
+
+	 Name=Planning
+
+	 AttributeName=DeptCode
+
+	 CodeValue=PLNG
+
+	 Description=No Description Available
+
+	 Status=1
+
+	 CodeIndex=7
+
+</GenericCode>
+
+<GenericCode>
+
+	 Name=Purchase
+
+	 AttributeName=DeptCode
+
+	 CodeValue=PURCH
+
+	 Description=No Description Available
+
+	 Status=1
+
+	 CodeIndex=9
+
+</GenericCode>
+
+<GenericCode>
+
+	 Name=Transport
+
+	 AttributeName=DeptCode
+
+	 CodeValue=TRNS
+
+	 Description=No Description Available
+
+	 Status=1
+
+	 CodeIndex=12
+
+</GenericCode>
+
+//Adding Generic Code for Attribute:DomainCode
+
+<GenericCode>
+
+	 Name=Construction Material
+
+	 AttributeName=DomainCode
+
+	 CodeValue=1
+
+	 Description=No Description Available
+
+	 Status=1
+
+	 CodeIndex=1
+
+</GenericCode>
+
+<GenericCode>
+
+	 Name=Office Material
+
+	 AttributeName=DomainCode
+
+	 CodeValue=2
+
+	 Description=No Description Available
+
+	 Status=1
+
+	 CodeIndex=2
+
+</GenericCode>
+
+<GenericCode>
+
+	 Name=Construction Equipment
+
+	 AttributeName=DomainCode
+
+	 CodeValue=3
+
+	 Description=No Description Available
+
+	 Status=1
+
+	 CodeIndex=3
+
+</GenericCode>
+
+<GenericCode>
+
+	 Name=Testing Equipment
+
+	 AttributeName=DomainCode
+
+	 CodeValue=4
+
+	 Description=No Description Available
+
+	 Status=1
+
+	 CodeIndex=4
+
+</GenericCode>
+
+<GenericCode>
+
+	 Name=Management Staff
+
+	 AttributeName=DomainCode
+
+	 CodeValue=5
+
+	 Description=No Description Available
+
+	 Status=1
+
+	 CodeIndex=5
+
+</GenericCode>
+
+<GenericCode>
+
+	 Name=Labor Supply
+
+	 AttributeName=DomainCode
+
+	 CodeValue=6
+
+	 Description=No Description Available
+
+	 Status=1
+
+	 CodeIndex=6
+
+</GenericCode>
+
+<GenericCode>
+
+	 Name=Consultant
+
+	 AttributeName=DomainCode
+
+	 CodeValue=7
+
+	 Description=No Description Available
+
+	 Status=1
+
+	 CodeIndex=7
+
+</GenericCode>
+
+<GenericCode>
+
+	 Name=Maintenance Parts
+
+	 AttributeName=DomainCode
+
+	 CodeValue=8
+
+	 Description=Maintenance Parts
+
+	 Status=1
+
+	 CodeIndex=8
+
+</GenericCode>
+
+<GenericCode>
+
+	 Name=Maintenance Resource
+
+	 AttributeName=DomainCode
+
+	 CodeValue=9
+
+	 Description=No Description Available
+
+	 Status=1
+
+	 CodeIndex=9
+
+</GenericCode>
+
+//Adding Generic Code for Attribute:EmpCode
+
+<GenericCode>
+
+	 Name=Full Time
+
+	 AttributeName=EmpCode
+
+	 CodeValue=1
+
+	 Description=No Description Available
+
+	 Status=1
+
+	 CodeIndex=1
+
+</GenericCode>
+
+<GenericCode>
+
+	 Name=Part Time
+
+	 AttributeName=EmpCode
+
+	 CodeValue=2
+
+	 Description=No Description Available
+
+	 Status=1
+
+	 CodeIndex=2
+
+</GenericCode>
+
+<GenericCode>
+
+	 Name=Contractor
+
+	 AttributeName=EmpCode
+
+	 CodeValue=3
+
+	 Description=No Description Available
+
+	 Status=1
+
+	 CodeIndex=3
+
+</GenericCode>
+
+<GenericCode>
+
+	 Name=Non Employee
+
+	 AttributeName=EmpCode
+
+	 CodeValue=4
+
+	 Description=No Description Available
+
+	 Status=1
+
+	 CodeIndex=4
+
+</GenericCode>
+
+//Adding Generic Code for Attribute:EvalCode
+
+<GenericCode>
+
+	 Name=Half Year
+
+	 AttributeName=EvalCode
+
+	 CodeValue=1
+
+	 Description=No Description Available
+
+	 Status=1
+
+	 CodeIndex=1
+
+</GenericCode>
+
+<GenericCode>
+
+	 Name=Full Year
+
+	 AttributeName=EvalCode
+
+	 CodeValue=2
+
+	 Description=No Description Available
+
+	 Status=1
+
+	 CodeIndex=2
+
+</GenericCode>
+
+<GenericCode>
+
+	 Name=No Evaluation
+
+	 AttributeName=EvalCode
+
+	 CodeValue=3
+
+	 Description=No Description Available
+
+	 Status=1
+
+	 CodeIndex=3
+
+</GenericCode>
+
+//Adding Generic Code for Attribute:InfoCode
+
+<GenericCode>
+
+	 Name=Vendor Item Bid Quotation Process (BQ)
+
+	 AttributeName=InfoCode
+
+	 CodeValue=BD
+
+	 Description=No Description Available
+
+	 Status=1
+
+	 CodeIndex=4
+
+</GenericCode>
+
+<GenericCode>
+
+	 Name=Purchase Process (PO)
+
+	 AttributeName=InfoCode
+
+	 CodeValue=PO
+
+	 Description=No Description Available
+
+	 Status=1
+
+	 CodeIndex=3
+
+</GenericCode>
+
+<GenericCode>
+
+	 Name=Quotation Request Process (QR)
+
+	 AttributeName=InfoCode
+
+	 CodeValue=QR
+
+	 Description=No Description Available
+
+	 Status=1
+
+	 CodeIndex=2
+
+</GenericCode>
+
+<GenericCode>
+
+	 Name=Technical Requirement Process(TR)
+
+	 AttributeName=InfoCode
+
+	 CodeValue=TR
+
+	 Description=No Description Available
+
+	 Status=1
+
+	 CodeIndex=1
+
+</GenericCode>
+
+//Adding Generic Code for Attribute:JobCode
+
+<GenericCode>
+
+	 Name=Admin
+
+	 AttributeName=JobCode
+
+	 CodeValue=Admin
+
+	 Description=No Description Available
+
+	 Status=1
+
+	 CodeIndex=8
+
+</GenericCode>
+
+<GenericCode>
+
+	 Name=Assistant
+
+	 AttributeName=JobCode
+
+	 CodeValue=Assistant
+
+	 Description=No Description Available
+
+	 Status=1
+
+	 CodeIndex=10
+
+</GenericCode>
+
+<GenericCode>
+
+	 Name=Director
+
+	 AttributeName=JobCode
+
+	 CodeValue=Director
+
+	 Description=No Description Available
+
+	 Status=1
+
+	 CodeIndex=4
+
+</GenericCode>
+
+<GenericCode>
+
+	 Name=Engineer
+
+	 AttributeName=JobCode
+
+	 CodeValue=Engineer
+
+	 Description=No Description Available
+
+	 Status=1
+
+	 CodeIndex=1
+
+</GenericCode>
+
+<GenericCode>
+
+	 Name=HR Manager
+
+	 AttributeName=JobCode
+
+	 CodeValue=HRM
+
+	 Description=No Description Available
+
+	 Status=1
+
+	 CodeIndex=9
+
+</GenericCode>
+
+<GenericCode>
+
+	 Name=Sales Manager
+
+	 AttributeName=JobCode
+
+	 CodeValue=Sales Manager
+
+	 Description=No Description Available
+
+	 Status=1
+
+	 CodeIndex=12
+
+</GenericCode>
+
+<GenericCode>
+
+	 Name=IT Engineer
+
+	 AttributeName=JobCode
+
+	 CodeValue=ITE
+
+	 Description=No Description Available
+
+	 Status=1
+
+	 CodeIndex=7
+
+</GenericCode>
+
+<GenericCode>
+
+	 Name=Manager
+
+	 AttributeName=JobCode
+
+	 CodeValue=Manager
+
+	 Description=No Description Available
+
+	 Status=1
+
+	 CodeIndex=3
+
+</GenericCode>
+
+<GenericCode>
+
+	 Name=Sales Agent
+
+	 AttributeName=JobCode
+
+	 CodeValue=Sales Agent
+
+	 Description=No Description Available
+
+	 Status=1
+
+	 CodeIndex=15
+
+</GenericCode>
+
+<GenericCode>
+
+	 Name=President
+
+	 AttributeName=JobCode
+
+	 CodeValue=President
+
+	 Description=No Description Available
+
+	 Status=1
+
+	 CodeIndex=13
+
+</GenericCode>
+
+<GenericCode>
+
+	 Name=QA Manager
+
+	 AttributeName=JobCode
+
+	 CodeValue=QAM
+
+	 Description=No Description Available
+
+	 Status=1
+
+	 CodeIndex=6
+
+</GenericCode>
+
+<GenericCode>
+
+	 Name=Shop Manager
+
+	 AttributeName=JobCode
+
+	 CodeValue=SM
+
+	 Description=No Description Available
+
+	 Status=1
+
+	 CodeIndex=16
+
+</GenericCode>
+
+<GenericCode>
+
+	 Name=Secretary
+
+	 AttributeName=JobCode
+
+	 CodeValue=SR
+	 
+	 Description=No Description Available
+
+	 Status=1
+
+	 CodeIndex=11
+
+</GenericCode>
+
+<GenericCode>
+
+	 Name=Supervisor
+
+	 AttributeName=JobCode
+
+	 CodeValue=Supervisor
+
+	 Description=No Description Available
+
+	 Status=1
+
+	 CodeIndex=2
+
+</GenericCode>
+
+<GenericCode>
+
+	 Name=Store Manager
+
+	 AttributeName=JobCode
+
+	 CodeValue=Store Manager
+
+	 Description=No Description Available
+
+	 Status=1
+
+	 CodeIndex=14
+
+</GenericCode>
+
+<GenericCode>
+
+	 Name=Marketing Manager
+
+	 AttributeName=JobCode
+
+	 CodeValue=Marketing Manager
+
+	 Description=No Description Available
+
+	 Status=1
+
+	 CodeIndex=20
+
+</GenericCode>
+
+<GenericCode>
+
+	 Name=VP
+
+	 AttributeName=JobCode
+
+	 CodeValue=VP
+
+	 Description=No Description Available
+
+	 Status=1
+
+	 CodeIndex=5
+
+</GenericCode>
+
+//Adding Generic Code for Attribute:LeadSourceCode
+
+<GenericCode>
+
+	 Name=Home Show
+
+	 AttributeName=LeadSourceCode
+
+	 CodeValue=Home Show
+
+	 Description=No Description Available
+
+	 Status=1
+
+	 CodeIndex=6
+
+</GenericCode>
+
+<GenericCode>
+
+	 Name=Internet
+
+	 AttributeName=LeadSourceCode
+
+	 CodeValue=Internet
+
+	 Description=No Description Available
+
+	 Status=1
+
+	 CodeIndex=1
+
+</GenericCode>
+
+<GenericCode>
+
+	 Name=News Paper
+
+	 AttributeName=LeadSourceCode
+
+	 CodeValue=News Paper
+
+	 Description=No Description Available
+
+	 Status=1
+
+	 CodeIndex=2
+
+</GenericCode>
+
+<GenericCode>
+
+	 Name=Others
+
+	 AttributeName=LeadSourceCode
+
+	 CodeValue=Others
+
+	 Description=No Description Available
+
+	 Status=1
+
+	 CodeIndex=7
+
+</GenericCode>
+
+<GenericCode>
+
+	 Name=Referrals
+
+	 AttributeName=LeadSourceCode
+
+	 CodeValue=Referrals
+
+	 Description=No Description Available
+
+	 Status=1
+
+	 CodeIndex=5
+
+</GenericCode>
+
+<GenericCode>
+
+	 Name=TV
+
+	 AttributeName=LeadSourceCode
+
+	 CodeValue=TV
+
+	 Description=No Description Available
+
+	 Status=1
+
+	 CodeIndex=3
+
+</GenericCode>
+
+<GenericCode>
+
+	 Name=Web Site
+
+	 AttributeName=LeadSourceCode
+
+	 CodeValue=Web Site
+
+	 Description=No Description Available
+
+	 Status=1
+
+	 CodeIndex=4
+
+</GenericCode>
+
+//Adding Generic Code for Attribute:MediaCode
+
+<GenericCode>
+
+	 Name=Google
+
+	 AttributeName=MediaCode
+
+	 CodeValue=1
+
+	 Description=No Description Available
+
+	 Status=1
+
+	 CodeIndex=1
+
+</GenericCode>
+
+<GenericCode>
+
+	 Name=Yahoo
+
+	 AttributeName=MediaCode
+
+	 CodeValue=2
+
+	 Description=No Description Available
+
+	 Status=1
+
+	 CodeIndex=2
+
+</GenericCode>
+
+<GenericCode>
+
+	 Name=MSN
+
+	 AttributeName=MediaCode
+
+	 CodeValue=3
+
+	 Description=No Description Available
+
+	 Status=1
+
+	 CodeIndex=2
+
+</GenericCode>
+
+<GenericCode>
+
+	 Name=Tele Marketing
+
+	 AttributeName=MediaCode
+
+	 CodeValue=4
+
+	 Description=No Description Available
+
+	 Status=1
+
+	 CodeIndex=4
+
+</GenericCode>
+
+<GenericCode>
+
+	 Name=Referal
+
+	 AttributeName=MediaCode
+
+	 CodeValue=5
+
+	 Description=No Description Available
+
+	 Status=1
+
+	 CodeIndex=5
+
+</GenericCode>
+
+<GenericCode>
+
+	 Name=Web Searching
+
+	 AttributeName=MediaCode
+
+	 CodeValue=6
+
+	 Description=No Description Available
+
+	 Status=1
+
+	 CodeIndex=6
+
+</GenericCode>
+
+<GenericCode>
+
+	 Name=Business
+
+	 AttributeName=MediaCode
+
+	 CodeValue=7
+
+	 Description=No Description Available
+
+	 Status=1
+
+	 CodeIndex=7
+
+</GenericCode>
+
+<GenericCode>
+
+	 Name=Other
+
+	 AttributeName=MediaCode
+
+	 CodeValue=8
+
+	 Description=No Description Available
+
+	 Status=1
+
+	 CodeIndex=8
+
+</GenericCode>
+
+//Adding Generic Code for Attribute:MonthCode
+
+<GenericCode>
+
+	 Name=January
+
+	 AttributeName=MonthCode
+
+	 CodeValue=1
+
+	 Description=No Description Available
+
+	 Status=1
+
+	 CodeIndex=1
+
+</GenericCode>
+
+<GenericCode>
+
+	 Name=October
+
+	 AttributeName=MonthCode
+
+	 CodeValue=10
+
+	 Description=No Description Available
+
+	 Status=1
+
+	 CodeIndex=10
+
+</GenericCode>
+
+<GenericCode>
+
+	 Name=November
+
+	 AttributeName=MonthCode
+
+	 CodeValue=11
+
+	 Description=No Description Available
+
+	 Status=1
+
+	 CodeIndex=11
+
+</GenericCode>
+
+<GenericCode>
+
+	 Name=December
+
+	 AttributeName=MonthCode
+
+	 CodeValue=12
+
+	 Description=No Description Available
+
+	 Status=1
+
+	 CodeIndex=12
+
+</GenericCode>
+
+<GenericCode>
+
+	 Name=February
+
+	 AttributeName=MonthCode
+
+	 CodeValue=2
+
+	 Description=No Description Available
+
+	 Status=1
+
+	 CodeIndex=2
+
+</GenericCode>
+
+<GenericCode>
+
+	 Name=March
+
+	 AttributeName=MonthCode
+
+	 CodeValue=3
+
+	 Description=No Description Available
+
+	 Status=1
+
+	 CodeIndex=3
+
+</GenericCode>
+
+<GenericCode>
+
+	 Name=April
+
+	 AttributeName=MonthCode
+
+	 CodeValue=4
+
+	 Description=No Description Available
+
+	 Status=1
+
+	 CodeIndex=4
+
+</GenericCode>
+
+<GenericCode>
+
+	 Name=May
+
+	 AttributeName=MonthCode
+
+	 CodeValue=5
+
+	 Description=No Description Available
+
+	 Status=1
+
+	 CodeIndex=5
+
+</GenericCode>
+
+<GenericCode>
+
+	 Name=June
+
+	 AttributeName=MonthCode
+
+	 CodeValue=6
+
+	 Description=No Description Available
+
+	 Status=1
+
+	 CodeIndex=6
+
+</GenericCode>
+
+<GenericCode>
+
+	 Name=July
+
+	 AttributeName=MonthCode
+
+	 CodeValue=7
+
+	 Description=No Description Available
+
+	 Status=1
+
+	 CodeIndex=7
+
+</GenericCode>
+
+<GenericCode>
+
+	 Name=August
+
+	 AttributeName=MonthCode
+
+	 CodeValue=8
+
+	 Description=No Description Available
+
+	 Status=1
+
+	 CodeIndex=8
+
+</GenericCode>
+
+<GenericCode>
+
+	 Name=September
+
+	 AttributeName=MonthCode
+
+	 CodeValue=9
+
+	 Description=No Description Available
+
+	 Status=1
+
+	 CodeIndex=9
+
+</GenericCode>
+
+//Adding Generic Code for Attribute:ReasonCode
+
+<GenericCode>
+
+	 Name=Want BidCRM
+
+	 AttributeName=ReasonCode
+
+	 CodeValue=1
+
+	 Description=No Description Available
+
+	 Status=1
+
+	 CodeIndex=2
+
+</GenericCode>
+
+<GenericCode>
+
+	 Name=Want Campaign Management
+
+	 AttributeName=ReasonCode
+
+	 CodeValue=2
+
+	 Description=No Description Available
+
+	 Status=1
+
+	 CodeIndex=4
+
+</GenericCode>
+
+
+//Adding Generic Code for Attribute:SubscribeCode
+
+<GenericCode>
+
+	 Name=Monthly Subscription
+
+	 AttributeName=SubscribeCode
+
+	 CodeValue=1
+
+	 Description=No Description Available
+
+	 Status=1
+
+	 CodeIndex=1
+
+</GenericCode>
+
+<GenericCode>
+
+	 Name=Yearly Subscription
+
+	 AttributeName=SubscribeCode
+
+	 CodeValue=2
+
+	 Description=No Description Available
+
+	 Status=1
+
+	 CodeIndex=2
+
+</GenericCode>
+
+//Adding Generic Code for Attribute:UmCode
+
+<GenericCode>
+
+	 Name=Bags
+
+	 AttributeName=UmCode
+
+	 CodeValue=BAG
+
+	 Description=No Description Available
+
+	 Status=1
+
+	 CodeIndex=0
+
+</GenericCode>
+
+<GenericCode>
+
+	 Name=Box
+
+	 AttributeName=UmCode
+
+	 CodeValue=Box
+
+	 Description=No Description Available
+
+	 Status=1
+
+	 CodeIndex=0
+
+</GenericCode>
+
+<GenericCode>
+
+	 Name=Cubic Feet
+
+	 AttributeName=UmCode
+
+	 CodeValue=CFT
+
+	 Description=No Description Available
+
+	 Status=1
+
+	 CodeIndex=2
+
+</GenericCode>
+
+<GenericCode>
+
+	 Name=Cubic meter
+
+	 AttributeName=UmCode
+
+	 CodeValue=CMT
+
+	 Description=No Description Available
+
+	 Status=1
+
+	 CodeIndex=3
+
+</GenericCode>
+
+<GenericCode>
+
+	 Name=Count
+
+	 AttributeName=UmCode
+
+	 CodeValue=CUNT
+
+	 Description=No Description Available
+
+	 Status=1
+
+	 CodeIndex=24
+
+</GenericCode>
+
+<GenericCode>
+
+	 Name=Per Day
+
+	 AttributeName=UmCode
+
+	 CodeValue=DAILY
+
+	 Description=No Description Available
+
+	 Status=1
+
+	 CodeIndex=0
+
+</GenericCode>
+
+<GenericCode>
+
+	 Name=Each
+
+	 AttributeName=UmCode
+
+	 CodeValue=EACH
+
+	 Description=No Description Available
+
+	 Status=1
+
+	 CodeIndex=0
+
+</GenericCode>
+
+<GenericCode>
+
+	 Name=Feet
+
+	 AttributeName=UmCode
+
+	 CodeValue=FT
+
+	 Description=No Description Available
+
+	 Status=1
+
+	 CodeIndex=4
+
+</GenericCode>
+
+<GenericCode>
+
+	 Name=Gallon
+
+	 AttributeName=UmCode
+
+	 CodeValue=GL
+
+	 Description=No Description Available
+
+	 Status=1
+
+	 CodeIndex=18
+
+</GenericCode>
+
+<GenericCode>
+
+	 Name=Per Hr
+
+	 AttributeName=UmCode
+
+	 CodeValue=HOUR
+
+	 Description=No Description Available
+
+	 Status=1
+
+	 CodeIndex=10
+
+</GenericCode>
+
+<GenericCode>
+
+	 Name=Inch
+
+	 AttributeName=UmCode
+
+	 CodeValue=INCH
+
+	 Description=No Description Available
+
+	 Status=1
+
+	 CodeIndex=4
+
+</GenericCode>
+
+<GenericCode>
+
+	 Name=KG
+
+	 AttributeName=UmCode
+
+	 CodeValue=KG
+
+	 Description=No Description Available
+
+	 Status=1
+
+	 CodeIndex=5
+
+</GenericCode>
+
+<GenericCode>
+
+	 Name=KM
+
+	 AttributeName=UmCode
+
+	 CodeValue=KM
+
+	 Description=No Description Available
+
+	 Status=1
+
+	 CodeIndex=4
+
+</GenericCode>
+
+<GenericCode>
+
+	 Name=lb
+
+	 AttributeName=UmCode
+
+	 CodeValue=LB
+
+	 Description=No Description Available
+
+	 Status=1
+
+	 CodeIndex=17
+
+</GenericCode>
+
+<GenericCode>
+
+	 Name=Liter
+
+	 AttributeName=UmCode
+
+	 CodeValue=LIT
+
+	 Description=No Description Available
+
+	 Status=1
+
+	 CodeIndex=19
+
+</GenericCode>
+
+<GenericCode>
+
+	 Name=Minute
+
+	 AttributeName=UmCode
+
+	 CodeValue=MINT
+
+	 Description=No Description Available
+
+	 Status=1
+
+	 CodeIndex=21
+
+</GenericCode>
+
+<GenericCode>
+
+	 Name=Month
+
+	 AttributeName=UmCode
+
+	 CodeValue=MNTH
+
+	 Description=No Description Available
+
+	 Status=1
+
+	 CodeIndex=23
+
+</GenericCode>
+
+<GenericCode>
+
+	 Name=Meter
+
+	 AttributeName=UmCode
+
+	 CodeValue=MT
+
+	 Description=No Description Available
+
+	 Status=1
+
+	 CodeIndex=6
+
+</GenericCode>
+
+<GenericCode>
+
+	 Name=Metric Ton
+
+	 AttributeName=UmCode
+
+	 CodeValue=MTR
+
+	 Description=No Description Available
+
+	 Status=1
+
+	 CodeIndex=7
+
+</GenericCode>
+
+<GenericCode>
+
+	 Name=Mile
+
+	 AttributeName=UmCode
+
+	 CodeValue=Mile
+
+	 Description=No Description Available
+
+	 Status=1
+
+	 CodeIndex=4
+
+</GenericCode>
+
+<GenericCode>
+
+	 Name=Number
+
+	 AttributeName=UmCode
+
+	 CodeValue=NUM
+
+	 Description=No Description Available
+
+	 Status=1
+
+	 CodeIndex=8
+
+</GenericCode>
+
+<GenericCode>
+
+	 Name=Per Room
+
+	 AttributeName=UmCode
+
+	 CodeValue=ROOM
+
+	 Description=No Description Available
+
+	 Status=1
+
+	 CodeIndex=14
+
+</GenericCode>
+
+<GenericCode>
+
+	 Name=Sq Feet
+
+	 AttributeName=UmCode
+
+	 CodeValue=SFT
+
+	 Description=No Description Available
+
+	 Status=1
+
+	 CodeIndex=13
+
+</GenericCode>
+
+<GenericCode>
+
+	 Name=Sq meter
+
+	 AttributeName=UmCode
+
+	 CodeValue=SMT
+
+	 Description=No Description Available
+
+	 Status=1
+
+	 CodeIndex=15
+
+</GenericCode>
+
+<GenericCode>
+
+	 Name=Sq Inch
+
+	 AttributeName=UmCode
+
+	 CodeValue=SQINCH
+
+	 Description=No Description Available
+
+	 Status=1
+
+	 CodeIndex=13
+
+</GenericCode>
+
+<GenericCode>
+
+	 Name=Sq Yard
+
+	 AttributeName=UmCode
+
+	 CodeValue=SYRD
+
+	 Description=No Description Available
+
+	 Status=1
+
+	 CodeIndex=14
+
+</GenericCode>
+
+<GenericCode>
+
+	 Name=Ton
+
+	 AttributeName=UmCode
+
+	 CodeValue=TON
+
+	 Description=No Description Available
+
+	 Status=1
+
+	 CodeIndex=20
+
+</GenericCode>
+
+<GenericCode>
+
+	 Name=Per Week
+
+	 AttributeName=UmCode
+
+	 CodeValue=WEEK
+
+	 Description=No Description Available
+
+	 Status=1
+
+	 CodeIndex=12
+
+</GenericCode>
+
+<GenericCode>
+
+	 Name=Yard
+
+	 AttributeName=UmCode
+
+	 CodeValue=YRD
+
+	 Description=No Description Available
+
+	 Status=1
+
+	 CodeIndex=16
+
+</GenericCode>
+
+<GenericCode>
+
+	 Name=Year
+
+	 AttributeName=UmCode
+
+	 CodeValue=YRS
+
+	 Description=No Description Available
+
+	 Status=1
+
+	 CodeIndex=22
+
+</GenericCode>
+
+//Adding Generic Code for Attribute:YearCode
+
+<GenericCode>
+
+	 Name=2008
+
+	 AttributeName=YearCode
+
+	 CodeValue=2008
+
+	 Description=No Description Available
+
+	 Status=1
+
+	 CodeIndex=1
+
+</GenericCode>
+
+<GenericCode>
+
+	 Name=2009
+
+	 AttributeName=YearCode
+
+	 CodeValue=2009
+
+	 Description=No Description Available
+
+	 Status=1
+
+	 CodeIndex=2
+
+</GenericCode>
+
+<GenericCode>
+
+	 Name=2010
+
+	 AttributeName=YearCode
+
+	 CodeValue=2010
+
+	 Description=No Description Available
+
+	 Status=1
+
+	 CodeIndex=3
+
+</GenericCode>
+
+<GenericCode>
+
+	 Name=2011
+
+	 AttributeName=YearCode
+
+	 CodeValue=2011
+
+	 Description=No Description Available
+
+	 Status=1
+
+	 CodeIndex=4
+
+</GenericCode>
+
+<GenericCode>
+
+	 Name=2012
+
+	 AttributeName=YearCode
+
+	 CodeValue=2012
+
+	 Description=No Description Available
+
+	 Status=1
+
+	 CodeIndex=5
+
+</GenericCode>
+
+<GenericCode>
+
+	 Name=2013
+
+	 AttributeName=YearCode
+
+	 CodeValue=2013
+
+	 Description=No Description Available
+
+	 Status=1
+
+	 CodeIndex=6
+
+</GenericCode>
+
+<GenericCode>
+
+	 Name=2014
+
+	 AttributeName=YearCode
+
+	 CodeValue=2014
+
+	 Description=No Description Available
+
+	 Status=1
+
+	 CodeIndex=7
+
+</GenericCode>
+
+<GenericCode>
+
+	 Name=2015
+
+	 AttributeName=YearCode
+
+	 CodeValue=2015
+
+	 Description=No Description Available
+
+	 Status=1
+
+	 CodeIndex=8
+
+</GenericCode>
+
+<GenericCode>
+
+	 Name=2016
+
+	 AttributeName=YearCode
+
+	 CodeValue=2016
+
+	 Description=No Description Available
+
+	 Status=1
+
+	 CodeIndex=9
+
+</GenericCode>
+
+<GenericCode>
+
+	 Name=2017
+
+	 AttributeName=YearCode
+
+	 CodeValue=2017
+
+	 Description=No Description Available
+
+	 Status=1
+
+	 CodeIndex=10
+
+</GenericCode>
+
+<GenericCode>
+
+	 Name=2018
+
+	 AttributeName=YearCode
+
+	 CodeValue=2018
+
+	 Description=No Description Available
+
+	 Status=1
+
+	 CodeIndex=11
+
+</GenericCode>
+
+<GenericCode>
+
+	 Name=2019
+
+	 AttributeName=YearCode
+
+	 CodeValue=2019
+
+	 Description=No Description Available
+
+	 Status=1
+
+	 CodeIndex=12
+
+</GenericCode>
+
+<GenericCode>
+
+	 Name=2020
+
+	 AttributeName=YearCode
+
+	 CodeValue=2020
+
+	 Description=No Description Available
+
+	 Status=1
+
+	 CodeIndex=13
+
+</GenericCode>
+
+<GenericCode>
+
+	 Name=Round 1
+
+	 AttributeName=StageCode
+
+	 CodeValue=10
+
+	 Description=No Description Available
+
+	 Status=1
+
+	 CodeIndex=1
+
+</GenericCode>
+
+<GenericCode>
+
+	 Name=Round 2
+
+	 AttributeName=StageCode
+
+	 CodeValue=20
+
+	 Description=No Description Available
+
+	 Status=1
+
+	 CodeIndex=2
+
+</GenericCode>
+<GenericCode>
+
+	 Name=Round 3
+
+	 AttributeName=StageCode
+
+	 CodeValue=30
+
+	 Description=No Description Available
+
+	 Status=1
+
+	 CodeIndex=3
+
+</GenericCode>
+<GenericCode>
+
+	 Name=Round 4
+
+	 AttributeName=StageCode
+
+	 CodeValue=40
+
+	 Description=No Description Available
+
+	 Status=1
+
+	 CodeIndex=4
+
+</GenericCode>
+
+<GenericCode>
+
+	 Name=Round 5
+
+	 AttributeName=StageCode
+
+	 CodeValue=50
+
+	 Description=No Description Available
+
+	 Status=1
+
+	 CodeIndex=5
+
+</GenericCode>
+<GenericCode>
+
+	 Name=Round 6
+
+	 AttributeName=StageCode
+
+	 CodeValue=60
+
+	 Description=No Description Available
+
+	 Status=1
+
+	 CodeIndex=6
+
+</GenericCode>
+<GenericCode>
+
+	 Name=Round 7
+
+	 AttributeName=StageCode
+
+	 CodeValue=70
+
+	 Description=No Description Available
+
+	 Status=1
+
+	 CodeIndex=7
+
+</GenericCode>
+
+<GenericCode>
+
+	 Name=Round 8
+
+	 AttributeName=StageCode
+
+	 CodeValue=80
+
+	 Description=No Description Available
+
+	 Status=1
+
+	 CodeIndex=8
+
+</GenericCode>
+<GenericCode>
+
+	 Name=Round 9
+
+	 AttributeName=StageCode
+
+	 CodeValue=90
+
+	 Description=No Description Available
+
+	 Status=1
+
+	 CodeIndex=9
+
+</GenericCode>
+<GenericCode>
+
+	 Name=Round 10
+
+	 AttributeName=StageCode
+
+	 CodeValue=100
+
+	 Description=No Description Available
+
+	 Status=1
+
+	 CodeIndex=10
+
+</GenericCode>
+
+<GenericCode>
+
+	 Name=Reminder 1
+
+	 AttributeName=StageCode
+
+	 CodeValue=110
+
+	 Description=No Description Available
+
+	 Status=1
+
+	 CodeIndex=11
+
+</GenericCode>
+
+<GenericCode>
+
+	 Name=Reminder 2
+
+	 AttributeName=StageCode
+
+	 CodeValue=120
+
+	 Description=No Description Available
+
+	 Status=1
+
+	 CodeIndex=12
+
+</GenericCode>
+<GenericCode>
+
+	 Name=Reminder 3
+
+	 AttributeName=StageCode
+
+	 CodeValue=130
+
+	 Description=No Description Available
+
+	 Status=1
+
+	 CodeIndex=13
+
+</GenericCode>
+
+<GenericCode>
+
+	 Name=Reminder 4
+
+	 AttributeName=StageCode
+
+	 CodeValue=140
+
+	 Description=No Description Available
+
+	 Status=1
+
+	 CodeIndex=14
+
+</GenericCode>
+
+<GenericCode>
+
+	 Name=00:00
+
+	 AttributeName=StartTimeCode
+
+	 CodeValue=00:00
+
+	 Description=No Description Available
+
+	 Status=1
+
+	 CodeIndex=1
+
+</GenericCode>
+<GenericCode>
+
+	 Name=01:00
+
+	 AttributeName=StartTimeCode
+
+	 CodeValue=01:00
+
+	 Description=No Description Available
+
+	 Status=1
+
+	 CodeIndex=2
+
+</GenericCode>
+<GenericCode>
+
+	 Name=02:00
+
+	 AttributeName=StartTimeCode
+
+	 CodeValue=02:00
+
+	 Description=No Description Available
+
+	 Status=1
+
+	 CodeIndex=3
+
+</GenericCode>
+<GenericCode>
+
+	 Name=03:00
+
+	 AttributeName=StartTimeCode
+
+	 CodeValue=03:00
+
+	 Description=No Description Available
+
+	 Status=1
+
+	 CodeIndex=4
+
+</GenericCode>
+<GenericCode>
+
+	 Name=04:00
+
+	 AttributeName=StartTimeCode
+
+	 CodeValue=04:00
+
+	 Description=No Description Available
+
+	 Status=1
+
+	 CodeIndex=5
+
+</GenericCode>
+<GenericCode>
+
+	 Name=05:00
+
+	 AttributeName=StartTimeCode
+
+	 CodeValue=05:00
+
+	 Description=No Description Available
+
+	 Status=1
+
+	 CodeIndex=6
+
+</GenericCode>
+<GenericCode>
+
+	 Name=06:00
+
+	 AttributeName=StartTimeCode
+
+	 CodeValue=06:00
+
+	 Description=No Description Available
+
+	 Status=1
+
+	 CodeIndex=7
+
+</GenericCode>
+<GenericCode>
+
+	 Name=07:00
+
+	 AttributeName=StartTimeCode
+
+	 CodeValue=07:00
+
+	 Description=No Description Available
+
+	 Status=1
+
+	 CodeIndex=8
+
+</GenericCode>
+<GenericCode>
+
+	 Name=08:00
+
+	 AttributeName=StartTimeCode
+
+	 CodeValue=08:00
+
+	 Description=No Description Available
+
+	 Status=1
+
+	 CodeIndex=9
+
+</GenericCode>
+<GenericCode>
+
+	 Name=09:00
+
+	 AttributeName=StartTimeCode
+
+	 CodeValue=09:00
+
+	 Description=No Description Available
+
+	 Status=1
+
+	 CodeIndex=10
+
+</GenericCode>
+<GenericCode>
+
+	 Name=10:00
+
+	 AttributeName=StartTimeCode
+
+	 CodeValue=10:00
+
+	 Description=No Description Available
+
+	 Status=1
+
+	 CodeIndex=11
+
+</GenericCode>
+<GenericCode>
+
+	 Name=11:00
+
+	 AttributeName=StartTimeCode
+
+	 CodeValue=11:00
+
+	 Description=No Description Available
+
+	 Status=1
+
+	 CodeIndex=12
+
+</GenericCode>
+<GenericCode>
+
+	 Name=12:00
+
+	 AttributeName=StartTimeCode
+
+	 CodeValue=12:00
+
+	 Description=No Description Available
+
+	 Status=1
+
+	 CodeIndex=13
+
+</GenericCode>
+<GenericCode>
+
+	 Name=13:00
+
+	 AttributeName=StartTimeCode
+
+	 CodeValue=13:00
+
+	 Description=No Description Available
+
+	 Status=1
+
+	 CodeIndex=13
+
+</GenericCode>
+<GenericCode>
+
+	 Name=14:00
+
+	 AttributeName=StartTimeCode
+
+	 CodeValue=14:00
+
+	 Description=No Description Available
+
+	 Status=1
+
+	 CodeIndex=14
+
+</GenericCode>
+<GenericCode>
+
+	 Name=15:00
+
+	 AttributeName=StartTimeCode
+
+	 CodeValue=15:00
+
+	 Description=No Description Available
+
+	 Status=1
+
+	 CodeIndex=15
+
+</GenericCode>
+<GenericCode>
+
+	 Name=16:00
+
+	 AttributeName=StartTimeCode
+
+	 CodeValue=16:00
+
+	 Description=No Description Available
+
+	 Status=1
+
+	 CodeIndex=16
+
+</GenericCode>
+<GenericCode>
+
+	 Name=17:00
+
+	 AttributeName=StartTimeCode
+
+	 CodeValue=17:00
+
+	 Description=No Description Available
+
+	 Status=1
+
+	 CodeIndex=17
+
+</GenericCode>
+<GenericCode>
+
+	 Name=18:00
+
+	 AttributeName=StartTimeCode
+
+	 CodeValue=18:00
+
+	 Description=No Description Available
+
+	 Status=1
+
+	 CodeIndex=18
+
+</GenericCode>
+<GenericCode>
+
+	 Name=19:00
+
+	 AttributeName=StartTimeCode
+
+	 CodeValue=19:00
+
+	 Description=No Description Available
+
+	 Status=1
+
+	 CodeIndex=19
+
+</GenericCode>
+<GenericCode>
+
+	 Name=20:00
+
+	 AttributeName=StartTimeCode
+
+	 CodeValue=20:00
+
+	 Description=No Description Available
+
+	 Status=1
+
+	 CodeIndex=20
+
+</GenericCode>
+<GenericCode>
+
+	 Name=21:00
+
+	 AttributeName=StartTimeCode
+
+	 CodeValue=21:00
+
+	 Description=No Description Available
+
+	 Status=1
+
+	 CodeIndex=21
+
+</GenericCode>
+<GenericCode>
+
+	 Name=22:00
+
+	 AttributeName=StartTimeCode
+
+	 CodeValue=22:00
+
+	 Description=No Description Available
+
+	 Status=1
+
+	 CodeIndex=22
+
+</GenericCode>
+<GenericCode>
+
+	 Name=23:00
+
+	 AttributeName=StartTimeCode
+
+	 CodeValue=23:00
+
+	 Description=No Description Available
+
+	 Status=1
+
+	 CodeIndex=23
+
+</GenericCode>
+<GenericCode>
+
+	 Name=24:00
+
+	 AttributeName=StartTimeCode
+
+	 CodeValue=24:00
+
+	 Description=No Description Available
+
+	 Status=1
+
+	 CodeIndex=24
+
+</GenericCode>
+
+<GenericCode>
+
+	 Name=Flight
+
+	 AttributeName=BookingCode
+
+	 CodeValue=Flight
+
+	 Description=No Description Available
+
+	 Status=1
+
+	 CodeIndex=1
+
+</GenericCode>
+<GenericCode>
+
+	 Name=Car
+
+	 AttributeName=BookingCode
+
+	 CodeValue=Car
+
+	 Description=No Description Available
+
+	 Status=1
+
+	 CodeIndex=2
+
+</GenericCode>
+<GenericCode>
+
+	 Name=Food
+
+	 AttributeName=BookingCode
+
+	 CodeValue=Food
+
+	 Description=No Description Available
+
+	 Status=1
+
+	 CodeIndex=3
+
+</GenericCode>
+<GenericCode>
+
+	 Name=Lodging
+
+	 AttributeName=BookingCode
+
+	 CodeValue=Lodging
+
+	 Description=No Description Available
+
+	 Status=1
+
+	 CodeIndex=4
+
+</GenericCode>
+<GenericCode>
+
+	 Name=Train
+
+	 AttributeName=BookingCode
+
+	 CodeValue=Train
+
+	 Description=No Description Available
+
+	 Status=1
+
+	 CodeIndex=5
+
+</GenericCode>
+<GenericCode>
+
+	 Name=Refreshment
+
+	 AttributeName=BookingCode
+
+	 CodeValue=Refreshment
+
+	 Description=No Description Available
+
+	 Status=1
+
+	 CodeIndex=6
+
+</GenericCode>
+<GenericCode>
+
+	 Name=Ticket
+
+	 AttributeName=BookingCode
+
+	 CodeValue=Ticket
+
+	 Description=No Description Available
+
+	 Status=1
+
+	 CodeIndex=7
+
+</GenericCode>
+<GenericCode>
+
+	 Name=Meeting
+
+	 AttributeName=BookingCode
+
+	 CodeValue=Meeting
+
+	 Description=No Description Available
+
+	 Status=1
+
+	 CodeIndex=8
+
+</GenericCode>
+<GenericCode>
+
+	 Name=Conference
+
+	 AttributeName=BookingCode
+
+	 CodeValue=Conference
+
+	 Description=No Description Available
+
+	 Status=1
+
+	 CodeIndex=9
+
+</GenericCode>
+<GenericCode>
+
+	 Name=Other
+
+	 AttributeName=BookingCode
+
+	 CodeValue=Other
+
+	 Description=No Description Available
+
+	 Status=1
+
+	 CodeIndex=10
+
+</GenericCode>
+
+<GenericCode>
+
+     Name=00:00
+
+     AttributeName=EndTimeCode
+
+     CodeValue=00:00
+
+     Description=No Description Available
+
+     Status=1
+
+     CodeIndex=1
+
+</GenericCode>
+<GenericCode>
+
+     Name=01:00
+
+     AttributeName=EndTimeCode
+
+     CodeValue=01:00
+
+     Description=No Description Available
+
+     Status=1
+
+     CodeIndex=2
+
+</GenericCode>
+<GenericCode>
+
+     Name=02:00
+
+     AttributeName=EndTimeCode
+
+     CodeValue=02:00
+
+     Description=No Description Available
+
+     Status=1
+
+     CodeIndex=3
+
+</GenericCode>
+<GenericCode>
+
+     Name=03:00
+
+     AttributeName=EndTimeCode
+
+     CodeValue=03:00
+
+     Description=No Description Available
+
+     Status=1
+
+     CodeIndex=4
+
+</GenericCode>
+<GenericCode>
+
+     Name=04:00
+
+     AttributeName=EndTimeCode
+
+     CodeValue=04:00
+
+     Description=No Description Available
+
+     Status=1
+
+     CodeIndex=5
+
+</GenericCode>
+<GenericCode>
+
+     Name=05:00
+
+     AttributeName=EndTimeCode
+
+     CodeValue=05:00
+
+     Description=No Description Available
+
+     Status=1
+
+     CodeIndex=6
+
+</GenericCode>
+<GenericCode>
+
+     Name=06:00
+
+     AttributeName=EndTimeCode
+
+     CodeValue=06:00
+
+     Description=No Description Available
+
+     Status=1
+
+     CodeIndex=7
+
+</GenericCode>
+<GenericCode>
+
+     Name=07:00
+
+     AttributeName=EndTimeCode
+
+     CodeValue=07:00
+
+     Description=No Description Available
+
+     Status=1
+
+     CodeIndex=8
+
+</GenericCode>
+<GenericCode>
+
+     Name=08:00
+
+     AttributeName=EndTimeCode
+
+     CodeValue=08:00
+
+     Description=No Description Available
+
+     Status=1
+
+     CodeIndex=9
+
+</GenericCode>
+<GenericCode>
+
+     Name=09:00
+
+     AttributeName=EndTimeCode
+
+     CodeValue=09:00
+
+     Description=No Description Available
+
+     Status=1
+
+     CodeIndex=10
+
+</GenericCode>
+<GenericCode>
+
+     Name=10:00
+
+     AttributeName=EndTimeCode
+
+     CodeValue=10:00
+
+     Description=No Description Available
+
+     Status=1
+
+     CodeIndex=11
+
+</GenericCode>
+<GenericCode>
+
+     Name=11:00
+
+     AttributeName=EndTimeCode
+
+     CodeValue=11:00
+
+     Description=No Description Available
+
+     Status=1
+
+     CodeIndex=12
+
+</GenericCode>
+<GenericCode>
+
+     Name=12:00
+
+     AttributeName=EndTimeCode
+
+     CodeValue=12:00
+
+     Description=No Description Available
+
+     Status=1
+
+     CodeIndex=13
+
+</GenericCode>
+<GenericCode>
+
+     Name=13:00
+
+     AttributeName=EndTimeCode
+
+     CodeValue=13:00
+
+     Description=No Description Available
+
+     Status=1
+
+     CodeIndex=13
+
+</GenericCode>
+<GenericCode>
+
+     Name=14:00
+
+     AttributeName=EndTimeCode
+
+     CodeValue=14:00
+
+     Description=No Description Available
+
+     Status=1
+
+     CodeIndex=14
+
+</GenericCode>
+<GenericCode>
+
+     Name=15:00
+
+     AttributeName=EndTimeCode
+
+     CodeValue=15:00
+
+     Description=No Description Available
+
+     Status=1
+
+     CodeIndex=15
+
+</GenericCode>
+<GenericCode>
+
+     Name=16:00
+
+     AttributeName=EndTimeCode
+
+     CodeValue=16:00
+
+     Description=No Description Available
+
+     Status=1
+
+     CodeIndex=16
+
+</GenericCode>
+<GenericCode>
+
+     Name=17:00
+
+     AttributeName=EndTimeCode
+
+     CodeValue=17:00
+
+     Description=No Description Available
+
+     Status=1
+
+     CodeIndex=17
+
+</GenericCode>
+<GenericCode>
+
+     Name=18:00
+
+     AttributeName=EndTimeCode
+
+     CodeValue=18:00
+
+     Description=No Description Available
+
+     Status=1
+
+     CodeIndex=18
+
+</GenericCode>
+<GenericCode>
+
+     Name=19:00
+
+     AttributeName=EndTimeCode
+
+     CodeValue=19:00
+
+     Description=No Description Available
+
+     Status=1
+
+     CodeIndex=19
+
+</GenericCode>
+<GenericCode>
+
+     Name=20:00
+
+     AttributeName=EndTimeCode
+
+     CodeValue=20:00
+
+     Description=No Description Available
+
+     Status=1
+
+     CodeIndex=20
+
+</GenericCode>
+<GenericCode>
+
+     Name=21:00
+
+     AttributeName=EndTimeCode
+
+     CodeValue=21:00
+
+     Description=No Description Available
+
+     Status=1
+
+     CodeIndex=21
+
+</GenericCode>
+<GenericCode>
+
+     Name=22:00
+
+     AttributeName=EndTimeCode
+
+     CodeValue=22:00
+
+     Description=No Description Available
+
+     Status=1
+
+     CodeIndex=22
+
+</GenericCode>
+<GenericCode>
+
+     Name=23:00
+
+     AttributeName=EndTimeCode
+
+     CodeValue=23:00
+
+     Description=No Description Available
+
+     Status=1
+
+     CodeIndex=23
+
+</GenericCode>
+<GenericCode>
+
+     Name=24:00
+
+     AttributeName=EndTimeCode
+
+     CodeValue=24:00
+
+     Description=No Description Available
+
+     Status=1
+
+     CodeIndex=24
+
+</GenericCode>
+
+<GenericCode>
+
+     Name=Html
+
+     AttributeName=ContentType
+
+     CodeValue=Html
+
+     Description=No Description Available
+
+     Status=1
+
+     CodeIndex=1
+
+</GenericCode>
+<GenericCode>
+
+     Name=Text
+
+     AttributeName=ContentType
+
+     CodeValue=Text
+
+     Description=No Description Available
+
+     Status=1
+
+     CodeIndex=2
+
+</GenericCode>
+
+<GenericCode>
+
+     Name=Email
+
+     AttributeName=ChannelsCode
+
+     CodeValue=Email
+
+     Description=No Description Available
+
+     Status=1
+
+     CodeIndex=1
+
+</GenericCode>
+<GenericCode>
+
+     Name=Blog
+
+     AttributeName=ChannelsCode
+
+     CodeValue=Blog
+
+     Description=No Description Available
+
+     Status=1
+
+     CodeIndex=2
+
+</GenericCode>
+
+<GenericCode>
+
+     Name=Download
+
+     AttributeName=ChannelsCode
+
+     CodeValue=Download
+
+     Description=No Description Available
+
+     Status=1
+
+     CodeIndex=3
+
+</GenericCode>
+
+<GenericCode>
+
+     Name=WebSite Link
+
+     AttributeName=ChannelsCode
+
+     CodeValue=WebSite
+
+     Description=No Description Available
+
+     Status=1
+
+     CodeIndex=4
+
+</GenericCode>
+<GenericCode>
+
+     Name=Sample Portal
+
+     AttributeName=ChannelsCode
+
+     CodeValue=Sample 
+
+     Description=No Description Available
+
+     Status=1
+
+     CodeIndex=5
+
+</GenericCode>
+
+<GenericCode>
+
+     Name=Subscription Form
+
+     AttributeName=ChannelsCode
+
+     CodeValue=Subscription 
+
+     Description=No Description Available
+
+     Status=1
+
+     CodeIndex=6
+
+</GenericCode>
+<GenericCode>
+
+     Name=Contact Form
+
+     AttributeName=ChannelsCode
+
+     CodeValue=Contact 
+
+     Description=No Description Available
+
+     Status=1
+
+     CodeIndex=7
+
+</GenericCode>
+
+<GenericCode>
+
+     Name=Video Link
+
+     AttributeName=ChannelsCode
+
+     CodeValue=Video Link 
+
+     Description=No Description Available
+
+     Status=1
+
+     CodeIndex=8
+
+</GenericCode>
+<GenericCode>
+
+     Name=Podcasting
+
+     AttributeName=ChannelsCode
+
+     CodeValue=Podcasting 
+
+     Description=No Description Available
+
+     Status=1
+
+     CodeIndex=9
+
+</GenericCode>
+
+<GenericCode>
+
+     Name=Pre Order Form
+
+     AttributeName=ChannelsCode
+
+     CodeValue=Preorder 
+
+     Description=No Description Available
+
+     Status=1
+
+     CodeIndex=10
+
+</GenericCode>
+
+<GenericCode>
+
+     Name=Registration Form
+
+     AttributeName=ChannelsCode
+
+     CodeValue=Registration 
+
+     Description=No Description Available
+
+     Status=1
+
+     CodeIndex=9
+
+</GenericCode>
+
+<GenericCode>
+
+     Name=Survey
+
+     AttributeName=ChannelsCode
+
+     CodeValue=Survey 
+
+     Description=No Description Available
+
+     Status=1
+
+     CodeIndex=11
+
+</GenericCode>
+
+
+<GenericCode>
+
+     Name=SMS
+
+     AttributeName=ChannelsCode
+
+     CodeValue=SMS 
+
+     Description=No Description Available
+
+     Status=1
+
+     CodeIndex=12
+
+</GenericCode>
+<GenericCode>
+
+     Name=Trade Show
+
+     AttributeName=ChannelsCode
+
+     CodeValue=Tradeshow 
+
+     Description=No Description Available
+
+     Status=1
+
+     CodeIndex=13
+
+</GenericCode>
+
+<GenericCode>
+
+     Name=Thank You Email
+
+     AttributeName=ChannelsCode
+
+     CodeValue=Thankyou 
+
+     Description=No Description Available
+
+     Status=1
+
+     CodeIndex=14
+
+</GenericCode>
+
+<GenericCode>
+
+     Name=Webnier
+
+     AttributeName=ChannelsCode
+
+     CodeValue=Webnier 
+
+     Description=No Description Available
+
+     Status=1
+
+     CodeIndex=15
+
+</GenericCode>
+
+
+
+
+
+
+
+
+
+
+
+ 

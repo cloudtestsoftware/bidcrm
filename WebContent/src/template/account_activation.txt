@@ -1,0 +1,14 @@
+Hi @member,
+
+Please see below summary of new leads qualifying your setting in the member tab under this Campaign:
+@campaign
+
+Total Lead generated since @lastreportdate : @totallead
+Qualifying lead assigned to you: @leadassigned
+
+Please login  and look at your console and take necessary actions for new lead assigned to you.
+
+https://www.bidcrm.com/bidcrm/service
+
+Thank you,
+Artitelly Campaign Support Team,

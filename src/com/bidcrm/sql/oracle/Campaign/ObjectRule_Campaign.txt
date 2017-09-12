@@ -1,0 +1,364 @@
+//*****************************************************************//
+//Adding Object Rule
+//Table Name:Campaign
+//Attribute Name:Campaign Rule
+//********************************************************************//
+
+	<ObjectRule>
+		Name=Campaign Rule
+		TableName=Campaign
+		EffectedTable=CmpMember
+		Description=Calling Upadte and Insert Rule for object Campaign
+		Reason=1
+		ActionState=1
+		Condition=objid$gt$0
+		RuleIndex=1
+		Status=1
+	</ObjectRule>
+
+//*****************************************************************//
+//Adding Action Query
+//Table Name:Campaign
+//Name:Call Insert_Campaign procedure
+//Step No:1
+//**************************************************************//
+
+	<ActionQuery>
+		Name=Call Insert_Campaign procedure
+		TableName=Campaign
+		Description=Call Insert_Campaign procedure
+		StepNo=1
+		Input=@Objid
+		InputDataType=@Integer
+		Output=$activityId
+		QueryType=0
+		HasRecordSet=0
+		OracleQuery=exec Insert_Campaign(@objid)
+		MssqlQuery=exec Insert_Campaign @objid
+		Status=0
+	</ActionQuery>
+
+	<ActionQuery>
+		Name=Select -ve objid for child CmpMember
+		TableName=CmpMember
+		Description=Select -ve objid for child CmpMember
+		StepNo=2
+		Input=@Objid
+		InputDataType=@Integer
+		Output=$objid $name $CmpMemberid
+		QueryType=0
+		HasRecordSet=0
+		OracleQuery=select objid, name ,objid CmpMemberid from table_CmpMember where objid like \'-%\' and CmpMember2Campaign=@objid
+		MssqlQuery=select objid, name ,objid CmpMemberid from table_CmpMember where objid like \'-%\' and CmpMember2Campaign=@objid
+		Status=0
+	</ActionQuery>
+
+	<ActionQuery>
+		Name=Update -ve objid for child CmpMember
+		TableName=CmpMember
+		Description=Update -ve objid for child CmpMember
+		StepNo=3
+		Input=@objid @name @CmpMemberid
+		InputDataType=@Integer @Varchar @Integer
+		Output=$count
+		QueryType=0
+		HasRecordSet=0
+		OracleQuery=update table_CmpMember set objid=@objid where objid=@CmpMemberid and name=@name
+		MssqlQuery=update table_CmpMember set objid=@objid where objid=@CmpMemberid and name=@name
+		Status=0
+	</ActionQuery>
+
+
+	<ActionQuery>
+		Name=Select -ve objid for child ContactList
+		TableName=ContactList
+		Description=Select -ve objid for child ContactList
+		StepNo=4
+		Input=@Objid
+		InputDataType=@Integer
+		Output=$objid $name $ContactListid
+		QueryType=0
+		HasRecordSet=0
+		OracleQuery=select objid, name ,objid ContactListid from table_ContactList where objid like \'-%\' and ContactList2Campaign=@objid
+		MssqlQuery=select objid, name ,objid ContactListid from table_ContactList where objid like \'-%\' and ContactList2Campaign=@objid
+		Status=0
+	</ActionQuery>
+
+	<ActionQuery>
+		Name=Update -ve objid for child ContactList
+		TableName=ContactList
+		Description=Update -ve objid for child ContactList
+		StepNo=5
+		Input=@objid @name @ContactListid
+		InputDataType=@Integer @Varchar @Integer
+		Output=$count
+		QueryType=0
+		HasRecordSet=0
+		OracleQuery=update table_ContactList set objid=@objid where objid=@ContactListid and name=@name
+		MssqlQuery=update table_ContactList set objid=@objid where objid=@ContactListid and name=@name
+		Status=0
+	</ActionQuery>
+
+
+	<ActionQuery>
+		Name=Select -ve objid for child EmailSetting
+		TableName=EmailSetting
+		Description=Select -ve objid for child EmailSetting
+		StepNo=6
+		Input=@Objid
+		InputDataType=@Integer
+		Output=$objid $name $EmailSettingid
+		QueryType=0
+		HasRecordSet=0
+		OracleQuery=select objid, name ,objid EmailSettingid from table_EmailSetting where objid like \'-%\' and EmailSetting2Campaign=@objid
+		MssqlQuery=select objid, name ,objid EmailSettingid from table_EmailSetting where objid like \'-%\' and EmailSetting2Campaign=@objid
+		Status=0
+	</ActionQuery>
+
+	<ActionQuery>
+		Name=Update -ve objid for child EmailSetting
+		TableName=EmailSetting
+		Description=Update -ve objid for child EmailSetting
+		StepNo=7
+		Input=@objid @name @EmailSettingid
+		InputDataType=@Integer @Varchar @Integer
+		Output=$count
+		QueryType=0
+		HasRecordSet=0
+		OracleQuery=update table_EmailSetting set objid=@objid where objid=@EmailSettingid and name=@name
+		MssqlQuery=update table_EmailSetting set objid=@objid where objid=@EmailSettingid and name=@name
+		Status=0
+	</ActionQuery>
+
+
+	<ActionQuery>
+		Name=Select -ve objid for child Automation
+		TableName=Automation
+		Description=Select -ve objid for child Automation
+		StepNo=8
+		Input=@Objid
+		InputDataType=@Integer
+		Output=$objid $name $Automationid
+		QueryType=0
+		HasRecordSet=0
+		OracleQuery=select objid, name ,objid Automationid from table_Automation where objid like \'-%\' and Automation2Campaign=@objid
+		MssqlQuery=select objid, name ,objid Automationid from table_Automation where objid like \'-%\' and Automation2Campaign=@objid
+		Status=0
+	</ActionQuery>
+
+	<ActionQuery>
+		Name=Update -ve objid for child Automation
+		TableName=Automation
+		Description=Update -ve objid for child Automation
+		StepNo=9
+		Input=@objid @name @Automationid
+		InputDataType=@Integer @Varchar @Integer
+		Output=$count
+		QueryType=0
+		HasRecordSet=0
+		OracleQuery=update table_Automation set objid=@objid where objid=@Automationid and name=@name
+		MssqlQuery=update table_Automation set objid=@objid where objid=@Automationid and name=@name
+		Status=0
+	</ActionQuery>
+
+
+	<ActionQuery>
+		Name=Select -ve objid for child SampleReserve
+		TableName=SampleReserve
+		Description=Select -ve objid for child SampleReserve
+		StepNo=10
+		Input=@Objid
+		InputDataType=@Integer
+		Output=$objid $name $SampleReserveid
+		QueryType=0
+		HasRecordSet=0
+		OracleQuery=select objid, name ,objid SampleReserveid from table_SampleReserve where objid like \'-%\' and SampleReserve2Campaign=@objid
+		MssqlQuery=select objid, name ,objid SampleReserveid from table_SampleReserve where objid like \'-%\' and SampleReserve2Campaign=@objid
+		Status=0
+	</ActionQuery>
+
+	<ActionQuery>
+		Name=Update -ve objid for child SampleReserve
+		TableName=SampleReserve
+		Description=Update -ve objid for child SampleReserve
+		StepNo=11
+		Input=@objid @name @SampleReserveid
+		InputDataType=@Integer @Varchar @Integer
+		Output=$count
+		QueryType=0
+		HasRecordSet=0
+		OracleQuery=update table_SampleReserve set objid=@objid where objid=@SampleReserveid and name=@name
+		MssqlQuery=update table_SampleReserve set objid=@objid where objid=@SampleReserveid and name=@name
+		Status=0
+	</ActionQuery>
+
+
+	<ActionQuery>
+		Name=Select -ve objid for child EmailResponse
+		TableName=EmailResponse
+		Description=Select -ve objid for child EmailResponse
+		StepNo=12
+		Input=@Objid
+		InputDataType=@Integer
+		Output=$objid $name $EmailResponseid
+		QueryType=0
+		HasRecordSet=0
+		OracleQuery=select objid, name ,objid EmailResponseid from table_EmailResponse where objid like \'-%\' and EmailResponse2Campaign=@objid
+		MssqlQuery=select objid, name ,objid EmailResponseid from table_EmailResponse where objid like \'-%\' and EmailResponse2Campaign=@objid
+		Status=0
+	</ActionQuery>
+
+	<ActionQuery>
+		Name=Update -ve objid for child EmailResponse
+		TableName=EmailResponse
+		Description=Update -ve objid for child EmailResponse
+		StepNo=13
+		Input=@objid @name @EmailResponseid
+		InputDataType=@Integer @Varchar @Integer
+		Output=$count
+		QueryType=0
+		HasRecordSet=0
+		OracleQuery=update table_EmailResponse set objid=@objid where objid=@EmailResponseid and name=@name
+		MssqlQuery=update table_EmailResponse set objid=@objid where objid=@EmailResponseid and name=@name
+		Status=0
+	</ActionQuery>
+
+
+	<ActionQuery>
+		Name=Select -ve objid for child SampleOrder
+		TableName=SampleOrder
+		Description=Select -ve objid for child SampleOrder
+		StepNo=14
+		Input=@Objid
+		InputDataType=@Integer
+		Output=$objid $name $SampleOrderid
+		QueryType=0
+		HasRecordSet=0
+		OracleQuery=select objid, name ,objid SampleOrderid from table_SampleOrder where objid like \'-%\' and SampleOrder2Campaign=@objid
+		MssqlQuery=select objid, name ,objid SampleOrderid from table_SampleOrder where objid like \'-%\' and SampleOrder2Campaign=@objid
+		Status=0
+	</ActionQuery>
+
+	<ActionQuery>
+		Name=Update -ve objid for child SampleOrder
+		TableName=SampleOrder
+		Description=Update -ve objid for child SampleOrder
+		StepNo=15
+		Input=@objid @name @SampleOrderid
+		InputDataType=@Integer @Varchar @Integer
+		Output=$count
+		QueryType=0
+		HasRecordSet=0
+		OracleQuery=update table_SampleOrder set objid=@objid where objid=@SampleOrderid and name=@name
+		MssqlQuery=update table_SampleOrder set objid=@objid where objid=@SampleOrderid and name=@name
+		Status=0
+	</ActionQuery>
+
+
+	<ActionQuery>
+		Name=Select -ve objid for child Samples
+		TableName=Samples
+		Description=Select -ve objid for child Samples
+		StepNo=16
+		Input=@Objid
+		InputDataType=@Integer
+		Output=$objid $name $Samplesid
+		QueryType=0
+		HasRecordSet=0
+		OracleQuery=select objid, name ,objid Samplesid from table_Samples where objid like \'-%\' and Samples2Campaign=@objid
+		MssqlQuery=select objid, name ,objid Samplesid from table_Samples where objid like \'-%\' and Samples2Campaign=@objid
+		Status=0
+	</ActionQuery>
+
+	<ActionQuery>
+		Name=Update -ve objid for child Samples
+		TableName=Samples
+		Description=Update -ve objid for child Samples
+		StepNo=17
+		Input=@objid @name @Samplesid
+		InputDataType=@Integer @Varchar @Integer
+		Output=$count
+		QueryType=0
+		HasRecordSet=0
+		OracleQuery=update table_Samples set objid=@objid where objid=@Samplesid and name=@name
+		MssqlQuery=update table_Samples set objid=@objid where objid=@Samplesid and name=@name
+		Status=0
+	</ActionQuery>
+
+
+	<ActionQuery>
+		Name=Select -ve objid for child CampaignNote
+		TableName=CampaignNote
+		Description=Select -ve objid for child CampaignNote
+		StepNo=18
+		Input=@Objid
+		InputDataType=@Integer
+		Output=$objid $name $CampaignNoteid
+		QueryType=0
+		HasRecordSet=0
+		OracleQuery=select objid, name ,objid CampaignNoteid from table_CampaignNote where objid like \'-%\' and CampaignNote2Campaign=@objid
+		MssqlQuery=select objid, name ,objid CampaignNoteid from table_CampaignNote where objid like \'-%\' and CampaignNote2Campaign=@objid
+		Status=0
+	</ActionQuery>
+
+	<ActionQuery>
+		Name=Update -ve objid for child CampaignNote
+		TableName=CampaignNote
+		Description=Update -ve objid for child CampaignNote
+		StepNo=19
+		Input=@objid @name @CampaignNoteid
+		InputDataType=@Integer @Varchar @Integer
+		Output=$count
+		QueryType=0
+		HasRecordSet=0
+		OracleQuery=update table_CampaignNote set objid=@objid where objid=@CampaignNoteid and name=@name
+		MssqlQuery=update table_CampaignNote set objid=@objid where objid=@CampaignNoteid and name=@name
+		Status=0
+	</ActionQuery>
+
+
+	<ActionQuery>
+		Name=Select -ve objid for child SurveyQuestion
+		TableName=SurveyQuestion
+		Description=Select -ve objid for child SurveyQuestion
+		StepNo=20
+		Input=@Objid
+		InputDataType=@Integer
+		Output=$objid $name $SurveyQuestionid
+		QueryType=0
+		HasRecordSet=0
+		OracleQuery=select objid, name ,objid SurveyQuestionid from table_SurveyQuestion where objid like \'-%\' and SurveyQuestion2Campaign=@objid
+		MssqlQuery=select objid, name ,objid SurveyQuestionid from table_SurveyQuestion where objid like \'-%\' and SurveyQuestion2Campaign=@objid
+		Status=0
+	</ActionQuery>
+
+	<ActionQuery>
+		Name=Update -ve objid for child SurveyQuestion
+		TableName=SurveyQuestion
+		Description=Update -ve objid for child SurveyQuestion
+		StepNo=21
+		Input=@objid @name @SurveyQuestionid
+		InputDataType=@Integer @Varchar @Integer
+		Output=$count
+		QueryType=0
+		HasRecordSet=0
+		OracleQuery=update table_SurveyQuestion set objid=@objid where objid=@SurveyQuestionid and name=@name
+		MssqlQuery=update table_SurveyQuestion set objid=@objid where objid=@SurveyQuestionid and name=@name
+		Status=0
+	</ActionQuery>
+
+
+	<ActionQuery>
+		Name=Call Upadte_Campaign procedure
+		TableName=Campaign
+		Description=Call Update_Campaign procedure
+		StepNo=22
+		Input=@Objid
+		InputDataType=@Integer
+		Output=$activityId
+		QueryType=0
+		HasRecordSet=0
+		OracleQuery=exec Update_Campaign(@objid)
+		MssqlQuery=exec Update_Campaign @objid
+		Status=0
+	</ActionQuery>

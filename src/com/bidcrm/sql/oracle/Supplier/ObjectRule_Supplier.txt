@@ -1,0 +1,147 @@
+//*****************************************************************//
+//Adding Object Rule
+//Table Name:Supplier
+//Attribute Name:Supplier Rule
+//********************************************************************//
+
+	<ObjectRule>
+		Name=Supplier Rule
+		TableName=Supplier
+		EffectedTable=BizProfile
+		Description=Calling Upadte and Insert Rule for object Supplier
+		Reason=1
+		ActionState=1
+		Condition=objid$gt$0
+		RuleIndex=1
+		Status=1
+	</ObjectRule>
+
+//*****************************************************************//
+//Adding Action Query
+//Table Name:Supplier
+//Name:Call Insert_Supplier procedure
+//Step No:1
+//**************************************************************//
+
+	<ActionQuery>
+		Name=Call Insert_Supplier procedure
+		TableName=Supplier
+		Description=Call Insert_Supplier procedure
+		StepNo=1
+		Input=@Objid
+		InputDataType=@Integer
+		Output=$activityId
+		QueryType=0
+		HasRecordSet=0
+		OracleQuery=exec Insert_Supplier(@objid)
+		MssqlQuery=exec Insert_Supplier @objid
+		Status=0
+	</ActionQuery>
+
+	<ActionQuery>
+		Name=Select -ve objid for child BizProfile
+		TableName=BizProfile
+		Description=Select -ve objid for child BizProfile
+		StepNo=2
+		Input=@Objid
+		InputDataType=@Integer
+		Output=$objid $name $BizProfileid
+		QueryType=0
+		HasRecordSet=0
+		OracleQuery=select objid, name ,objid BizProfileid from table_BizProfile where objid like \'-%\' and BizProfile2Supplier=@objid
+		MssqlQuery=select objid, name ,objid BizProfileid from table_BizProfile where objid like \'-%\' and BizProfile2Supplier=@objid
+		Status=0
+	</ActionQuery>
+
+	<ActionQuery>
+		Name=Update -ve objid for child BizProfile
+		TableName=BizProfile
+		Description=Update -ve objid for child BizProfile
+		StepNo=3
+		Input=@objid @name @BizProfileid
+		InputDataType=@Integer @Varchar @Integer
+		Output=$count
+		QueryType=0
+		HasRecordSet=0
+		OracleQuery=update table_BizProfile set objid=@objid where objid=@BizProfileid and name=@name
+		MssqlQuery=update table_BizProfile set objid=@objid where objid=@BizProfileid and name=@name
+		Status=0
+	</ActionQuery>
+
+
+	<ActionQuery>
+		Name=Select -ve objid for child JobHistory
+		TableName=JobHistory
+		Description=Select -ve objid for child JobHistory
+		StepNo=4
+		Input=@Objid
+		InputDataType=@Integer
+		Output=$objid $name $JobHistoryid
+		QueryType=0
+		HasRecordSet=0
+		OracleQuery=select objid, name ,objid JobHistoryid from table_JobHistory where objid like \'-%\' and JobHistory2Supplier=@objid
+		MssqlQuery=select objid, name ,objid JobHistoryid from table_JobHistory where objid like \'-%\' and JobHistory2Supplier=@objid
+		Status=0
+	</ActionQuery>
+
+	<ActionQuery>
+		Name=Update -ve objid for child JobHistory
+		TableName=JobHistory
+		Description=Update -ve objid for child JobHistory
+		StepNo=5
+		Input=@objid @name @JobHistoryid
+		InputDataType=@Integer @Varchar @Integer
+		Output=$count
+		QueryType=0
+		HasRecordSet=0
+		OracleQuery=update table_JobHistory set objid=@objid where objid=@JobHistoryid and name=@name
+		MssqlQuery=update table_JobHistory set objid=@objid where objid=@JobHistoryid and name=@name
+		Status=0
+	</ActionQuery>
+
+
+	<ActionQuery>
+		Name=Select -ve objid for child User
+		TableName=User
+		Description=Select -ve objid for child User
+		StepNo=6
+		Input=@Objid
+		InputDataType=@Integer
+		Output=$objid $name $Userid
+		QueryType=0
+		HasRecordSet=0
+		OracleQuery=select objid, name ,objid Userid from table_User where objid like \'-%\' and User2Supplier=@objid
+		MssqlQuery=select objid, name ,objid Userid from table_User where objid like \'-%\' and User2Supplier=@objid
+		Status=0
+	</ActionQuery>
+
+	<ActionQuery>
+		Name=Update -ve objid for child User
+		TableName=User
+		Description=Update -ve objid for child User
+		StepNo=7
+		Input=@objid @name @Userid
+		InputDataType=@Integer @Varchar @Integer
+		Output=$count
+		QueryType=0
+		HasRecordSet=0
+		OracleQuery=update table_User set objid=@objid where objid=@Userid and name=@name
+		MssqlQuery=update table_User set objid=@objid where objid=@Userid and name=@name
+		Status=0
+	</ActionQuery>
+
+
+	<ActionQuery>
+		Name=Call Upadte_Supplier procedure
+		TableName=Supplier
+		Description=Call Update_Supplier procedure
+		StepNo=8
+		Input=@Objid
+		InputDataType=@Integer
+		Output=$activityId
+		QueryType=0
+		HasRecordSet=0
+		OracleQuery=exec Update_Supplier(@objid)
+		MssqlQuery=exec Update_Supplier @objid
+		Status=0
+	</ActionQuery>

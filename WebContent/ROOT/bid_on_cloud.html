@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="">
+<meta name="author" content="">
+
+<title>BidERP, Bidding & Construction ERP in Cloud</title>
+
+<!-- Bootstrap Core CSS -->
+<link href="css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Custom CSS -->
+<link href="css/modern-business.css" rel="stylesheet">
+
+<!-- Custom Fonts -->
+<!--<link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">-->
+<link href="http://fonts.googleapis.com/css?family=Inconsolata"
+	rel="stylesheet" type="text/css">
+<style>
+.navbar-inverse .navbar-brand {
+	color: #fff;
+	font-size: 22px;
+}
+
+.navbar-inverse {
+	border-color: #00BCD4;
+}
+
+.navbar-inverse {
+	background-color: #00BCD4;
+	box-shadow: 0 3px 3px rgba(0, 0, 0, .29);
+	/* border-color: #080808; */
+}
+
+.navbar-inverse .navbar-nav>li>a {
+	color: #fff;
+	text-transform: uppercase;
+}
+
+.panel {
+	box-shadow: 2px 2px 5px rgba(0, 0, 0, .1);
+	border-radius: 0;
+	cursor: pointer;
+	border: 1px solid #dedede;
+}
+
+.panel-default>.panel-heading {
+	color: #333;
+	background-color: #00BCD4;
+	border-color: none;
+	color: #fff;
+	text-align: center;
+	font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.panel-body {
+	font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	text-align: left;
+}
+
+.card-panel {
+	transition: box-shadow .25s;
+	padding: 24px;
+	margin: .5rem 0 1rem 0;
+	border-radius: 2px;
+	background-color: #607D8B;
+	box-shadow: 2px 2px 5px rgba(0, 0, 0, .1);
+	border-left: 10px solid #CDDC39;
+	color: ghostwhite;
+}
+
+img.responsive-img, video.responsive-video {
+	max-width: 100%;
+	height: auto;
+}
+
+.circle {
+	border-radius: 50%;
+}
+
+img.responsive-img, video.responsive-video {
+	max-width: 100%;
+	height: auto;
+	width: 60px;
+	background-color: #fafafa
+}
+
+.navbar-inverse .navbar-nav>li>a:hover {
+	background-color: rgba(63, 81, 181, 0.63);
+}
+
+panel-heading {
+	padding: 10px 15px;
+	border-bottom: 0px solid transparent;
+	border-top-left-radius: 0px;
+	border-top-right-radius: 0px;
+}
+
+.portfolio {
+	box-shadow: 2px 2px 5px rgba(0, 0, 0, .1);
+	background-color: #fff;
+}
+
+.img-portfolio {
+	margin: 0px;
+	padding: 10px;
+}
+
+.iconImage {
+	display: block;
+	text-align: center;
+	margin: 0 auto;
+}
+
+.panelFooter {
+	background-color: #607D8B;
+	padding: 10px;
+	box-shadow: 2px 2px 2px #888888;
+}
+
+.circle1 {
+	width: 9px;
+	height: 9px;
+	-webkit-border-radius: 25px;
+	-moz-border-radius: 25px;
+	border-radius: 20px;
+	background-color: #AED581;
+	display: inline-block;
+	margin-right: 10px;
+}
+
+.circle2 {
+	width: 9px;
+	height: 9px;
+	-webkit-border-radius: 25px;
+	-moz-border-radius: 25px;
+	border-radius: 20px;
+	background-color: #FFF176;
+	display: inline-block;
+	margin-right: 10px;
+}
+
+.circle3 {
+	width: 9px;
+	height: 9px;
+	-webkit-border-radius: 25px;
+	-moz-border-radius: 25px;
+	border-radius: 20px;
+	background-color: #f3b49f;
+	display: inline-block;
+	margin-right: 10px;
+}
+
+.circle4 {
+	width: 9px;
+	height: 9px;
+	-webkit-border-radius: 25px;
+	-moz-border-radius: 25px;
+	border-radius: 20px;
+	background-color: #80DEEA;
+	display: inline-block;
+	margin-right: 10px;
+}
+
+.circle5 {
+	width: 9px;
+	height: 9px;
+	-webkit-border-radius: 25px;
+	-moz-border-radius: 25px;
+	border-radius: 20px;
+	background-color: #8BC34A;
+	display: inline-block;
+	margin-right: 10px;
+}
+
+.mini-timeline:before {
+	content: '';
+	position: absolute;
+	top: 8px;
+	bottom: 0;
+	width: 2px;
+	background: #eeeeee;
+	left: 8px;
+}
+
+.mini-timeline {
+	padding-left: 0;
+	list-style: none;
+	position: relative;
+	margin-left: 7%;
+}
+
+.mini-timeline>li {
+	position: relative;
+}
+
+li {
+	display: list-item;
+	text-align: -webkit-match-parent;
+}
+
+.mini-timeline-lime .timeline-icon {
+	border: 2px solid #cddc39 !important;
+}
+
+.mini-timeline>li .timeline-body {
+	margin: 0 0px 20px 32px;
+	padding: 0;
+	position: relative;
+	background-color: #fff;
+}
+
+.mini-timeline>li .timeline-icon {
+	position: absolute;
+	border-radius: 50%;
+	left: 3px;
+	top: 3px;
+	margin: 0;
+	padding: 0;
+	width: 12px;
+	height: 12px;
+	background: #fff;
+}
+
+.mini-timeline-deeporange .timeline-icon {
+	border: 2px solid #ff5722 !important;
+}
+
+.mini-timeline-info .timeline-icon {
+	border: 2px solid #00bcd4 !important;
+}
+
+.mini-timeline-indigo .timeline-icon {
+	border: 2px solid #3f51b5 !important;
+}
+
+li {
+	list-style: none;
+}
+
+.modal-content {
+	border-radius: none;
+}
+
+#success_message {
+	display: none;
+}
+
+.intro-header {
+	background: center center no-repeat;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	background-size: cover;
+	-o-background-size: cover;
+	margin-bottom: 50px;
+}
+
+.intro-header .site-heading {
+	padding: 100px 0;
+}
+
+.intro-header .page-heading .subheading, .intro-header .site-heading .subheading
+	{
+	font-size: 24px;
+	line-height: 1.1;
+	display: block;
+	font-weight: 300;
+	margin: 10px 0 0;
+}
+
+body {
+	background: rgba(238, 238, 238, 0.63);
+	font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+</style>
+
+
+
+
+
+</head>
+
+<body>
+
+	<!-- Navigation -->
+	<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+		<div class="container">
+			<!-- Brand and toggle get grouped for better mobile display -->
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse"
+					data-target="#bs-example-navbar-collapse-1">
+					<span class="sr-only">Toggle navigation</span> <span
+						class="icon-bar"></span> <span class="icon-bar"></span> <span
+						class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="index.html">BidERP</a>
+			</div>
+			<!-- Collect the nav links, forms, and other content for toggling -->
+			<div class="collapse navbar-collapse"
+				id="bs-example-navbar-collapse-1">
+				<ul class="nav navbar-nav navbar-right">
+					<li><a href="index.html">Home</a></li>
+					<li><a href="About.html">About</a></li>
+					<li><a href="Product.html">Products</a></li>
+					<li><a href="contact.html">Contact</a></li>
+					<li><a href="Blog.html">Blog</a></li>
+					<li><a href="./bidcrm/service">LogIn</a></li>
+				</ul>
+			</div>
+			<!-- /.navbar-collapse -->
+		</div>
+		<!-- /.container -->
+	</nav>
+
+	<header class="intro-header"
+		style="background-image: url('https://static.wixstatic.com/media/cddd59278e114d2392d4458e3efb7660.jpg/v1/fill/w_1263,h_263,al_c,q_85,usm_0.66_1.00_0.01/cddd59278e114d2392d4458e3efb7660.webp'); height: 300px; box-shadow: 2px 2px 5px rgba(0, 0, 0, .1);">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+					<div class="site-heading">
+						<h1>Bid On Cloud</h1>
+						<br /> <span class="subheading"
+							style="padding: 10px; background-color: #00BCD5; color: #fff; display: inline-block; box-shadow: 2px 2px 5px rgba(0, 0, 0, .1);">Expedite
+							and Simplify bidding process</span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+
+
+
+
+	<!-- Page Content -->
+	<div class="container">
+
+		<div class="row">
+			<div class="card-panel grey lighten-5 z-depth-1"
+				style="margin-top: 1%;">
+				<div class="row valign-wrapper">
+					<div class="col-lg-1">
+
+						<img src="./img/profilePic.png" class="circle responsive-img">
+						<!-- notice the "circle" class -->
+					</div>
+					<div class="col-lg-11">
+
+						<span> If you are in construction business, you might
+							engage in the bidding process regularly. Whether you are the one
+							accepting the bids or you have to bid on projects, the basic
+							steps are typically the same. Completing the bidding process in
+							the proper manner could be the difference between getting a bid
+							or looking for work. BidERP makes easy and expedite bidding
+							process for both parties by simplifying and managing entire
+							process with following 5 core tasks. </span>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-lg-6" style="text-align: center">
+				<button type="button" class="btn  btn-success" data-toggle="modal"
+					data-target="#myModal">START A TRAIL</button>
+			</div>
+			<div class="col-lg-6" style="text-align: center">
+				<button type="button" class="btn  btn-warning" data-toggle="modal"
+					data-target="#myModal">TRY OPEN SOURCE</button>
+			</div>
+		</div>
+
+
+		<div class="row" style="margin-top: 2%">
+			<div class="col-md-6">
+				<div style="box-shadow: 2px 2px 5px rgba(0, 0, 0, .1);">
+					<div
+						style="background-color: #fff; padding: 20px; font-size: 600px">
+						<h4>
+							Specifications
+							</h3>
+					</div>
+					<div style="box-shadow: 2px 2px 5px rgba(0, 0, 0, .1);">
+
+						<img src="./img/specification.png" alt="Lights"
+							style="width: 100%; height: 300px;">
+
+					</div>
+					<div style="padding: 20px; background-color: tomato; color: #fff">
+
+						The first step in the bidding process deals with coming up with
+						the specifications for the job. The company or customer looking
+						for bids has to develop specifications for the bidding process.
+						For example, if the customer needs a building constructed, a
+						schematic or blueprints must be developed first. All of the
+						details for the entire project must be outlined in the
+						documentation.</div>
+				</div>
+			</div>
+			<div class="col-md-6">
+				<div style="box-shadow: 2px 2px 5px rgba(0, 0, 0, .1);">
+					<div
+						style="background-color: #fff; padding: 20px; font-size: 600px">
+						<h4>
+							Request for Bids
+							</h3>
+					</div>
+					<div style="box-shadow: 2px 2px 5px rgba(0, 0, 0, .1);">
+
+						<img src="./img/rfp.jpg" alt="Lights"
+							style="width: 100%; height: 300px;">
+
+					</div>
+					<div
+						style="padding: 20px; background-color: steelblue; color: #fff">
+
+						After the details of the project have been developed, the customer
+						must request that bids be made. This can involve sending out
+						invitations to bid on projects and posting the opportunity online.
+						In some cases, the client will only request bids from a
+						pre-selected list of contractors. In other situations, the bid
+						opportunity may be open to anyone who qualifies to bid on it.</div>
+				</div>
+			</div>
+		</div>
+		<div class="row" style="margin-top: 2%">
+			<div class="col-md-6">
+				<div style="box-shadow: 2px 2px 5px rgba(0, 0, 0, .1);">
+					<div
+						style="background-color: #fff; padding: 20px; font-size: 600px;">
+						<h4>
+							Bidding
+							</h3>
+					</div>
+					<div style="box-shadow: 2px 2px 5px rgba(0, 0, 0, .1);">
+
+						<img src="./img/bid.jpg" alt="Lights"
+							style="width: 100%; height: 300px">
+
+					</div>
+					<div style="padding: 20px; background-color: #2196F3; color: #fff">
+
+						After the information about the project has been distributed to
+						contractors, the bidding process begins. The bidding process can
+						differ, depending on the rules set by the client. In some cases,
+						sealed bids will be submitted and the customer will evaluate them.
+						In other cases, a more informal bidding process will be involved
+						in which contractors simply give a total amount that they can do
+						the job for.</div>
+				</div>
+			</div>
+			<div class="col-md-6">
+				<div style="box-shadow: 2px 2px 5px rgba(0, 0, 0, .1);">
+					<div
+						style="background-color: #fff; padding: 20px; font-size: 600px">
+						<h4>
+							Reviewing the Bids
+							</h3>
+					</div>
+					<div style="box-shadow: 2px 2px 5px rgba(0, 0, 0, .1);">
+
+						<img src="./img/review2.jpg" alt="Lights"
+							style="width: 100%; height: 300px;">
+
+					</div>
+					<div style="padding: 20px; background-color: #FF9800;; color: #fff">
+
+						The customer will typically set a deadline on when the last bids
+						will be accepted. Once that deadline is reached, the customer will
+						begin reviewing the bids. The length of time that it takes to
+						review the bids could vary, depending on the number of bids
+						received.</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="row" style="margin-top: 2%">
+			<div class="col-md-6">
+				<div style="box-shadow: 2px 2px 5px rgba(0, 0, 0, .1);">
+					<div
+						style="background-color: #fff; padding: 20px; font-size: 600px">
+						<h4>
+							Awarding the Contract
+							</h3>
+					</div>
+					<div style="box-shadow: 2px 2px 5px rgba(0, 0, 0, .1);">
+
+						<img src="./img/contract1.jpg" alt="Lights"
+							style="width: 100%; height: 300px;">
+
+					</div>
+					<div style="padding: 20px; background-color: #ee3330;; color: #fff">
+
+						After the bids have been thoroughly reviewed, the customer will
+						award the contract to one bidder. In most cases, the bidder with
+						the lowest bid wins. In some situations, the bidder will award the
+						contract not only on price but other factors as well. For
+						instance, the customer may be inclined to go with a more reputable
+						provider or with those where a prior relationship exists.</div>
+				</div>
+			</div>
+			<div class="col-md-6">
+				<div style="box-shadow: 2px 2px 5px rgba(0, 0, 0, .1);">
+					<div
+						style="background-color: #fff; padding: 20px; font-size: 600px">
+						<h4>
+							Subcontracting
+							</h3>
+					</div>
+					<div style="box-shadow: 2px 2px 5px rgba(0, 0, 0, .1);">
+
+						<img src="./img/subcontract.jpg" alt="Lights"
+							style="width: 100%; height: 300px;">
+
+					</div>
+					<div style="padding: 20px; background-color: #CC7799;; color: #fff">
+
+						After the contract is awarded to a General Contractor, a contract
+						can be sub contracted with similar bidding process of the main
+						contract. BIdERP provides complete bidding solution in the cloud
+						where main contract can pass with multiple sub contracting and
+						specific project data can seamlessly shared across multiple stake
+						holders in the complete project close out.</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<footer>
+		<div class="container-fluid"
+			style="padding: 20px; background-color: #607D8B; color: #fff">
+			<div class="col-lg-12">
+				<p>© 2015 by Artitelly Solutions , Inc</p>
+				<p>info@CloudTestSoftware.com | Tel: 1-650-823-2300</p>
+			</div>
+		</div>
+	</footer>
+	<!-- Footer -->
+
+	<div id="myModal" class="modal fade" role="dialog">
+		<div class="modal-dialog">
+
+			<!-- Modal content-->
+			<div class="modal-content">
+				<a href="index.html"> <img src="./img/error-page.jpg">
+				</a>
+			</div>
+
+		</div>
+	</div>
+
+
+	<!-- jQuery -->
+	<script src="js/jquery.js"></script>
+
+	<!-- Bootstrap Core JavaScript -->
+	<script src="js/bootstrap.min.js"></script>
+
+	<!-- Script to Activate the Carousel -->
+	<script>
+
+    </script>
+
+</body>
+
+</html>

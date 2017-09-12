@@ -1,0 +1,1038 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="">
+<meta name="author" content="">
+
+<title>BidERP, Bidding & Construction ERP in Cloud</title>
+
+<!-- Bootstrap Core CSS -->
+<link href="css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Custom CSS -->
+<link href="css/modern-business.css" rel="stylesheet">
+
+<!-- Custom Fonts -->
+<!--<link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">-->
+<link href="http://fonts.googleapis.com/css?family=Inconsolata"
+	rel="stylesheet" type="text/css">
+<style>
+.navbar-inverse .navbar-brand {
+	color: #fff;
+	font-size: 22px;
+}
+
+.navbar-inverse {
+	border-color: #00BCD4;
+}
+
+.navbar-inverse {
+	background-color: #00BCD4;
+	box-shadow: 0 3px 3px rgba(0, 0, 0, .29);
+	/* border-color: #080808; */
+}
+
+.navbar-inverse .navbar-nav>li>a {
+	color: #fff;
+	text-transform: uppercase;
+}
+
+.panel {
+	box-shadow: 2px 2px 5px rgba(0, 0, 0, .1);
+	border-radius: 0;
+	cursor: pointer;
+	border: 1px solid #dedede;
+}
+
+.panel-default>.panel-heading {
+	color: #333;
+	background-color: #00BCD4;
+	border-color: none;
+	color: #fff;
+	text-align: center;
+	font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.panel-body {
+	font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	text-align: left;
+}
+
+.card-panel {
+	transition: box-shadow .25s;
+	padding: 24px;
+	margin: .5rem 0 1rem 0;
+	border-radius: 2px;
+	background-color: #fff;
+	box-shadow: 2px 2px 5px rgba(0, 0, 0, .1);
+	border-left: 10px solid #CDDC39;
+}
+
+img.responsive-img, video.responsive-video {
+	max-width: 100%;
+	height: auto;
+}
+
+.circle {
+	border-radius: 50%;
+}
+
+img.responsive-img, video.responsive-video {
+	max-width: 100%;
+	height: auto;
+	width: 60px;
+	background-color: #fafafa
+}
+
+.navbar-inverse .navbar-nav>li>a:hover {
+	background-color: rgba(63, 81, 181, 0.63);
+}
+
+panel-heading {
+	padding: 10px 15px;
+	border-bottom: 0px solid transparent;
+	border-top-left-radius: 0px;
+	border-top-right-radius: 0px;
+}
+
+.portfolio {
+	box-shadow: 2px 2px 5px rgba(0, 0, 0, .1);
+	background-color: #fff;
+}
+
+.img-portfolio {
+	margin: 0px;
+	padding: 10px;
+}
+
+.iconImage {
+	display: block;
+	text-align: center;
+	margin: 0 auto;
+}
+
+.panelFooter {
+	background-color: #607D8B;
+	padding: 10px;
+	box-shadow: 2px 2px 2px #888888;
+}
+
+.circle1 {
+	width: 9px;
+	height: 9px;
+	-webkit-border-radius: 25px;
+	-moz-border-radius: 25px;
+	border-radius: 20px;
+	background-color: #AED581;
+	display: inline-block;
+	margin-right: 10px;
+}
+
+.circle2 {
+	width: 9px;
+	height: 9px;
+	-webkit-border-radius: 25px;
+	-moz-border-radius: 25px;
+	border-radius: 20px;
+	background-color: #FFF176;
+	display: inline-block;
+	margin-right: 10px;
+}
+
+.circle3 {
+	width: 9px;
+	height: 9px;
+	-webkit-border-radius: 25px;
+	-moz-border-radius: 25px;
+	border-radius: 20px;
+	background-color: #f3b49f;
+	display: inline-block;
+	margin-right: 10px;
+}
+
+.circle4 {
+	width: 9px;
+	height: 9px;
+	-webkit-border-radius: 25px;
+	-moz-border-radius: 25px;
+	border-radius: 20px;
+	background-color: #80DEEA;
+	display: inline-block;
+	margin-right: 10px;
+}
+
+.circle5 {
+	width: 9px;
+	height: 9px;
+	-webkit-border-radius: 25px;
+	-moz-border-radius: 25px;
+	border-radius: 20px;
+	background-color: #8BC34A;
+	display: inline-block;
+	margin-right: 10px;
+}
+
+.mini-timeline:before {
+	content: '';
+	position: absolute;
+	top: 8px;
+	bottom: 0;
+	width: 2px;
+	background: #eeeeee;
+	left: 8px;
+}
+
+.mini-timeline {
+	padding-left: 0;
+	list-style: none;
+	position: relative;
+	margin-left: 7%;
+}
+
+.mini-timeline>li {
+	position: relative;
+}
+
+li {
+	display: list-item;
+	text-align: -webkit-match-parent;
+}
+
+.mini-timeline-lime .timeline-icon {
+	border: 2px solid #cddc39 !important;
+}
+
+.mini-timeline>li .timeline-body {
+	margin: 0 0px 20px 32px;
+	padding: 0;
+	position: relative;
+	background-color: #fff;
+}
+
+.mini-timeline>li .timeline-icon {
+	position: absolute;
+	border-radius: 50%;
+	left: 3px;
+	top: 3px;
+	margin: 0;
+	padding: 0;
+	width: 12px;
+	height: 12px;
+	background: #fff;
+}
+
+.mini-timeline-deeporange .timeline-icon {
+	border: 2px solid #ff5722 !important;
+}
+
+.mini-timeline-info .timeline-icon {
+	border: 2px solid #00bcd4 !important;
+}
+
+.mini-timeline-indigo .timeline-icon {
+	border: 2px solid #3f51b5 !important;
+}
+
+li {
+	list-style: none;
+}
+
+.modal-content {
+	border-radius: none;
+}
+
+#success_message {
+	display: none;
+}
+
+.intro-header {
+	background: center center no-repeat;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	background-size: cover;
+	-o-background-size: cover;
+	margin-bottom: 50px;
+}
+
+.heading {
+	padding: 150px 0;
+}
+
+.site-heading {
+	padding: 100px 0 50px;
+	color: #fff;
+}
+
+.subheading {
+	font-size: 24px;
+	line-height: 1.1;
+	font-weight: 300;
+	margin: 10px 0 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-weight: 600;
+}
+
+.background-image {
+	position: fixed;
+	left: 0;
+	right: 0;
+	z-index: 1;
+	display: block;
+	background-image:
+		url('http://666a658c624a3c03a6b2-25cda059d975d2f318c03e90bcf17c40.r92.cf1.rackcdn.com/unsplash_527bf56961712_1.JPG');
+	width: 1200px;
+	height: 800px;
+	-webkit-filter: blur(5px);
+	-moz-filter: blur(5px);
+	-o-filter: blur(5px);
+	-ms-filter: blur(5px);
+	filter: blur(5px);
+}
+
+body {
+	background: rgba(238, 238, 238, 0.63);
+	font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+</style>
+
+
+
+
+
+</head>
+
+<body>
+
+	<!-- Navigation -->
+	<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+		<div class="container">
+			<!-- Brand and toggle get grouped for better mobile display -->
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse"
+					data-target="#bs-example-navbar-collapse-1">
+					<span class="sr-only">Toggle navigation</span> <span
+						class="icon-bar"></span> <span class="icon-bar"></span> <span
+						class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="index.html">BidERP</a>
+			</div>
+			<!-- Collect the nav links, forms, and other content for toggling -->
+			<div class="collapse navbar-collapse"
+				id="bs-example-navbar-collapse-1">
+				<ul class="nav navbar-nav navbar-right">
+					<li><a href="index.html">Home</a></li>
+					<li><a href="About.html">About</a></li>
+					<li><a href="Product.html">Products</a></li>
+					<li><a href="contact.html">Contact</a></li>
+					<li><a href="Blog.html">Blog</a></li>
+					<li><a href="./bidcrm/service">LogIn</a></li>
+				</ul>
+			</div>
+			<!-- /.navbar-collapse -->
+		</div>
+		<!-- /.container -->
+	</nav>
+
+
+
+	<!-- Page Content -->
+
+
+
+	<header class="intro-header"
+		style="background-image: url('https://static.wixstatic.com/media/2e8ee11a9dd04e7cafa6fac0bc175ee5.jpg/v1/fill/w_1349,h_225,al_c,q_85,usm_0.66_1.00_0.01/2e8ee11a9dd04e7cafa6fac0bc175ee5.webp');">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+					<div class="site-heading">
+						<h1 style="color: darkslategrey;">Our Blog</h1>
+						<hr class="small">
+						<span class="subheading"
+							style="padding: 10px; background-color: rgba(96, 125, 139, 0.88); box-shadow: 2px 2px 5px rgba(0, 0, 0, .1);">New
+							techonolgy brings new ideas</span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+
+	<div class="container">
+
+		<div class="col-lg-12">
+
+			<div class="col-lg-8">
+				<div class="row">
+					<h4>Cost estimation phases using BidERP</h4>
+					<h6>June 2nd, 2017</h6>
+				</div>
+
+				<div class="col-lg-6">
+
+					<img src="./img/blog1-0.png" alt=""
+						style="height: 200px; width: 100%">
+
+				</div>
+				<div class="col-lg-6">
+
+					<p>In construction project, there are multiple cycle of cost
+						estimation involved based on the project delivery model selected
+						by the principle. In the design build process, the cost estimation
+						is completely a unit of purchase basis and the principle mainly
+						gathers all specification and requirements of the unit of purchase
+						involving an engineering consulting firm and there is a finite
+						amount of contract signed with the vendor with certain terms and
+						conditions. However, many construction projects involve...</p>
+
+					<button class="btn btn-warning" data-toggle="modal"
+						data-target="#blog1">Read More</button>
+
+				</div>
+
+				</br>
+				<div class="col-lg-12" style="margin-top: 2%">
+					<div class="row">
+						<h4>Construction bidding process and best practices</h4>
+						<h6>April 16, 2017</h6>
+					</div>
+
+					<div class="col-lg-6">
+
+						<img src="./img/blog2.png" alt=""
+							style="height: 200px; width: 100%">
+
+					</div>
+					<div class="col-lg-6">
+
+						<p>It is almost certain that construction bidding is one of
+							the most challenging tasks for contractors to remain profitable
+							in the business. Many new contractors not sure what could be best
+							practices for construction bidding. There are no hard and fast
+							rule for the bidding. Software and technology can help in many
+							cases but also it is certain that contractors can also make some
+							judgment based on their experience with similar project and also
+							other cases some extent inflation and supply of goods and
+							resources, time line of project delivery etc.</p>
+
+						<button class="btn btn-warning" data-toggle="modal"
+							data-target="#blog2">Read More</button>
+
+					</div>
+
+
+
+
+				</div>
+				</br>
+				<div class="col-lg-12" style="margin-top: 2%">
+					<div class="row">
+						<h4>Construction project management challenges and how to
+							overcome</h4>
+						<h6>March 12, 2017</h6>
+					</div>
+
+					<div class="col-lg-6">
+
+						<img src="./img/blog3.jpg" alt=""
+							style="height: 200px; width: 100%">
+
+					</div>
+					<div class="col-lg-6">
+
+						<p>A good question indeed! Some managers think that they are
+							already having a team of automation engineers and are also using
+							Selenium with some kind of recording. They are already running
+							hundreds of tests and they are very good in this. Why do they
+							need any other tool or help in automation such as
+							CloudTestSoftware? To answer this question in short, you need to
+							analy...</p>
+
+						<button class="btn btn-warning" data-toggle="modal"
+							data-target="#blog3">Read More</button>
+
+					</div>
+
+
+
+
+				</div>
+
+			</div>
+
+			<div class="col-lg-4">
+
+				<div
+					style="padding: 15px; font-size: 16px; font-weight: 600; color: #fff; background-color: #00BCD5; margin-bottom: 2%">
+					LATEST UPDATES</div>
+
+				<div
+					style="padding: 15px; background-color: #fff; border-left: 6px solid rgba(37, 150, 0, 0.53); box-shadow: 2px 2px 5px rgba(0, 0, 0, .1);">
+					<p>PwC has sponsored a new report - Global Construction 2030 -
+						which forecasts that the volume of construction output will grow
+						by 85% to $15.5 trillion worldwide by 2030, with three countries,
+						China, US and India , leading the way and accounting for 57% of
+						all global growth.</p>
+
+				</div>
+
+				<div
+					style="padding: 15px; background-color: #fff; border-left: 6px solid #FF9800; margin-top: 3%; box-shadow: 2px 2px 5px rgba(0, 0, 0, .1);">
+					<p>The benchmark global study, the fourth in a series from
+						Global Construction Perspectives and Oxford Economics, shows
+						average global construction growth of 3.9% pa to 2030, outpacing
+						that of global GDP by over one percentage point, driven by
+						developed countries recovering from economic instability and
+						emerging countries continuing to industrialize.</p>
+
+				</div>
+
+
+				<div
+					style="padding: 15px; background-color: #fff; border-left: 6px solid rgba(156, 39, 176, 0.75); margin-top: 3%; box-shadow: 2px 2px 5px rgba(0, 0, 0, .1);">
+					<p>The construction market in India will grow almost twice as
+						fast as China to 2030, providing a new engine of global growth in
+						emerging markets. India's urban population is expected to grow by
+						a staggering 165 million by 2030, swelling Delhi by 10.4 million
+						people to become the world's second largest city.</p>
+
+				</div>
+
+				<div
+					style="padding: 15px; background-color: #fff; border-left: 5px solid #607D8B; margin-top: 3%; box-shadow: 2px 2px 5px rgba(0, 0, 0, .1);">
+					<p>Based on the CIC's (Construction Intelligence Center) Global
+						50, a grouping of the 50 largest and most influential markets in
+						the world, the global construction industry is projected to grow
+						from US$7.4 trillion in 2010 to US$8.5 trillion in 2015 and to
+						US$10.3 trillion in 2020, when measured at constant 2010 prices
+						and exchange rates (real 2010 US$).The global construction
+						industry has regained growth momentum, with the pace of expansion
+						accelerating from an annual average of 2.7% a year in real terms
+						in 2011-2013 to 3.1% in 2014. This research forecasts a further
+						rise to 3.8% in 2015, and then an average annual increase of 3.9%
+						over 2016-2020. The complete report is available here.</p>
+
+				</div>
+
+				<div
+					style="padding: 15px; background-color: #fff; border-left: 5px solid tomato; margin-top: 3%; box-shadow: 2px 2px 5px rgba(0, 0, 0, .1);">
+					<p>The global construction industry is forecast to grow at a
+						CAGR of 5.5% from 2016 to 2021. The major drivers of growth for
+						this market are increasing rate of urbanization and growing
+						population. Asia-Pacific's share of the global construction
+						industry will continue to rise, reaching close to 49% in 2020, up
+						from 40% in 2010.</p>
+
+				</div>
+
+
+			</div>
+
+			<footer>
+				<div class="container-fluid"
+					style="padding: 20px; background-color: #F4F4F4; color: black">
+					<div class="col-lg-12">
+						<p>© 2015 by Artitelly Solutions , Inc</p>
+						<p>info@CloudTestSoftware.com | Tel: 1-650-823-2300</p>
+					</div>
+				</div>
+			</footer>
+			<!-- Footer -->
+
+			<div id="blog1" class="modal fade" role="dialog">
+				<div class="modal-dialog modal-lg" style="width: 80%">
+
+					<!-- Modal content-->
+					<div class="modal-content" style="border-radius: 0px">
+
+						<div class="modal-header" style="border-bottom: none">
+
+							<button type="button" class="close" data-dismiss="modal">&times;</button>
+							<img src="./img/plugin.png" /> <span class="modal-title"
+								style="padding-left: 20px; font-size: 20px; color: #607D8B;">Cost
+								estimation phases using BidERP</span>
+						</div>
+
+						<div class="modal-body">
+							<div class="row">
+								<div class="col-lg-9">
+									<div
+										style="padding-left: 10px; text-align: left; border-left: 5px solid rgba(255, 99, 71, 0.68)">
+										<p>In construction project, there are multiple cycle of
+											cost estimation involved based on the project delivery model
+											selected by the principle. In the design build process, the
+											cost estimation is completely a unit of purchase basis and
+											the principle mainly gathers all specification and
+											requirements of the unit of purchase involving an engineering
+											consulting firm and there is a finite amount of contract
+											signed with the principle with certain terms and conditions.
+											However, many construction projects involve with multilevel
+											and multiparty contracts, under goes multiple cycle of
+											estimation based on the accuracy of data gathered in multiple
+											stages of the project. BidERP can handle both scenarios
+											design build and traditional contract estimation process that
+											is more flexible and can be adjusted in the later stage of
+											the construction project.</p>
+									</div>
+
+								</div>
+
+								<div class="col-lg-7">
+									<div style="box-shadow: 2px 2px 5px rgba(0, 0, 0, .1);">
+										<img src="./img/blog1-0.png" style="width: 100%" />
+									</div>
+								</div>
+								<div class="col-lg-9">
+
+									<div class="panel-heading" style="background-color: #ffffff">
+										<h4>
+											<i class="fa fa-fw fa-compass"></i> Estimates are About Costs
+										</h4>
+									</div>
+									<div
+										style="padding-left: 10px; text-align: left; border-left: 5px solid rgba(100, 75, 136, 0.65)">
+										<p>The customer wants to know the price of the job. As a
+											contractor, you first need to know what expenses you will
+											incur in doing the job – for example, your costs of materials
+											and labor. The difference between the price you present to
+											the customer (a price estimate) and your expenses (a costing
+											estimate) will be your overall profit. A price estimate
+											provides information to a customer, but is not necessarily a
+											commitment from either side to go ahead with a project.</p>
+									</div>
+
+									<div class="panel-heading" style="background-color: #ffffff">
+										<h4>
+											<i class="fa fa-fw fa-compass"></i> Levels of Accuracy in
+											Estimates
+										</h4>
+									</div>
+									<div
+										style="padding-left: 10px; text-align: left; border-left: 5px solid rgba(100, 75, 136, 0.65)">
+										<p>An estimate presented to a customer as the price for a
+											job is expected to be reasonably accurate. Price estimates
+											that turn out to be wildly over or under the final price for
+											a job might cast doubts on your competence as a contractor.
+											On the other hand, your own internal estimates may vary in
+											increasing order of accuracy as you plan for a project.</p>
+									</div>
+
+									<div class="col-lg-7">
+										<div style="box-shadow: 2px 2px 5px rgba(0, 0, 0, .1);">
+											<img src="./img/blog1-2.png" style="width: 100%" />
+										</div>
+									</div>
+									<div
+										style="padding-left: 10px; text-align: left; border-left: 5px solid rgba(255, 193, 7, 0.79)">
+										<p>
+											<b>Preliminary estimate (or a “ballpark” estimate).</b>This
+											helps you to assess the basic feasibility or interest of a
+											project. Some projects may turn out to be the wrong size or
+											involve risk that you prefer not to accept. If so, the
+											preliminary estimate tells you that you can turn your
+											attention to other more attractive projects.
+										</p>
+										<p>
+											<b>Rate base estimate</b> If the project looks ‘doable’, a
+											next level of estimate may be to use industry-standard unit
+											costs per square foot, multiplied by the number of square
+											feet (or metric/square meter equivalents.)
+										</p>
+										<p>
+											<b>Design estimate.</b> This refines figures and calculations
+											by considering each separate component of a construction
+											project. Foundations, flooring, roofing, windows and
+											sanitation for example may each require different levels of
+											resources, compared to the general ‘one-size-fits-all’
+											approach of the square foot estimate above.
+										</p>
+										<p>
+											<b>Construction estimate.</b> This has the most detail and
+											accuracy. It may involve getting written commitments from
+											partners and subcontractors. It can then form the basis of a
+											firm or official commitment that you make to your customer
+										</p>
+										<p>BidERP provides you necessary software tools and
+											resources to support all 4 types of estimation techniques and
+											help you to scale up your construction activities even
+											starting with a single unit of construction work to very
+											large complex construction enterprise. Despite the size of
+											your construction work BidERP can manage and help you to grow
+											your business on demand basis and you do not have any
+											investment on your software resource in ahead of time.</p>
+									</div>
+									<div class="col-lg-4">
+
+										<div
+											style="padding: 10px; background-color: rgba(0, 150, 136, 0.69); box-shadow: 2px 2px 3px #888888; text-align: center; color: #fff">
+
+											<a style="color: #fff; font-weight: bold; font-size: 20px;">
+												Contact Us </a>
+
+										</div>
+
+									</div>
+								</div>
+
+
+							</div>
+						</div>
+
+
+					</div>
+
+				</div>
+			</div>
+
+
+
+			<div id="blog2" class="modal fade" role="dialog">
+				<div class="modal-dialog modal-lg" style="width: 80%">
+
+					<!-- Modal content-->
+					<div class="modal-content" style="border-radius: 0px">
+
+						<div class="modal-header" style="border-bottom: none">
+
+							<button type="button" class="close" data-dismiss="modal">&times;</button>
+							<img src="./img/plugin.png" /> <span class="modal-title"
+								style="padding-left: 20px; font-size: 20px; color: #607D8B;">Construction
+								bidding process and best practices</span>
+						</div>
+
+						<div class="modal-body">
+							<div class="row">
+								<div class="col-lg-9">
+									<div
+										style="padding-left: 10px; text-align: left; border-left: 5px solid rgba(255, 99, 71, 0.68)">
+										<p>It is almost certain that construction bidding is one
+											of the most challenging task for contractors to remain
+											profitable in the business. Many new contractors not sure
+											what could be best practices for construction bidding. There
+											are no hard and fast rule for the bidding. Software and
+											technology can help in many cases but also it is certain that
+											contractors can also make some judgment based on their
+											experience with similar project. In other cases some extent
+											inflation and supply of goods and resources, time line of
+											project, delivery schedule and many other things effect the
+											bidding.</p>
+									</div>
+
+								</div>
+
+								<div class="col-lg-5">
+									<div style="box-shadow: 2px 2px 5px rgba(0, 0, 0, .1);">
+										<img src="./img/blog2.png" style="width: 100%" />
+									</div>
+								</div>
+								<div class="col-lg-9">
+									<div
+										style="padding-left: 10px; text-align: left; border-left: 5px solid rgba(0, 150, 136, 0.65)">
+										<p>There is no set way to bid on construction projects,
+											but coming up with the most accurate cost estimate and
+											developing the lowest bid is a tried-and-true method.
+											Construction bidding is the process in which a general
+											contractor (and, in some cases, the architect) is selected to
+											work on a construction project. In some cases, the only thing
+											that matters in the construction bidding process is
+											presenting the lowest price to the owner; in other cases, the
+											contractor's qualifications are as important—if not more
+											important—than having the lowest dollar amount. Knowing how
+											to bid construction jobs makes the difference between success
+											and bankruptcy for a construction contractor. If a contractor
+											does not know how to bid on construction jobs, they will have
+											no chance at turning a profit.</p>
+									</div>
+									<div class="panel-heading" style="background-color: #ffffff">
+										<h4>
+											<i class="fa fa-fw fa-compass"></i> Using Construction Bid
+											Estimation Software
+										</h4>
+									</div>
+									<div
+										style="padding-left: 10px; text-align: left; border-left: 5px solid rgba(255, 193, 7, 0.79)">
+										<p>Construction bid software is used largely by general
+											contractors as part of the cost estimation and budgeting
+											processes when developing a bid for a new project. It was
+											introduced the industry two decades ago, and it has made a
+											major impact in a short period of time. What was once a major
+											issue of concern for all construction projects, can now be
+											done quickly and efficiently. The main benefit of estimating
+											software is the way it automates job costing using database.
+
+
+											Many builders will prefer to keep their own database for job
+											costing so that the software will more accurately reflect
+											local costs and price fluctuations in the market. Simply
+											having material and labor costs at hand makes the estimator’s
+											job easier. Estimators can also use the software to define a
+											job’s materials and labor hours. The software takes this
+											definition and calculates the job cost from a database of
+											labor and material costs. In this way, the estimator only
+											needs to choose a job he has defined in the database, and the
+											software does the rest. This minimizes the chance that some
+											procedure or material will accidentally be left out of the
+											equation. Another benefit of estimating software is that it
+											allows the builder to look at the final job costs and compare
+											them with the initial bid. Bids can then be reviewed to see
+											how they can be made more accurate. The estimator may decide
+											to alter the definition of a particular job within the
+											software database, calling for less of a material or fewer
+											labor hours.</p>
+									</div>
+
+									<div class="panel-heading" style="background-color: #ffffff">
+										<h4>
+											<i class="fa fa-fw fa-compass"></i> Construction Bid Template
+											or Bid Sheet
+										</h4>
+									</div>
+									<div
+										style="padding-left: 10px; text-align: left; border-left: 5px solid rgba(110, 89, 77, 0.79)">
+										<p>Construction bid software is used largely by general
+											contractors as part of the cost estimation and budgeting
+											processes when developing a bid for a new project. It was
+											introduced the industry two decades ago, and it has made a
+											major impact in a short period of time. What was once a major
+											issue of concern for all construction projects, can now be
+											done quickly and efficiently. The main benefit of estimating
+											software is the way it automates job costing using database.
+
+
+											Many builders will prefer to keep their own database for job
+											costing so that the software will more accurately reflect
+											local costs and price fluctuations in the market. Simply
+											having material and labor costs at hand makes the estimator’s
+											job easier. Estimators can also use the software to define a
+											job’s materials and labor hours. The software takes this
+											definition and calculates the job cost from a database of
+											labor and material costs. In this way, the estimator only
+											needs to choose a job he has defined in the database, and the
+											software does the rest. This minimizes the chance that some
+											procedure or material will accidentally be left out of the
+											equation. Another benefit of estimating software is that it
+											allows the builder to look at the final job costs and compare
+											them with the initial bid. Bids can then be reviewed to see
+											how they can be made more accurate. The estimator may decide
+											to alter the definition of a particular job within the
+											software database, calling for less of a material or fewer
+											labor hours.</p>
+									</div>
+									<div class="panel-heading" style="background-color: #ffffff">
+										<h4>
+											<i class="fa fa-fw fa-compass"></i> Design-Build Construction
+											Bid Proposals
+										</h4>
+									</div>
+									<div
+										style="padding-left: 10px; text-align: left; border-left: 5px solid rgba(222, 148, 111, 0.79)">
+										<p>With the design-bid construction method, construction
+											bid proposals cover more than just the price to build. The
+											design-build method combines the architect and contractor as
+											a unified team, where they present not only their price to
+											build the project, but their architectural design as well. A
+											design-build construction bid proposal includes an
+											all-inclusive price, including the cost of design and
+											construction. Design-build supporters believe this method is
+											not only more efficient, but leads to lower costs as well.</p>
+									</div>
+									<div class="panel-heading" style="background-color: #ffffff">
+										<h4>
+											<i class="fa fa-fw fa-compass"></i> Construction Manager
+											At-Risk Bid Proposals
+										</h4>
+									</div>
+									<div
+										style="padding-left: 10px; text-align: left; border-left: 5px solid rgba(66, 200, 33, 0.79)">
+										<p>The construction manager at-risk (CM at-risk) method is
+											another way construction project bids are submitted. Under
+											the CM at-risk method, the contractor and architect operate
+											separately, but the contractor is involved in the process
+											from the beginning and serves as liaison for the client
+											dealing with the architect. CM at-risk bids are not blind,
+											and the client can select whichever contractor he believes is
+											best-suited to handle the project. The contractor's bid comes
+											in the form of the guaranteed maximum price, which states the
+											cost of pre-construction services and the construction
+											process itself will not go over a certain total.</p>
+									</div>
+									<div class="col-lg-4">
+
+										<div
+											style="padding: 10px; background-color: rgba(0, 150, 136, 0.69); box-shadow: 2px 2px 3px #888888; text-align: center; color: #fff">
+
+											<a style="color: #fff; font-weight: bold; font-size: 20px;">
+												Contact Us </a>
+
+										</div>
+
+									</div>
+								</div>
+
+
+							</div>
+						</div>
+
+
+					</div>
+
+				</div>
+			</div>
+
+
+			<div id="blog3" class="modal fade" role="dialog">
+				<div class="modal-dialog modal-lg" style="width: 80%">
+
+					<!-- Modal content-->
+					<div class="modal-content" style="border-radius: 0px">
+
+						<div class="modal-header" style="border-bottom: none">
+
+							<button type="button" class="close" data-dismiss="modal">&times;</button>
+							<img src="./img/plugin.png" /> <span class="modal-title"
+								style="padding-left: 20px; font-size: 20px; color: #607D8B;">Construction
+								bidding process and best practices</span>
+						</div>
+
+						<div class="modal-body">
+							<div class="row">
+								<div class="col-lg-9">
+									<div
+										style="padding-left: 10px; text-align: left; border-left: 5px solid rgba(255, 99, 71, 0.68)">
+										<p>In a broad sense, construction is the mastery of
+											creating space—be it for work, for play or all of the above.
+											These spaces come to life through research, planning, design
+											and implementation, and just as with any project, there can
+											be challenges. After all, there’s machinery, materials, and
+											equipment to worry about. Then, there’s reporting, payments,
+											policies and software to attend to. The entire lifecycle of a
+											construction project has its complexities, and the most
+											common challenges can be avoided with accurate planning and
+											good systems in place. Take the following into consideration:
+										</p>
+									</div>
+
+								</div>
+
+								<div class="col-lg-5">
+									<div style="box-shadow: 2px 2px 5px rgba(0, 0, 0, .1);">
+										<img src="./img/blog3.jpg" style="width: 100%" />
+									</div>
+								</div>
+								<div class="col-lg-9">
+									<div class="panel-heading" style="background-color: #ffffff">
+										<h4>
+											<i class="fa fa-fw fa-compass"></i> Inadequate Project
+											Management
+										</h4>
+									</div>
+									<div
+										style="padding-left: 10px; text-align: left; border-left: 5px solid rgba(0, 150, 136, 0.65)">
+										<p>Project management is essential in all stages of the
+											construction process. Good project management uses
+											commitment, planning, and transparency to manage possible
+											changes, highlight the importance of procedures, communicate
+											across groups and implement appropriate governance; all of
+											which can be shared via construction software. Some of the
+											common causes of hazards, delays and unexpected costs stem
+											from a lack of communication. In order to avoid such
+											difficulties, information on all parts of the project (i.e.
+											design, management, evaluation, approvals, health and safety
+											issues, etc.), should be readily available in a clear,
+											detailed and organized location. Skilled and experienced
+											project managers are also essential to overcoming the
+											challenge of inadequate project management.</p>
+									</div>
+									<div class="panel-heading" style="background-color: #ffffff">
+										<h4>
+											<i class="fa fa-fw fa-compass"></i> Sudden Changes in the
+											Project
+										</h4>
+									</div>
+									<div
+										style="padding-left: 10px; text-align: left; border-left: 5px solid rgba(255, 193, 7, 0.79)">
+										<p>When changes happen suddenly in your project, they can
+											have big consequences like increasing construction cost,
+											damaging team relationships and inhibiting your ability to
+											deliver on schedule. Keeping an accurate account of
+											information, making information easy to find and having a
+											contingency plan in place are best practices to navigate
+											sudden changes in construction projects. In this instance,
+											technology is also on your side. BidERP software allow easy
+											and effective communication, document storage and exchange,
+											data collection and more. These tech-wise systems ultimately
+											help steer construction projects toward success.</p>
+									</div>
+
+									<div class="panel-heading" style="background-color: #ffffff">
+										<h4>
+											<i class="fa fa-fw fa-compass"></i> Delays in Construction
+											and Additional Costs
+										</h4>
+									</div>
+									<div
+										style="padding-left: 10px; text-align: left; border-left: 5px solid rgba(110, 89, 77, 0.79)">
+										<p>In every aspect of the construction processes, delays
+											in construction can be devastating. Delays not only pose
+											risks to project development, they negatively impact good
+											faith relationships with clients and owners. In addition to
+											increasing risks and impacting business relationships, delays
+											in construction almost always result in additional and
+											unplanned costs. To avoid this, make use of rules, stages,
+											and methods and outline clear definition of roles and
+											responsibilities for all participants of your project. High
+											quality and effective project management, coupled with a
+											reliable means to communicate deadlines and expectations can
+											help increase your chances of completing projects on-time and
+											on budget, every step of the way.</p>
+									</div>
+
+									<div class="col-lg-4">
+
+										<div
+											style="padding: 10px; background-color: rgba(0, 150, 136, 0.69); box-shadow: 2px 2px 3px #888888; text-align: center; color: #fff">
+
+											<a style="color: #fff; font-weight: bold; font-size: 20px;">
+												Contact Us </a>
+
+										</div>
+
+									</div>
+								</div>
+
+
+							</div>
+						</div>
+
+
+					</div>
+
+				</div>
+			</div>
+
+		</div>
+	</div>
+
+
+
+
+
+	<!-- jQuery -->
+	<script src="js/jquery.js"></script>
+
+	<!-- Bootstrap Core JavaScript -->
+	<script src="js/bootstrap.min.js"></script>
+
+	<!-- Script to Activate the Carousel -->
+	<script>
+
+        </script>
+
+</body>
+
+</html>

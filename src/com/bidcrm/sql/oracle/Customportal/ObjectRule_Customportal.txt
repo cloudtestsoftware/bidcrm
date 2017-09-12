@@ -1,0 +1,85 @@
+//*****************************************************************//
+//Adding Object Rule
+//Table Name:Customportal
+//Attribute Name:Customportal Rule
+//********************************************************************//
+
+	<ObjectRule>
+		Name=Customportal Rule
+		TableName=Customportal
+		EffectedTable=CustomLinks
+		Description=Calling Upadte and Insert Rule for object Customportal
+		Reason=1
+		ActionState=1
+		Condition=objid$gt$0
+		RuleIndex=1
+		Status=1
+	</ObjectRule>
+
+//*****************************************************************//
+//Adding Action Query
+//Table Name:Customportal
+//Name:Call Insert_Customportal procedure
+//Step No:1
+//**************************************************************//
+
+	<ActionQuery>
+		Name=Call Insert_Customportal procedure
+		TableName=Customportal
+		Description=Call Insert_Customportal procedure
+		StepNo=1
+		Input=@Objid
+		InputDataType=@Integer
+		Output=$activityId
+		QueryType=0
+		HasRecordSet=0
+		OracleQuery=exec Insert_Customportal(@objid)
+		MssqlQuery=exec Insert_Customportal @objid
+		Status=0
+	</ActionQuery>
+
+	<ActionQuery>
+		Name=Select -ve objid for child CustomLinks
+		TableName=CustomLinks
+		Description=Select -ve objid for child CustomLinks
+		StepNo=2
+		Input=@Objid
+		InputDataType=@Integer
+		Output=$objid $name $CustomLinksid
+		QueryType=0
+		HasRecordSet=0
+		OracleQuery=select objid, name ,objid CustomLinksid from table_CustomLinks where objid like \'-%\' and CustomLinks2Customportal=@objid
+		MssqlQuery=select objid, name ,objid CustomLinksid from table_CustomLinks where objid like \'-%\' and CustomLinks2Customportal=@objid
+		Status=0
+	</ActionQuery>
+
+	<ActionQuery>
+		Name=Update -ve objid for child CustomLinks
+		TableName=CustomLinks
+		Description=Update -ve objid for child CustomLinks
+		StepNo=3
+		Input=@objid @name @CustomLinksid
+		InputDataType=@Integer @Varchar @Integer
+		Output=$count
+		QueryType=0
+		HasRecordSet=0
+		OracleQuery=update table_CustomLinks set objid=@objid where objid=@CustomLinksid and name=@name
+		MssqlQuery=update table_CustomLinks set objid=@objid where objid=@CustomLinksid and name=@name
+		Status=0
+	</ActionQuery>
+
+
+	<ActionQuery>
+		Name=Call Upadte_Customportal procedure
+		TableName=Customportal
+		Description=Call Update_Customportal procedure
+		StepNo=4
+		Input=@Objid
+		InputDataType=@Integer
+		Output=$activityId
+		QueryType=0
+		HasRecordSet=0
+		OracleQuery=exec Update_Customportal(@objid)
+		MssqlQuery=exec Update_Customportal @objid
+		Status=0
+	</ActionQuery>

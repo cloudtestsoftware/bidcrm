@@ -1,0 +1,85 @@
+//*****************************************************************//
+//Adding Object Rule
+//Table Name:Console
+//Attribute Name:Console Rule
+//********************************************************************//
+
+	<ObjectRule>
+		Name=Console Rule
+		TableName=Console
+		EffectedTable=ConsoleLog
+		Description=Calling Upadte and Insert Rule for object Console
+		Reason=1
+		ActionState=1
+		Condition=objid$gt$0
+		RuleIndex=1
+		Status=1
+	</ObjectRule>
+
+//*****************************************************************//
+//Adding Action Query
+//Table Name:Console
+//Name:Call Insert_Console procedure
+//Step No:1
+//**************************************************************//
+
+	<ActionQuery>
+		Name=Call Insert_Console procedure
+		TableName=Console
+		Description=Call Insert_Console procedure
+		StepNo=1
+		Input=@Objid
+		InputDataType=@Integer
+		Output=$activityId
+		QueryType=0
+		HasRecordSet=0
+		OracleQuery=exec Insert_Console(@objid)
+		MssqlQuery=exec Insert_Console @objid
+		Status=0
+	</ActionQuery>
+
+	<ActionQuery>
+		Name=Select -ve objid for child ConsoleLog
+		TableName=ConsoleLog
+		Description=Select -ve objid for child ConsoleLog
+		StepNo=2
+		Input=@Objid
+		InputDataType=@Integer
+		Output=$objid $name $ConsoleLogid
+		QueryType=0
+		HasRecordSet=0
+		OracleQuery=select objid, name ,objid ConsoleLogid from table_ConsoleLog where objid like \'-%\' and ConsoleLog2Console=@objid
+		MssqlQuery=select objid, name ,objid ConsoleLogid from table_ConsoleLog where objid like \'-%\' and ConsoleLog2Console=@objid
+		Status=0
+	</ActionQuery>
+
+	<ActionQuery>
+		Name=Update -ve objid for child ConsoleLog
+		TableName=ConsoleLog
+		Description=Update -ve objid for child ConsoleLog
+		StepNo=3
+		Input=@objid @name @ConsoleLogid
+		InputDataType=@Integer @Varchar @Integer
+		Output=$count
+		QueryType=0
+		HasRecordSet=0
+		OracleQuery=update table_ConsoleLog set objid=@objid where objid=@ConsoleLogid and name=@name
+		MssqlQuery=update table_ConsoleLog set objid=@objid where objid=@ConsoleLogid and name=@name
+		Status=0
+	</ActionQuery>
+
+
+	<ActionQuery>
+		Name=Call Upadte_Console procedure
+		TableName=Console
+		Description=Call Update_Console procedure
+		StepNo=4
+		Input=@Objid
+		InputDataType=@Integer
+		Output=$activityId
+		QueryType=0
+		HasRecordSet=0
+		OracleQuery=exec Update_Console(@objid)
+		MssqlQuery=exec Update_Console @objid
+		Status=0
+	</ActionQuery>

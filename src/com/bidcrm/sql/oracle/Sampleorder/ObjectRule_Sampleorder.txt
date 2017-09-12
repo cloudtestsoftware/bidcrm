@@ -1,0 +1,85 @@
+//*****************************************************************//
+//Adding Object Rule
+//Table Name:Sampleorder
+//Attribute Name:Sampleorder Rule
+//********************************************************************//
+
+	<ObjectRule>
+		Name=Sampleorder Rule
+		TableName=Sampleorder
+		EffectedTable=SampleOrderItem
+		Description=Calling Upadte and Insert Rule for object Sampleorder
+		Reason=1
+		ActionState=1
+		Condition=objid$gt$0
+		RuleIndex=1
+		Status=1
+	</ObjectRule>
+
+//*****************************************************************//
+//Adding Action Query
+//Table Name:Sampleorder
+//Name:Call Insert_Sampleorder procedure
+//Step No:1
+//**************************************************************//
+
+	<ActionQuery>
+		Name=Call Insert_Sampleorder procedure
+		TableName=Sampleorder
+		Description=Call Insert_Sampleorder procedure
+		StepNo=1
+		Input=@Objid
+		InputDataType=@Integer
+		Output=$activityId
+		QueryType=0
+		HasRecordSet=0
+		OracleQuery=exec Insert_Sampleorder(@objid)
+		MssqlQuery=exec Insert_Sampleorder @objid
+		Status=0
+	</ActionQuery>
+
+	<ActionQuery>
+		Name=Select -ve objid for child SampleOrderItem
+		TableName=SampleOrderItem
+		Description=Select -ve objid for child SampleOrderItem
+		StepNo=2
+		Input=@Objid
+		InputDataType=@Integer
+		Output=$objid $name $SampleOrderItemid
+		QueryType=0
+		HasRecordSet=0
+		OracleQuery=select objid, name ,objid SampleOrderItemid from table_SampleOrderItem where objid like \'-%\' and SampleOrderItem2Sampleorder=@objid
+		MssqlQuery=select objid, name ,objid SampleOrderItemid from table_SampleOrderItem where objid like \'-%\' and SampleOrderItem2Sampleorder=@objid
+		Status=0
+	</ActionQuery>
+
+	<ActionQuery>
+		Name=Update -ve objid for child SampleOrderItem
+		TableName=SampleOrderItem
+		Description=Update -ve objid for child SampleOrderItem
+		StepNo=3
+		Input=@objid @name @SampleOrderItemid
+		InputDataType=@Integer @Varchar @Integer
+		Output=$count
+		QueryType=0
+		HasRecordSet=0
+		OracleQuery=update table_SampleOrderItem set objid=@objid where objid=@SampleOrderItemid and name=@name
+		MssqlQuery=update table_SampleOrderItem set objid=@objid where objid=@SampleOrderItemid and name=@name
+		Status=0
+	</ActionQuery>
+
+
+	<ActionQuery>
+		Name=Call Upadte_Sampleorder procedure
+		TableName=Sampleorder
+		Description=Call Update_Sampleorder procedure
+		StepNo=4
+		Input=@Objid
+		InputDataType=@Integer
+		Output=$activityId
+		QueryType=0
+		HasRecordSet=0
+		OracleQuery=exec Update_Sampleorder(@objid)
+		MssqlQuery=exec Update_Sampleorder @objid
+		Status=0
+	</ActionQuery>
